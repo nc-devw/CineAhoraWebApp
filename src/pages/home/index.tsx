@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import { Offer1, Offer2, Offer3 } from "@/assets";
 import NOW_PLAYING from "@/assets/rawData/now_playing.json";
 import UPCOMING from "@/assets/rawData/upcoming.json";
 import { Card, Carousel } from "@/components";
 import { Movie } from "@/models";
+import { PATHS } from "@/routes";
 
 const slides = [Offer1, Offer2, Offer3];
 
@@ -17,7 +19,11 @@ const ListOfMovies: React.FC<{
       <div className="flex flex-wrap gap-x-4 gap-y-6 justify-around">
         {movies.map((movie) => {
           const imagePath = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
-          return <Card image={imagePath} movie={movie} />;
+          return (
+            <Link to={PATHS.DETAIL.replace(":id", String(movie.id))}>
+              <Card image={imagePath} movie={movie} />
+            </Link>
+          );
         })}
       </div>
     </div>

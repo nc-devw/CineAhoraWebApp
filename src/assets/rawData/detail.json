@@ -1,0 +1,3286 @@
+[
+  {
+    "id": 365177,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/mKOBdgaEFguADkJhfFslY7TYxIh.jpg",
+      "belongs_to_collection": null,
+      "budget": 115000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 878,
+          "name": "Ciencia ficción"
+        },
+        {
+          "id": 35,
+          "name": "Comedia"
+        }
+      ],
+      "homepage": "",
+      "id": 365177,
+      "imdb_id": "tt4978420",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Borderlands",
+      "overview": "Lilith, una infame cazatesoros con un misterioso pasado, regresa a su planeta natal de Pandora para encontrar a la hija desaparecida del poderoso Atlas. Para ello forma una alianza inesperada con un heterogéneo equipo de inadaptados: Roland, un antiguo mercenario de élite ahora desesperado por la redención; Tiny Tina, una demolicionista salvaje preadolescente; Krieg, el musculoso protector de Tina; la científica Tannis; y Claptrap, un robot muy peculiar. Estos extraños héroes deberán luchar contra monstruos alienígenas y peligrosos bandidos para buscar y proteger a la niña desaparecida, que puede tener la clave de un poder inimaginable.",
+      "popularity": 581.159,
+      "poster_path": "/jtEZi4eZxDjxcDIeMbkQ8HmvRs1.jpg",
+      "production_companies": [
+        {
+          "id": 1632,
+          "logo_path": "/cisLn1YAUuptXVBa0xjq7ST9cH0.png",
+          "name": "Lionsgate",
+          "origin_country": "US"
+        },
+        {
+          "id": 14439,
+          "logo_path": null,
+          "name": "Arad Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 123244,
+          "logo_path": "/7eH1Y4RIuontJJXVmmSRrNUMZhU.png",
+          "name": "Picturestart",
+          "origin_country": "US"
+        },
+        {
+          "id": 158612,
+          "logo_path": "/uuByByK2kn72I2c6MGsoa5YQlcJ.png",
+          "name": "Gearbox Studios",
+          "origin_country": "US"
+        },
+        {
+          "id": 181160,
+          "logo_path": "/bfngnSWlPGca8MZG2veYx4JYgOz.png",
+          "name": "2K",
+          "origin_country": "US"
+        },
+        {
+          "id": 147591,
+          "logo_path": "/uMVoIH3rug7F3BsU1FGVJos4yrR.png",
+          "name": "Hercules Film Fund",
+          "origin_country": "LU"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "LU",
+          "name": "Luxembourg"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-08-07",
+      "revenue": 30863794,
+      "runtime": 101,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Borderlands",
+      "video": false,
+      "vote_average": 5.88,
+      "vote_count": 654
+    }
+  },
+  {
+    "id": 646097,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/cyKH7pDFlxIXluqRyNoHHEpxSDX.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 80,
+          "name": "Crimen"
+        },
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "https://www.netflix.com/es/title/81157729",
+      "id": 646097,
+      "imdb_id": "tt11301886",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Rebel Ridge",
+      "overview": "Un exmarine se enfrenta a la corrupción en una pequeña ciudad cuando la policía local le confisca, de forma injusta, la bolsa de dinero que necesita para la fianza de su primo.",
+      "popularity": 283.955,
+      "poster_path": "/ymTgBQ8rCouE27oHpAUfgKEgRAj.jpg",
+      "production_companies": [
+        {
+          "id": 1976,
+          "logo_path": "/vuNHAl3LpcNtjtRx8Ml4gpUMO2G.png",
+          "name": "filmscience",
+          "origin_country": "US"
+        },
+        {
+          "id": 125043,
+          "logo_path": null,
+          "name": "Bonneville Pictures",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-08-27",
+      "revenue": 0,
+      "runtime": 132,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Rebel Ridge",
+      "video": false,
+      "vote_average": 7.023,
+      "vote_count": 810
+    }
+  },
+  {
+    "id": 917496,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/A1dZ6faTjg0e6HYftBmEKujuXGQ.jpg",
+      "belongs_to_collection": {
+        "id": 945475,
+        "name": "Bitelchús - Colección",
+        "poster_path": "/2N5c3ue4bxvTO5OO3bOjHPJZs3H.jpg",
+        "backdrop_path": "/bJ76WnTj7G8dYQSZJvZejna262D.jpg"
+      },
+      "budget": 100000000,
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedia"
+        },
+        {
+          "id": 14,
+          "name": "Fantasía"
+        },
+        {
+          "id": 27,
+          "name": "Terror"
+        }
+      ],
+      "homepage": "",
+      "id": 917496,
+      "imdb_id": "tt2049403",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Beetlejuice Beetlejuice",
+      "overview": "Tras una inesperada tragedia familiar, tres generaciones de la familia Deetz regresan a Winter River. La vida de Lydia, todavía atormentada por Bitelchús, da un vuelco cuando su rebelde hija adolescente, Astrid, descubre la misteriosa maqueta de la ciudad en el desván y el portal al Más Allá se abre accidentalmente. Con los problemas que se avecinan en ambos reinos, es sólo cuestión de tiempo que alguien diga el nombre de Bitelchús tres veces y el travieso demonio regrese para desatar su propio caos.",
+      "popularity": 868.952,
+      "poster_path": "/kWJw7dCWHcfMLr0irTHAPIKrJ4I.jpg",
+      "production_companies": [
+        {
+          "id": 174,
+          "logo_path": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 360,
+          "logo_path": "/hbDlIbBdBe0nVFTeZ7hDX3d5n2N.png",
+          "name": "Geffen Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 81,
+          "logo_path": "/8wOfUhA7vwU2gbPjQy7Vv3EiF0o.png",
+          "name": "Plan B Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 8601,
+          "logo_path": "/kqubCH3sfBAk4znUj7hjqv8ffgi.png",
+          "name": "Tim Burton Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 216687,
+          "logo_path": null,
+          "name": "Domain Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 228708,
+          "logo_path": null,
+          "name": "Tommy Harper Productions",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-09-04",
+      "revenue": 402822428,
+      "runtime": 105,
+      "spoken_languages": [
+        {
+          "english_name": "Spanish",
+          "iso_639_1": "es",
+          "name": "Español"
+        },
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "Italian",
+          "iso_639_1": "it",
+          "name": "Italiano"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Vuelve el más fantasma de todos.",
+      "title": "Bitelchús Bitelchús",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 863
+    }
+  },
+  {
+    "id": 519182,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/lgkPzcOSnTvjeMnuFzozRO5HHw1.jpg",
+      "belongs_to_collection": {
+        "id": 86066,
+        "name": "Gru, mi villano favorito - Colección",
+        "poster_path": "/xiA6S0XNwMCMERS18ekGQPohIYr.jpg",
+        "backdrop_path": "/37xamYKRUGCRux532lKcZdVGYuR.jpg"
+      },
+      "budget": 100000000,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animación"
+        },
+        {
+          "id": 10751,
+          "name": "Familia"
+        },
+        {
+          "id": 35,
+          "name": "Comedia"
+        },
+        {
+          "id": 28,
+          "name": "Acción"
+        }
+      ],
+      "homepage": "https://www.universalpictures.es/micro/dm4",
+      "id": 519182,
+      "imdb_id": "tt7510222",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Despicable Me 4",
+      "overview": "Gru, Lucy y las niñas -Margo, Edith y Agnes- dan la bienvenida a un nuevo miembro en la familia: Gru Junior, que parece llegar con el propósito de ser un suplicio para su padre. Gru tendrá que enfrentarse en esta ocasión a su nueva némesis Maxime Le Mal y su sofisticada y malévola novia Valentina, lo que obligará a la familia a tener que darse a la fuga. Cuarta entrega de 'Gru, mi villano favorito'.",
+      "popularity": 1854.122,
+      "poster_path": "/kqph8UWNOoYgTjYnkAx8dRlLLCq.jpg",
+      "production_companies": [
+        {
+          "id": 33,
+          "logo_path": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+          "name": "Universal Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 6704,
+          "logo_path": "/fOG2oY4m1YuYTQh4bMqqZkmgOAI.png",
+          "name": "Illumination",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-06-20",
+      "revenue": 953140610,
+      "runtime": 94,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Gru 4. Mi villano favorito",
+      "video": false,
+      "vote_average": 7.139,
+      "vote_count": 1907
+    }
+  },
+  {
+    "id": 957452,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/Asg2UUwipAdE87MxtJy7SQo08XI.jpg",
+      "belongs_to_collection": null,
+      "budget": 50000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 14,
+          "name": "Fantasía"
+        },
+        {
+          "id": 27,
+          "name": "Terror"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        },
+        {
+          "id": 80,
+          "name": "Crimen"
+        }
+      ],
+      "homepage": "",
+      "id": 957452,
+      "imdb_id": "tt1340094",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "The Crow",
+      "overview": "Un año después de que él y su prometida fueran asesinados, un cuervo místico devuelve a Eric a la vida para que pueda clamar su venganza.",
+      "popularity": 1329.937,
+      "poster_path": "/X9iFHeIYgfqoZImvdidx8b9v4R.jpg",
+      "production_companies": [
+        {
+          "id": 342,
+          "logo_path": "/kZ99mxyNvNgyAFjm7rcl9vfYmU8.png",
+          "name": "Davis Films",
+          "origin_country": "FR"
+        },
+        {
+          "id": 6455,
+          "logo_path": "/mc3rMk0tW5ajjbfqkB8xlp85Cdy.png",
+          "name": "Pressman Film",
+          "origin_country": "US"
+        },
+        {
+          "id": 51526,
+          "logo_path": null,
+          "name": "Hassell Free Production",
+          "origin_country": "US"
+        },
+        {
+          "id": 67260,
+          "logo_path": "/oV2FZfhRcEc1HReC66e1L4t2qPV.png",
+          "name": "The Electric Shadow Company",
+          "origin_country": "GB"
+        },
+        {
+          "id": 104363,
+          "logo_path": "/tKIimrvYUH02D4km00lCEDUYvIF.png",
+          "name": "30WEST",
+          "origin_country": "US"
+        },
+        {
+          "id": 189103,
+          "logo_path": "/hu0qcD4k7kfWpdAewqmJSUyZPa7.png",
+          "name": "Ashland Hill Media Finance",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "FR",
+          "name": "France"
+        },
+        {
+          "iso_3166_1": "GB",
+          "name": "United Kingdom"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-08-21",
+      "revenue": 13690814,
+      "runtime": 111,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "El Cuervo",
+      "video": false,
+      "vote_average": 5.4,
+      "vote_count": 493
+    }
+  },
+  {
+    "id": 718821,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/7aPrv2HFssWcOtpig5G3HEVk3uS.jpg",
+      "belongs_to_collection": {
+        "id": 1062948,
+        "name": "Twister - Colección",
+        "poster_path": "/s6jL8oqIQGkQ51tnTl7OKMofTIY.jpg",
+        "backdrop_path": "/bnb3pWSDihCCeZ0wGlFBbTScyZv.jpg"
+      },
+      "budget": 155000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 12,
+          "name": "Aventura"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        }
+      ],
+      "homepage": "",
+      "id": 718821,
+      "imdb_id": "tt12584954",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Twisters",
+      "overview": "Kate Carter, una ex cazadora de tormentas perseguida por un devastador encuentro con un tornado, es llamada por su amigo Javi de regreso a las llanuras para probar un nuevo e innovador sistema de seguimiento. Allí, se cruza con el encantador e imprudente ídolo de las redes sociales Tyler Owens y su estridente equipo. A medida que la temporada de tormentas se intensifica, se desatan fenómenos terroríficos nunca vistos, y Kate, Tyler y sus equipos competidores se encuentran directamente en el camino de múltiples sistemas de tormentas que convergen sobre Oklahoma en lo que será una lucha por sobrevivir.",
+      "popularity": 422.364,
+      "poster_path": "/50xgtaDR0xJkLSVghdTGUeMoPHP.jpg",
+      "production_companies": [
+        {
+          "id": 33,
+          "logo_path": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+          "name": "Universal Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 174,
+          "logo_path": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 56,
+          "logo_path": "/cEaxANEisCqeEoRvODv2dO1I0iI.png",
+          "name": "Amblin Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 216687,
+          "logo_path": null,
+          "name": "Domain Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-07-10",
+      "revenue": 369590675,
+      "runtime": 123,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Twisters",
+      "video": false,
+      "vote_average": 6.972,
+      "vote_count": 1517
+    }
+  },
+  {
+    "id": 4011,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/sIzZQdXY21sEks9lGkGuXzqdGSA.jpg",
+      "belongs_to_collection": {
+        "id": 945475,
+        "name": "Bitelchús - Colección",
+        "poster_path": "/2N5c3ue4bxvTO5OO3bOjHPJZs3H.jpg",
+        "backdrop_path": "/bJ76WnTj7G8dYQSZJvZejna262D.jpg"
+      },
+      "budget": 15000000,
+      "genres": [
+        {
+          "id": 14,
+          "name": "Fantasía"
+        },
+        {
+          "id": 35,
+          "name": "Comedia"
+        }
+      ],
+      "homepage": "",
+      "id": 4011,
+      "imdb_id": "tt0094721",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Beetlejuice",
+      "overview": "¿Qué debería hacer una pareja de fantasmas si su estrafalario hogar de Nueva Inglaterra se llenara de elegantes visitantes neoyorquinos? Pedir ayuda a un exorcista para aterrorizar a los intrusos con el fin de que abandonen la casa. Bitelchús es una criatura de ultratumba repugnante y terrorífica, un fenómeno asustando y bromeando que se gira y se transforma en grotescas formas, traga insectos y no puede dejar a las mujeres (vivas o muertas) en paz.",
+      "popularity": 338.633,
+      "poster_path": "/2LanWSlqSOtyvQiIaoYz448oBSl.jpg",
+      "production_companies": [
+        {
+          "id": 174,
+          "logo_path": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 360,
+          "logo_path": "/hbDlIbBdBe0nVFTeZ7hDX3d5n2N.png",
+          "name": "Geffen Pictures",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "1988-03-30",
+      "revenue": 84554197,
+      "runtime": 92,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "La encarnación de la risa en el más allá.",
+      "title": "Bitelchús",
+      "video": false,
+      "vote_average": 7.376,
+      "vote_count": 7217
+    }
+  },
+  {
+    "id": 945961,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/9SSEUrSqhljBMzRe4aBTh17rUaC.jpg",
+      "belongs_to_collection": null,
+      "budget": 80000000,
+      "genres": [
+        {
+          "id": 27,
+          "name": "Terror"
+        },
+        {
+          "id": 878,
+          "name": "Ciencia ficción"
+        },
+        {
+          "id": 28,
+          "name": "Acción"
+        }
+      ],
+      "homepage": "",
+      "id": 945961,
+      "imdb_id": "tt18412256",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Alien: Romulus",
+      "overview": "Mientras rebuscan en las profundidades de una estación espacial abandonada, un grupo de jóvenes colonizadores del espacio se encuentra cara a cara con la forma de vida más aterradora del universo. Nueva película de la saga Alien.",
+      "popularity": 482.191,
+      "poster_path": "/8PYqGSd8MOm5ce8io4qNSAiSExW.jpg",
+      "production_companies": [
+        {
+          "id": 127928,
+          "logo_path": "/h0rjX5vjW5r8yEnUBStFarjcLT4.png",
+          "name": "20th Century Studios",
+          "origin_country": "US"
+        },
+        {
+          "id": 221347,
+          "logo_path": "/6Ry6uNBaa0IbbSs1XYIgX5DkA9r.png",
+          "name": "Scott Free Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 401,
+          "logo_path": "/t7mM3DvQ9MwDT3YzMCBrkWpWiiz.png",
+          "name": "Brandywine Productions",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-08-13",
+      "revenue": 341521150,
+      "runtime": 119,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "En el espacio, nadie puede esucharte.",
+      "title": "Alien: Romulus",
+      "video": false,
+      "vote_average": 7.048,
+      "vote_count": 1124
+    }
+  },
+  {
+    "id": 1226578,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/bizhlTVjifYQUu4Xrdt7m3TYr7d.jpg",
+      "belongs_to_collection": null,
+      "budget": 10000000,
+      "genres": [
+        {
+          "id": 27,
+          "name": "Terror"
+        },
+        {
+          "id": 80,
+          "name": "Crimen"
+        }
+      ],
+      "homepage": "",
+      "id": 1226578,
+      "imdb_id": "tt23468450",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Longlegs",
+      "overview": "Lee Harker, una nueva y talentosa agente del FBI, ha sido asignada a un caso sin resolver de un asesino en serie. A medida que la investigación se complica y se descubren pruebas ocultistas, Harker se da cuenta de que existe un vínculo personal con el despiadado asesino y debe actuar con rapidez para evitar otro asesinato familiar.",
+      "popularity": 300.364,
+      "poster_path": "/uUXRqplQ9TWmKzDkFmWN1NuPsmb.jpg",
+      "production_companies": [
+        {
+          "id": 184518,
+          "logo_path": "/lOouI8ibBzhLI4qvku74FPUVT8t.png",
+          "name": "C2 Motion Picture Group",
+          "origin_country": "US"
+        },
+        {
+          "id": 831,
+          "logo_path": "/vLENXiYTyITnMDrTKabUXhgTKX2.png",
+          "name": "Saturn Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 85465,
+          "logo_path": "/vWaAGbuCTIjEv8yz2Pog4Sfo67X.png",
+          "name": "Oddfellows Entertainment",
+          "origin_country": "CA"
+        },
+        {
+          "id": 232289,
+          "logo_path": null,
+          "name": "Traffic.",
+          "origin_country": "US"
+        },
+        {
+          "id": 167684,
+          "logo_path": "/kzQwU2H6woBFti9cqjr9BrVXrst.png",
+          "name": "Range Media Partners",
+          "origin_country": "US"
+        },
+        {
+          "id": 22842,
+          "logo_path": "/waIZoO3pnB0VVCUVo8u6hqcYN9U.png",
+          "name": "Waypoint Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "CA",
+          "name": "Canada"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-05-31",
+      "revenue": 102469694,
+      "runtime": 101,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Longlegs",
+      "video": false,
+      "vote_average": 6.667,
+      "vote_count": 993
+    }
+  },
+  {
+    "id": 1079091,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/zAqBIeO71BFL7bAtP5TFzVjVamy.jpg",
+      "belongs_to_collection": null,
+      "budget": 25000000,
+      "genres": [
+        {
+          "id": 10749,
+          "name": "Romance"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "",
+      "id": 1079091,
+      "imdb_id": "tt10655524",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "It Ends with Us",
+      "overview": "Una mujer atraviesa las tumultuosas etapas de una relación abusiva. Tras mudarse a la ciudad de Boston después de la universidad, decide iniciar su propio negocio como florista y se enamora de un joven neurocirujano.",
+      "popularity": 852.823,
+      "poster_path": "/2EH42blLQzgqwDWxn39RXkTgb91.jpg",
+      "production_companies": [
+        {
+          "id": 144610,
+          "logo_path": "/879WnwsOH1oP6NlLY7ChD6vL6lh.png",
+          "name": "Wayfarer Studios",
+          "origin_country": "US"
+        },
+        {
+          "id": 194285,
+          "logo_path": null,
+          "name": "Saks Picture Company",
+          "origin_country": "US"
+        },
+        {
+          "id": 5,
+          "logo_path": "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
+          "name": "Columbia Pictures",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-08-07",
+      "revenue": 334836337,
+      "runtime": 131,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Rompemos el patrón o el patrón nos rompe.",
+      "title": "Romper el círculo",
+      "video": false,
+      "vote_average": 7.032,
+      "vote_count": 698
+    }
+  },
+  {
+    "id": 748783,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/1wP1phHo2CROOqzv7Azs0MT5esU.jpg",
+      "belongs_to_collection": null,
+      "budget": 60000000,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animación"
+        },
+        {
+          "id": 35,
+          "name": "Comedia"
+        },
+        {
+          "id": 10751,
+          "name": "Familia"
+        },
+        {
+          "id": 12,
+          "name": "Aventura"
+        },
+        {
+          "id": 28,
+          "name": "Acción"
+        }
+      ],
+      "homepage": "https://www.sonypictures.es/pelicula/garfield",
+      "id": 748783,
+      "imdb_id": "tt5779228",
+      "origin_country": ["US", "GB"],
+      "original_language": "en",
+      "original_title": "The Garfield Movie",
+      "overview": "El mundialmente famoso Garfield, el gato casero que odia los lunes y que adora la lasaña, está a punto de vivir una aventura ¡en el salvaje mundo exterior! Tras una inesperada reunión con su largamente perdido padre – el desaliñado gato callejero Vic – Garfield y su amigo canino Odie se ven forzados a abandonar sus perfectas y consentidas vidas al unirse a Vic en un hilarante y muy arriesgado atraco.",
+      "popularity": 428.751,
+      "poster_path": "/6QR2FOCQr41gSduN70WulRIhJb7.jpg",
+      "production_companies": [
+        {
+          "id": 1088,
+          "logo_path": "/9WOE5AQUXbOtLU6GTwfjS8OMF0v.png",
+          "name": "Alcon Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 31922,
+          "logo_path": "/omWPoru2LNayUOBqjMBLP9KrFrP.png",
+          "name": "DNEG",
+          "origin_country": "GB"
+        },
+        {
+          "id": 144610,
+          "logo_path": "/879WnwsOH1oP6NlLY7ChD6vL6lh.png",
+          "name": "Wayfarer Studios",
+          "origin_country": "US"
+        },
+        {
+          "id": 129773,
+          "logo_path": null,
+          "name": "One Cool Group",
+          "origin_country": "HK"
+        },
+        {
+          "id": 11341,
+          "logo_path": "/xytTBODEy3p20ksHL4Ftxr483Iv.png",
+          "name": "Stage 6 Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 229807,
+          "logo_path": "/p8IO8N3bIaWaebafj52xvVB1On6.png",
+          "name": "Andrews McMeel Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 178792,
+          "logo_path": null,
+          "name": "John Cohen Productions",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "HK",
+          "name": "Hong Kong"
+        },
+        {
+          "iso_3166_1": "GB",
+          "name": "United Kingdom"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-04-30",
+      "revenue": 230295748,
+      "runtime": 101,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Agárrate a tu asiento.",
+      "title": "Garfield: La película",
+      "video": false,
+      "vote_average": 7.111,
+      "vote_count": 995
+    }
+  },
+  {
+    "id": 970347,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/tCQfubckzzcuCbsGugkpLhfjS5z.jpg",
+      "belongs_to_collection": null,
+      "budget": 30000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        },
+        {
+          "id": 80,
+          "name": "Crimen"
+        }
+      ],
+      "homepage": "",
+      "id": 970347,
+      "imdb_id": "tt1121948",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "The Killer",
+      "overview": "Zee es una temida asesina a sueldo conocida como “la Reina de los Muertos”, pero cuando se niega a asesinar a una joven ciega, se encuentra perseguida tanto por sus colegas criminales como por un decidido detective de policía.",
+      "popularity": 226.287,
+      "poster_path": "/6PCnxKZZIVRanWb710pNpYVkCSw.jpg",
+      "production_companies": [
+        {
+          "id": 33,
+          "logo_path": "/8lvHyhjr8oUKOOy2dKXoALWKdp0.png",
+          "name": "Universal Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 507,
+          "logo_path": "/aRmHe6GWxYMRCQljF75rn2B9Gv8.png",
+          "name": "Atlas Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 172860,
+          "logo_path": null,
+          "name": "A Better Tomorrow Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 8147,
+          "logo_path": "/q6HOAdSNgCbeOqwoMVRc6REgbXF.png",
+          "name": "Entertainment One",
+          "origin_country": "CA"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "CA",
+          "name": "Canada"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-08-22",
+      "revenue": 0,
+      "runtime": 126,
+      "spoken_languages": [
+        {
+          "english_name": "French",
+          "iso_639_1": "fr",
+          "name": "Français"
+        },
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "The Killer",
+      "video": false,
+      "vote_average": 6.612,
+      "vote_count": 254
+    }
+  },
+  {
+    "id": 923667,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/9juRmk8QjcsUcbrevVu5t8VZy5G.jpg",
+      "belongs_to_collection": null,
+      "budget": 38400000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 12,
+          "name": "Aventura"
+        },
+        {
+          "id": 80,
+          "name": "Crimen"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        }
+      ],
+      "homepage": "",
+      "id": 923667,
+      "imdb_id": "tt20316748",
+      "origin_country": ["CN", "HK"],
+      "original_language": "cn",
+      "original_title": "九龍城寨之圍城",
+      "overview": "En los años ochenta, el único lugar de Hong Kong donde no se aplicaba la ley británica era la temida Ciudad Amurallada de Kowloon, un enclave entregado a las bandas y al tráfico de todo tipo. Huyendo del poderoso jefe de las tríadas Mr. Big, el emigrante ilegal Chan Lok-kwun se refugia en Kowloon City, donde es acogido bajo la protección de Ciclón, líder de la Ciudadela. Junto a los demás marginados de su clan, tendrán que hacer frente a la invasión de la banda de Mr. Big y proteger el refugio en que se ha convertido para ellos la ciudad fortificada.",
+      "popularity": 295.419,
+      "poster_path": "/wPJVSxlEaBxiqHREJ25Yw21EaOn.jpg",
+      "production_companies": [
+        {
+          "id": 62894,
+          "logo_path": "/fIu9uAhKFyEZipwObaA9EjQJsS2.png",
+          "name": "Entertaining Power",
+          "origin_country": "HK"
+        },
+        {
+          "id": 69437,
+          "logo_path": null,
+          "name": "One Cool Pictures",
+          "origin_country": "HK"
+        },
+        {
+          "id": 5686,
+          "logo_path": "/o4aETXAP9HxOSRbGDWgBfkSzSJw.png",
+          "name": "Sil-Metropole Organisation",
+          "origin_country": "HK"
+        },
+        {
+          "id": 214726,
+          "logo_path": null,
+          "name": "HG Entertainment",
+          "origin_country": "CN"
+        },
+        {
+          "id": 197030,
+          "logo_path": "/z9xtT1e3HunOnZUm3uGYb59eL7v.png",
+          "name": "Tao Piao Piao",
+          "origin_country": "CN"
+        },
+        {
+          "id": 5552,
+          "logo_path": "/wdtjT9x5OG7nLusPctACI3i7Im2.png",
+          "name": "Media Asia Films",
+          "origin_country": "HK"
+        },
+        {
+          "id": 131587,
+          "logo_path": "/vtQSkfAuPHoBtlEbUpsjs5kVfG6.png",
+          "name": "Lian Ray Pictures",
+          "origin_country": "CN"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "CN",
+          "name": "China"
+        },
+        {
+          "iso_3166_1": "HK",
+          "name": "Hong Kong"
+        }
+      ],
+      "release_date": "2024-04-23",
+      "revenue": 95335412,
+      "runtime": 125,
+      "spoken_languages": [
+        {
+          "english_name": "Japanese",
+          "iso_639_1": "ja",
+          "name": "日本語"
+        },
+        {
+          "english_name": "Cantonese",
+          "iso_639_1": "cn",
+          "name": "广州话 / 廣州話"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Twilight of the Warriors: Walled In",
+      "video": false,
+      "vote_average": 6.5,
+      "vote_count": 181
+    }
+  },
+  {
+    "id": 698687,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/tAwfoDyKiYa4KQdUp3DTMrEs4En.jpg",
+      "belongs_to_collection": null,
+      "budget": 75000000,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animación"
+        },
+        {
+          "id": 878,
+          "name": "Ciencia ficción"
+        },
+        {
+          "id": 12,
+          "name": "Aventura"
+        },
+        {
+          "id": 10751,
+          "name": "Familia"
+        },
+        {
+          "id": 28,
+          "name": "Acción"
+        }
+      ],
+      "homepage": "",
+      "id": 698687,
+      "imdb_id": "tt8864596",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Transformers One",
+      "overview": "La historia jamás contada del origen de Optimus Prime y Megatron y de cómo pasaron de ser hermanos de armas que cambiaron el destino de Cybertron para siempre, a convertirse en enemigos acérrimos.",
+      "popularity": 518.627,
+      "poster_path": "/ynqqkPy8RiawjGtWFIsF9pmYZtJ.jpg",
+      "production_companies": [
+        {
+          "id": 24955,
+          "logo_path": "/pUZAeCMZlLBBUItAl11Ip2XikdD.png",
+          "name": "Paramount Animation",
+          "origin_country": "US"
+        },
+        {
+          "id": 435,
+          "logo_path": "/AjzK0s2w1GtLfR4hqCjVSYi0Sr8.png",
+          "name": "di Bonaventura Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 38831,
+          "logo_path": null,
+          "name": "DeSanto/Murphy Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 6734,
+          "logo_path": "/u55FhlG6vFNzSVKLcmnFFwLb2cc.png",
+          "name": "Bay Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 114732,
+          "logo_path": "/tNCbisMxO5mX2X2bOQxHHQZVYnT.png",
+          "name": "New Republic Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 207846,
+          "logo_path": "/1Qep9fdnqCjWFKYpwNvwy2zoRNQ.png",
+          "name": "Hasbro Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-09-11",
+      "revenue": 97058804,
+      "runtime": 104,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Descubre el origen",
+      "title": "Transformers One",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 121
+    }
+  },
+  {
+    "id": 1160018,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/okVLmXL5y18dfN2R4ufMZEGaeCd.jpg",
+      "belongs_to_collection": null,
+      "budget": 3000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 80,
+          "name": "Crimen"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "",
+      "id": 1160018,
+      "imdb_id": "tt28259207",
+      "origin_country": ["IN"],
+      "original_language": "hi",
+      "original_title": "किल",
+      "overview": "Un pasajero en un tren a Nueva Delhi. El tren pronto se convierte en un campo de batalla en el que un par de comandos se enfrentan a un ejército de bandidos invasores.",
+      "popularity": 383.263,
+      "poster_path": "/j8aqIMzHnVHgS98CD6lXtspSV2S.jpg",
+      "production_companies": [
+        {
+          "id": 22486,
+          "logo_path": "/a101r8HZ9dk6xvXyFHcEyh73Qpr.png",
+          "name": "Sikhya Entertainment",
+          "origin_country": "IN"
+        },
+        {
+          "id": 19146,
+          "logo_path": "/5Ff25ornzVNhm5skuAvMAR556NB.png",
+          "name": "Dharma Productions",
+          "origin_country": "IN"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "IN",
+          "name": "India"
+        }
+      ],
+      "release_date": "2024-07-03",
+      "revenue": 5400000,
+      "runtime": 105,
+      "spoken_languages": [
+        {
+          "english_name": "Hindi",
+          "iso_639_1": "hi",
+          "name": "हिन्दी"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "किल",
+      "video": false,
+      "vote_average": 7.153,
+      "vote_count": 196
+    }
+  },
+  {
+    "id": 5492,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/bxwKC4qAbceMgHU1xCCTBK1eYdn.jpg",
+      "belongs_to_collection": null,
+      "budget": 20000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        },
+        {
+          "id": 80,
+          "name": "Crimen"
+        }
+      ],
+      "homepage": "",
+      "id": 5492,
+      "imdb_id": "tt12598606",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Gunner",
+      "overview": "",
+      "popularity": 234.503,
+      "poster_path": "/eEkAY5veAnwxUOOlpF62KawkFO9.jpg",
+      "production_companies": [
+        {
+          "id": 7417,
+          "logo_path": "/13GyIWMzFvDqJN6I6tZCQYzWr7L.png",
+          "name": "Convergence Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 8000,
+          "logo_path": "/f8NwLg72BByt3eav7lX1lcJfe60.png",
+          "name": "Broken Road Productions",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-08-16",
+      "revenue": 0,
+      "runtime": 90,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Gunner",
+      "video": false,
+      "vote_average": 5.3,
+      "vote_count": 85
+    }
+  },
+  {
+    "id": 1032823,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/p5kpFS0P3lIwzwzHBOULQovNWyj.jpg",
+      "belongs_to_collection": null,
+      "budget": 30000000,
+      "genres": [
+        {
+          "id": 53,
+          "name": "Suspense"
+        },
+        {
+          "id": 80,
+          "name": "Crimen"
+        },
+        {
+          "id": 27,
+          "name": "Terror"
+        }
+      ],
+      "homepage": "",
+      "id": 1032823,
+      "imdb_id": "tt26753003",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Trap",
+      "overview": "Un padre y su hija adolescente asisten a un concierto de música pop, donde se dan cuenta de que están en el centro de un oscuro y siniestro suceso.",
+      "popularity": 199.003,
+      "poster_path": "/oY9SRUcRqdrjyINFoGewobSP7FB.jpg",
+      "production_companies": [
+        {
+          "id": 12236,
+          "logo_path": "/bVu0qQm4GujSTCvZZz9S3rHDczA.png",
+          "name": "Blinding Edge Pictures",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-07-31",
+      "revenue": 82406909,
+      "runtime": 105,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "30.000 aficionados. 300 policías. 1 asesino en serie. Sin escapatoria.",
+      "title": "La trampa",
+      "video": false,
+      "vote_average": 6.522,
+      "vote_count": 1271
+    }
+  },
+  {
+    "id": 704239,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/4ft6TR9wA6bra0RLL6G7JFDQ5t1.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 35,
+          "name": "Comedia"
+        }
+      ],
+      "homepage": "https://www.netflix.com/es/title/81282732",
+      "id": 704239,
+      "imdb_id": "tt12610390",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "The Union",
+      "overview": "Un obrero de Nueva Jersey pasa de ser un tío normal a un aspirante a espía cuando su novia del instituto, desaparecida desde hace tiempo, lo recluta para una misión de espionaje.",
+      "popularity": 239.714,
+      "poster_path": "/1UHp2QEBPnTrcx0i6aYw6jWtDbI.jpg",
+      "production_companies": [
+        {
+          "id": 169668,
+          "logo_path": null,
+          "name": "Municipal Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 8537,
+          "logo_path": null,
+          "name": "Closest to the Hole Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 8536,
+          "logo_path": null,
+          "name": "Leverage Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-08-15",
+      "revenue": 0,
+      "runtime": 109,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "El sindicato",
+      "video": false,
+      "vote_average": 6.271,
+      "vote_count": 721
+    }
+  },
+  {
+    "id": 1129598,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/n3JeGELHa9V6k9mL81ItMxWLSS6.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        },
+        {
+          "id": 27,
+          "name": "Terror"
+        }
+      ],
+      "homepage": "",
+      "id": 1129598,
+      "imdb_id": "tt27682129",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Prey",
+      "overview": "Una joven pareja se ve obligada a abandonar su puesto de misioneros cristianos en el desierto del Kalahari tras ser amenazados de muerte por una banda de militantes extremistas. Tras estrellarse su avión, deben luchar contra hombres y animales por sus vidas.",
+      "popularity": 356.568,
+      "poster_path": "/uMILqn3ArGkfDSteAlqsL2WiINT.jpg",
+      "production_companies": [
+        {
+          "id": 188570,
+          "logo_path": null,
+          "name": "The Barnum Picture Company",
+          "origin_country": "US"
+        },
+        {
+          "id": 116018,
+          "logo_path": null,
+          "name": "Green Light Pictures",
+          "origin_country": ""
+        },
+        {
+          "id": 142122,
+          "logo_path": "/oqZHKDB4izafodDDD9BABNNq7VN.png",
+          "name": "Lucky 13 Productions",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-03-15",
+      "revenue": 0,
+      "runtime": 86,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "Spanish",
+          "iso_639_1": "es",
+          "name": "Español"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Presa",
+      "video": false,
+      "vote_average": 6.292,
+      "vote_count": 243
+    }
+  },
+  {
+    "id": 930600,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/qkEnklEGDFy4TRVhuHFn2DI2BP6.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 27,
+          "name": "Terror"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        }
+      ],
+      "homepage": "https://www.netflix.com/es/title/81582382",
+      "id": 930600,
+      "imdb_id": "tt4196566",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "The Deliverance",
+      "overview": "Ebony Jackson, una madre soltera, se muda con su familia para empezar desde cero, sin saber que en su nueva casa ya habita un malvado ente.",
+      "popularity": 163.864,
+      "poster_path": "/zFnDISBzIDg4JlKaCCdMELpkWKz.jpg",
+      "production_companies": [
+        {
+          "id": 100033,
+          "logo_path": "/74LDJbOFdya1ijNT11uh0mM5eg0.png",
+          "name": "Tucker Tooley Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 14226,
+          "logo_path": null,
+          "name": "Turn Left Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 695,
+          "logo_path": "/rxXG5CZjBGFbJt9tYgrySrkJCTF.png",
+          "name": "Lee Daniels Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-08-16",
+      "revenue": 0,
+      "runtime": 112,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "La liberación",
+      "video": false,
+      "vote_average": 6.259,
+      "vote_count": 344
+    }
+  },
+  {
+    "id": 917496,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/A1dZ6faTjg0e6HYftBmEKujuXGQ.jpg",
+      "belongs_to_collection": {
+        "id": 945475,
+        "name": "Bitelchús - Colección",
+        "poster_path": "/2N5c3ue4bxvTO5OO3bOjHPJZs3H.jpg",
+        "backdrop_path": "/bJ76WnTj7G8dYQSZJvZejna262D.jpg"
+      },
+      "budget": 100000000,
+      "genres": [
+        {
+          "id": 35,
+          "name": "Comedia"
+        },
+        {
+          "id": 14,
+          "name": "Fantasía"
+        },
+        {
+          "id": 27,
+          "name": "Terror"
+        }
+      ],
+      "homepage": "",
+      "id": 917496,
+      "imdb_id": "tt2049403",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Beetlejuice Beetlejuice",
+      "overview": "Tras una inesperada tragedia familiar, tres generaciones de la familia Deetz regresan a Winter River. La vida de Lydia, todavía atormentada por Bitelchús, da un vuelco cuando su rebelde hija adolescente, Astrid, descubre la misteriosa maqueta de la ciudad en el desván y el portal al Más Allá se abre accidentalmente. Con los problemas que se avecinan en ambos reinos, es sólo cuestión de tiempo que alguien diga el nombre de Bitelchús tres veces y el travieso demonio regrese para desatar su propio caos.",
+      "popularity": 868.952,
+      "poster_path": "/kWJw7dCWHcfMLr0irTHAPIKrJ4I.jpg",
+      "production_companies": [
+        {
+          "id": 174,
+          "logo_path": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 360,
+          "logo_path": "/hbDlIbBdBe0nVFTeZ7hDX3d5n2N.png",
+          "name": "Geffen Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 81,
+          "logo_path": "/8wOfUhA7vwU2gbPjQy7Vv3EiF0o.png",
+          "name": "Plan B Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 8601,
+          "logo_path": "/kqubCH3sfBAk4znUj7hjqv8ffgi.png",
+          "name": "Tim Burton Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 216687,
+          "logo_path": null,
+          "name": "Domain Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 228708,
+          "logo_path": null,
+          "name": "Tommy Harper Productions",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-09-04",
+      "revenue": 402822428,
+      "runtime": 105,
+      "spoken_languages": [
+        {
+          "english_name": "Spanish",
+          "iso_639_1": "es",
+          "name": "Español"
+        },
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        },
+        {
+          "english_name": "Italian",
+          "iso_639_1": "it",
+          "name": "Italiano"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Vuelve el más fantasma de todos.",
+      "title": "Bitelchús Bitelchús",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 863
+    }
+  },
+  {
+    "id": 1079091,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/zAqBIeO71BFL7bAtP5TFzVjVamy.jpg",
+      "belongs_to_collection": null,
+      "budget": 25000000,
+      "genres": [
+        {
+          "id": 10749,
+          "name": "Romance"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "",
+      "id": 1079091,
+      "imdb_id": "tt10655524",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "It Ends with Us",
+      "overview": "Una mujer atraviesa las tumultuosas etapas de una relación abusiva. Tras mudarse a la ciudad de Boston después de la universidad, decide iniciar su propio negocio como florista y se enamora de un joven neurocirujano.",
+      "popularity": 852.823,
+      "poster_path": "/2EH42blLQzgqwDWxn39RXkTgb91.jpg",
+      "production_companies": [
+        {
+          "id": 144610,
+          "logo_path": "/879WnwsOH1oP6NlLY7ChD6vL6lh.png",
+          "name": "Wayfarer Studios",
+          "origin_country": "US"
+        },
+        {
+          "id": 194285,
+          "logo_path": null,
+          "name": "Saks Picture Company",
+          "origin_country": "US"
+        },
+        {
+          "id": 5,
+          "logo_path": "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
+          "name": "Columbia Pictures",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-08-07",
+      "revenue": 334836337,
+      "runtime": 131,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Rompemos el patrón o el patrón nos rompe.",
+      "title": "Romper el círculo",
+      "video": false,
+      "vote_average": 7.032,
+      "vote_count": 698
+    }
+  },
+  {
+    "id": 923667,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/9juRmk8QjcsUcbrevVu5t8VZy5G.jpg",
+      "belongs_to_collection": null,
+      "budget": 38400000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 12,
+          "name": "Aventura"
+        },
+        {
+          "id": 80,
+          "name": "Crimen"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        }
+      ],
+      "homepage": "",
+      "id": 923667,
+      "imdb_id": "tt20316748",
+      "origin_country": ["CN", "HK"],
+      "original_language": "cn",
+      "original_title": "九龍城寨之圍城",
+      "overview": "En los años ochenta, el único lugar de Hong Kong donde no se aplicaba la ley británica era la temida Ciudad Amurallada de Kowloon, un enclave entregado a las bandas y al tráfico de todo tipo. Huyendo del poderoso jefe de las tríadas Mr. Big, el emigrante ilegal Chan Lok-kwun se refugia en Kowloon City, donde es acogido bajo la protección de Ciclón, líder de la Ciudadela. Junto a los demás marginados de su clan, tendrán que hacer frente a la invasión de la banda de Mr. Big y proteger el refugio en que se ha convertido para ellos la ciudad fortificada.",
+      "popularity": 295.419,
+      "poster_path": "/wPJVSxlEaBxiqHREJ25Yw21EaOn.jpg",
+      "production_companies": [
+        {
+          "id": 62894,
+          "logo_path": "/fIu9uAhKFyEZipwObaA9EjQJsS2.png",
+          "name": "Entertaining Power",
+          "origin_country": "HK"
+        },
+        {
+          "id": 69437,
+          "logo_path": null,
+          "name": "One Cool Pictures",
+          "origin_country": "HK"
+        },
+        {
+          "id": 5686,
+          "logo_path": "/o4aETXAP9HxOSRbGDWgBfkSzSJw.png",
+          "name": "Sil-Metropole Organisation",
+          "origin_country": "HK"
+        },
+        {
+          "id": 214726,
+          "logo_path": null,
+          "name": "HG Entertainment",
+          "origin_country": "CN"
+        },
+        {
+          "id": 197030,
+          "logo_path": "/z9xtT1e3HunOnZUm3uGYb59eL7v.png",
+          "name": "Tao Piao Piao",
+          "origin_country": "CN"
+        },
+        {
+          "id": 5552,
+          "logo_path": "/wdtjT9x5OG7nLusPctACI3i7Im2.png",
+          "name": "Media Asia Films",
+          "origin_country": "HK"
+        },
+        {
+          "id": 131587,
+          "logo_path": "/vtQSkfAuPHoBtlEbUpsjs5kVfG6.png",
+          "name": "Lian Ray Pictures",
+          "origin_country": "CN"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "CN",
+          "name": "China"
+        },
+        {
+          "iso_3166_1": "HK",
+          "name": "Hong Kong"
+        }
+      ],
+      "release_date": "2024-04-23",
+      "revenue": 95335412,
+      "runtime": 125,
+      "spoken_languages": [
+        {
+          "english_name": "Japanese",
+          "iso_639_1": "ja",
+          "name": "日本語"
+        },
+        {
+          "english_name": "Cantonese",
+          "iso_639_1": "cn",
+          "name": "广州话 / 廣州話"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Twilight of the Warriors: Walled In",
+      "video": false,
+      "vote_average": 6.5,
+      "vote_count": 181
+    }
+  },
+  {
+    "id": 698687,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/tAwfoDyKiYa4KQdUp3DTMrEs4En.jpg",
+      "belongs_to_collection": null,
+      "budget": 75000000,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animación"
+        },
+        {
+          "id": 878,
+          "name": "Ciencia ficción"
+        },
+        {
+          "id": 12,
+          "name": "Aventura"
+        },
+        {
+          "id": 10751,
+          "name": "Familia"
+        },
+        {
+          "id": 28,
+          "name": "Acción"
+        }
+      ],
+      "homepage": "",
+      "id": 698687,
+      "imdb_id": "tt8864596",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Transformers One",
+      "overview": "La historia jamás contada del origen de Optimus Prime y Megatron y de cómo pasaron de ser hermanos de armas que cambiaron el destino de Cybertron para siempre, a convertirse en enemigos acérrimos.",
+      "popularity": 518.627,
+      "poster_path": "/ynqqkPy8RiawjGtWFIsF9pmYZtJ.jpg",
+      "production_companies": [
+        {
+          "id": 24955,
+          "logo_path": "/pUZAeCMZlLBBUItAl11Ip2XikdD.png",
+          "name": "Paramount Animation",
+          "origin_country": "US"
+        },
+        {
+          "id": 435,
+          "logo_path": "/AjzK0s2w1GtLfR4hqCjVSYi0Sr8.png",
+          "name": "di Bonaventura Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 38831,
+          "logo_path": null,
+          "name": "DeSanto/Murphy Productions",
+          "origin_country": "US"
+        },
+        {
+          "id": 6734,
+          "logo_path": "/u55FhlG6vFNzSVKLcmnFFwLb2cc.png",
+          "name": "Bay Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 114732,
+          "logo_path": "/tNCbisMxO5mX2X2bOQxHHQZVYnT.png",
+          "name": "New Republic Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 207846,
+          "logo_path": "/1Qep9fdnqCjWFKYpwNvwy2zoRNQ.png",
+          "name": "Hasbro Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-09-11",
+      "revenue": 97058804,
+      "runtime": 104,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Descubre el origen",
+      "title": "Transformers One",
+      "video": false,
+      "vote_average": 7.4,
+      "vote_count": 121
+    }
+  },
+  {
+    "id": 1160018,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/okVLmXL5y18dfN2R4ufMZEGaeCd.jpg",
+      "belongs_to_collection": null,
+      "budget": 3000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 80,
+          "name": "Crimen"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "",
+      "id": 1160018,
+      "imdb_id": "tt28259207",
+      "origin_country": ["IN"],
+      "original_language": "hi",
+      "original_title": "किल",
+      "overview": "Un pasajero en un tren a Nueva Delhi. El tren pronto se convierte en un campo de batalla en el que un par de comandos se enfrentan a un ejército de bandidos invasores.",
+      "popularity": 383.263,
+      "poster_path": "/j8aqIMzHnVHgS98CD6lXtspSV2S.jpg",
+      "production_companies": [
+        {
+          "id": 22486,
+          "logo_path": "/a101r8HZ9dk6xvXyFHcEyh73Qpr.png",
+          "name": "Sikhya Entertainment",
+          "origin_country": "IN"
+        },
+        {
+          "id": 19146,
+          "logo_path": "/5Ff25ornzVNhm5skuAvMAR556NB.png",
+          "name": "Dharma Productions",
+          "origin_country": "IN"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "IN",
+          "name": "India"
+        }
+      ],
+      "release_date": "2024-07-03",
+      "revenue": 5400000,
+      "runtime": 105,
+      "spoken_languages": [
+        {
+          "english_name": "Hindi",
+          "iso_639_1": "hi",
+          "name": "हिन्दी"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "किल",
+      "video": false,
+      "vote_average": 7.153,
+      "vote_count": 196
+    }
+  },
+  {
+    "id": 826510,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/iURqo6oIwbeegIwWXx5qrBsDcPk.jpg",
+      "belongs_to_collection": null,
+      "budget": 40000000,
+      "genres": [
+        {
+          "id": 12,
+          "name": "Aventura"
+        },
+        {
+          "id": 10751,
+          "name": "Familia"
+        },
+        {
+          "id": 14,
+          "name": "Fantasía"
+        },
+        {
+          "id": 35,
+          "name": "Comedia"
+        }
+      ],
+      "homepage": "https://www.sonypictures.es/pelicula/harold-y-el-lapiz-magico",
+      "id": 826510,
+      "imdb_id": "tt1609486",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Harold and the Purple Crayon",
+      "overview": "Un \"niño\" llamado Harold se embarca en una misión mágica con la ayuda de su crayón morado.",
+      "popularity": 231.063,
+      "poster_path": "/l9slQ1zMnE9fDH4uF0Zk542IC3H.jpg",
+      "production_companies": [
+        {
+          "id": 1302,
+          "logo_path": "/zC3b70ixHh89qJIikLQPEvLqbPM.png",
+          "name": "Davis Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 5,
+          "logo_path": "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
+          "name": "Columbia Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 22213,
+          "logo_path": "/qx9K6bFWJupwde0xQDwOvXkOaL8.png",
+          "name": "TSG Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-07-31",
+      "revenue": 24982787,
+      "runtime": 90,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Harold y el lápiz mágico",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 148
+    }
+  },
+  {
+    "id": 588648,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/h9YlRHAZWOWtGonllmj6JJg1FrE.jpg",
+      "belongs_to_collection": null,
+      "budget": 25600000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 12,
+          "name": "Aventura"
+        },
+        {
+          "id": 16,
+          "name": "Animación"
+        },
+        {
+          "id": 10751,
+          "name": "Familia"
+        },
+        {
+          "id": 14,
+          "name": "Fantasía"
+        }
+      ],
+      "homepage": "",
+      "id": 588648,
+      "imdb_id": "tt7093904",
+      "origin_country": ["CN", "ES"],
+      "original_language": "zh",
+      "original_title": "Dragonkeeper",
+      "overview": "Son tiempos oscuros en la China imperial. Los dragones, antaño amigos y sabios aliados de los hombres, han sido perseguidos durante años y encerrados en mazmorras. En una remota fortaleza en las montañas, una niña ayuda a escapar al último de los dragones y se une a él en una apasionante misión para recuperar el tesoro más preciado: El último huevo de dragón, robado por un malvado hechicero que quiere explotar su potencial mágico para alcanzar la inmortalidad. Adaptación de la primera de las seis novelas de la saga literaria homónima de Carole Wilkins.",
+      "popularity": 255.613,
+      "poster_path": "/A09gQ5TTsvHcMqOIdL9PHj283E2.jpg",
+      "production_companies": [
+        {
+          "id": 67412,
+          "logo_path": "/vgVqq5hunVs8GN5Je9d9rG7Q2NU.png",
+          "name": "Movistar+",
+          "origin_country": "ES"
+        },
+        {
+          "id": 29566,
+          "logo_path": "/wHbtRtUnXGNzX0riQIpq1fcgueq.png",
+          "name": "Atresmedia",
+          "origin_country": "ES"
+        },
+        {
+          "id": 115983,
+          "logo_path": null,
+          "name": "China Film Animation",
+          "origin_country": "CN"
+        },
+        {
+          "id": 222691,
+          "logo_path": null,
+          "name": "Guardián de Dragones AIE",
+          "origin_country": ""
+        },
+        {
+          "id": 202198,
+          "logo_path": null,
+          "name": "Telefonica",
+          "origin_country": ""
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "CN",
+          "name": "China"
+        },
+        {
+          "iso_3166_1": "ES",
+          "name": "Spain"
+        }
+      ],
+      "release_date": "2024-04-11",
+      "revenue": 5427272,
+      "runtime": 99,
+      "spoken_languages": [
+        {
+          "english_name": "Mandarin",
+          "iso_639_1": "zh",
+          "name": "普通话"
+        },
+        {
+          "english_name": "Spanish",
+          "iso_639_1": "es",
+          "name": "Español"
+        },
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Descubre tu poder",
+      "title": "Guardiana de dragones (Dragonkeeper)",
+      "video": false,
+      "vote_average": 7.275,
+      "vote_count": 111
+    }
+  },
+  {
+    "id": 929590,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/en3GU5uGkKaYmSyetHV4csHHiH3.jpg",
+      "belongs_to_collection": null,
+      "budget": 50000000,
+      "genres": [
+        {
+          "id": 10752,
+          "name": "Bélica"
+        },
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "",
+      "id": 929590,
+      "imdb_id": "tt17279496",
+      "origin_country": ["GB", "US"],
+      "original_language": "en",
+      "original_title": "Civil War",
+      "overview": "En un futuro cercano, donde América está sumida en una cruenta guerra civil, un equipo de periodistas y fotógrafos de guerra emprenderá un viaje por carretera en dirección a Washington DC. Su misión: llegar antes de que las fuerzas rebeldes asalten la Casa Blanca y arrebaten el control al presidente de Estados Unidos.",
+      "popularity": 286.885,
+      "poster_path": "/hxzHKNtkRbH5EVIVJmKc50aEfIV.jpg",
+      "production_companies": [
+        {
+          "id": 284,
+          "logo_path": "/6a26if3IKy7mlrQuGHHVp6ufQtF.png",
+          "name": "DNA Films",
+          "origin_country": "GB"
+        },
+        {
+          "id": 142269,
+          "logo_path": "/ggrWFqk5mPMks0vE3aCy3l9e0dv.png",
+          "name": "IPR.VC",
+          "origin_country": "FI"
+        },
+        {
+          "id": 41077,
+          "logo_path": "/1ZXsGaFPgrgS6ZZGS37AqD5uU12.png",
+          "name": "A24",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "FI",
+          "name": "Finland"
+        },
+        {
+          "iso_3166_1": "GB",
+          "name": "United Kingdom"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-04-10",
+      "revenue": 0,
+      "runtime": 109,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Todos los imperios caen",
+      "title": "Civil War",
+      "video": false,
+      "vote_average": 6.93,
+      "vote_count": 2505
+    }
+  },
+  {
+    "id": 1064028,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/pysPTtYmTcQBlShcxXZwfs3Zp8H.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 878,
+          "name": "Ciencia ficción"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        },
+        {
+          "id": 27,
+          "name": "Terror"
+        }
+      ],
+      "homepage": "",
+      "id": 1064028,
+      "imdb_id": "tt24871974",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Subservience",
+      "overview": "Un padre en apuros compra una SIM doméstica para que le ayude a cuidar de su casa y su familia. Esta empezará a cobrar conciencia y se volverá letal.",
+      "popularity": 420.193,
+      "poster_path": "/tv4uKiEC91eePxpqiiHUlwpph2t.jpg",
+      "production_companies": [
+        {
+          "id": 1020,
+          "logo_path": "/kuUIHNwMec4dwOLghDhhZJzHZTd.png",
+          "name": "Millennium Media",
+          "origin_country": "US"
+        },
+        {
+          "id": 48738,
+          "logo_path": null,
+          "name": "Campbell Grobman Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 12142,
+          "logo_path": "/rPnEeMwxjI6rYMGqkWqIWwIJXxi.png",
+          "name": "XYZ Films",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-08-15",
+      "revenue": 0,
+      "runtime": 105,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Alice",
+      "video": false,
+      "vote_average": 6.62,
+      "vote_count": 163
+    }
+  },
+  {
+    "id": 804616,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/2XCmJWRZIQtHzikNsW29l9oy5Fb.jpg",
+      "belongs_to_collection": null,
+      "budget": 0,
+      "genres": [
+        {
+          "id": 53,
+          "name": "Suspense"
+        },
+        {
+          "id": 27,
+          "name": "Terror"
+        }
+      ],
+      "homepage": "",
+      "id": 804616,
+      "imdb_id": "tt22863968",
+      "origin_country": ["US", "GB", "FR"],
+      "original_language": "en",
+      "original_title": "Something in the Water",
+      "overview": "Sigue a un grupo de cinco novias que deben luchar por sus vidas en aguas abiertas después de que una boda de ensueño se transforme en una pesadilla.",
+      "popularity": 140.483,
+      "poster_path": "/mehUdQGRSbxTTOgT3zCctg5uj3F.jpg",
+      "production_companies": [
+        {
+          "id": 1854,
+          "logo_path": "/3p1fIgAgsULm8wBTCTGk2mqh6yT.png",
+          "name": "Dan Films",
+          "origin_country": "GB"
+        },
+        {
+          "id": 113521,
+          "logo_path": "/f1zRNbj6hK0Fqgc9lTVU5r3O3Iw.png",
+          "name": "StudioCanal",
+          "origin_country": "GB"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "GB",
+          "name": "United Kingdom"
+        }
+      ],
+      "release_date": "2024-03-22",
+      "revenue": 0,
+      "runtime": 86,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Something in the Water",
+      "video": false,
+      "vote_average": 6.026,
+      "vote_count": 156
+    }
+  },
+  {
+    "id": 157336,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/xJHokMbljvjADYdit5fK5VQsXEG.jpg",
+      "belongs_to_collection": null,
+      "budget": 165000000,
+      "genres": [
+        {
+          "id": 12,
+          "name": "Aventura"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 878,
+          "name": "Ciencia ficción"
+        }
+      ],
+      "homepage": "https://www.warnerbros.co.uk/movies/interstellar",
+      "id": 157336,
+      "imdb_id": "tt0816692",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Interstellar",
+      "overview": "Un grupo de exploradores hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.",
+      "popularity": 174.337,
+      "poster_path": "/nrSaXF39nDfAAeLKksRCyvSzI2a.jpg",
+      "production_companies": [
+        {
+          "id": 923,
+          "logo_path": "/8M99Dkt23MjQMTTWukq4m5XsEuo.png",
+          "name": "Legendary Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 9996,
+          "logo_path": "/3tvBqYsBhxWeHlu62SIJ1el93O7.png",
+          "name": "Syncopy",
+          "origin_country": "GB"
+        },
+        {
+          "id": 13769,
+          "logo_path": null,
+          "name": "Lynda Obst Productions",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "GB",
+          "name": "United Kingdom"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2014-11-05",
+      "revenue": 701729206,
+      "runtime": 169,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "La humanidad nació en la Tierra. Nunca estuvo destinada a morir aquí.",
+      "title": "Interstellar",
+      "video": false,
+      "vote_average": 8.441,
+      "vote_count": 35315
+    }
+  },
+  {
+    "id": 938614,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/4yrOyO3N55XazHQXXYoqiiPQd40.jpg",
+      "belongs_to_collection": null,
+      "budget": 2000000,
+      "genres": [
+        {
+          "id": 27,
+          "name": "Terror"
+        }
+      ],
+      "homepage": "",
+      "id": 938614,
+      "imdb_id": "tt14966898",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Late Night with the Devil",
+      "overview": "Una transmisión de televisión en vivo en 1977 sale terriblemente mal, desatando el mal en las salas de estar de la nación.",
+      "popularity": 249.352,
+      "poster_path": "/jga2jfUWXuVdaBn3WojJooLTSeC.jpg",
+      "production_companies": [
+        {
+          "id": 169906,
+          "logo_path": "/vEiG2JXNpnJD8k8jkF6cHOpsFLe.png",
+          "name": "Spooky Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 131223,
+          "logo_path": "/cqTFMN4VU4dOQ5wl2nZtxXDEdEE.png",
+          "name": "Future Pictures",
+          "origin_country": "AU"
+        },
+        {
+          "id": 195800,
+          "logo_path": "/wT79wm2n1yeaK7HjJbQbPhnxzZr.png",
+          "name": "Good Fiend Films",
+          "origin_country": "US"
+        },
+        {
+          "id": 191328,
+          "logo_path": "/cbkGrwVcgf0aS0BAfqsF5uCBffH.png",
+          "name": "Image Nation Abu Dhabi",
+          "origin_country": "AE"
+        },
+        {
+          "id": 204763,
+          "logo_path": "/aqWMgtLOf2ClBDnK0f4DvYNTZf6.png",
+          "name": "VicScreen",
+          "origin_country": "AU"
+        },
+        {
+          "id": 110799,
+          "logo_path": "/eHjtiQJjrGQTooEsBmPSYoUnNB.png",
+          "name": "AGC Studios",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "AU",
+          "name": "Australia"
+        },
+        {
+          "iso_3166_1": "AE",
+          "name": "United Arab Emirates"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-03-19",
+      "revenue": 11902746,
+      "runtime": 93,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "De noche con el diablo",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 931
+    }
+  },
+  {
+    "id": 1184918,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/4zlOPT9CrtIX05bBIkYxNZsm5zN.jpg",
+      "belongs_to_collection": null,
+      "budget": 78000000,
+      "genres": [
+        {
+          "id": 16,
+          "name": "Animación"
+        },
+        {
+          "id": 878,
+          "name": "Ciencia ficción"
+        },
+        {
+          "id": 10751,
+          "name": "Familia"
+        }
+      ],
+      "homepage": "",
+      "id": 1184918,
+      "imdb_id": "tt29623480",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "The Wild Robot",
+      "overview": "Una robot (la unidad ROZZUM 7134 o «Roz») ha naufragado en una isla deshabitada y deberá aprender a adaptarse al duro entorno, forjando poco a poco relaciones con la fauna local y convirtiéndose en madre adoptiva de una cría de ganso huérfana.",
+      "popularity": 1096.791,
+      "poster_path": "/sDoXpaKZmrzCSJH63zZvQQ9A7VK.jpg",
+      "production_companies": [
+        {
+          "id": 521,
+          "logo_path": "/3BPX5VGBov8SDqTV7wC1L1xShAS.png",
+          "name": "DreamWorks Animation",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-09-12",
+      "revenue": 100730125,
+      "runtime": 102,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Robot salvaje",
+      "video": false,
+      "vote_average": 7.9,
+      "vote_count": 121
+    }
+  },
+  {
+    "id": 933260,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/7h6TqPB3ESmjuVbxCxAeB1c9OB1.jpg",
+      "belongs_to_collection": null,
+      "budget": 17500000,
+      "genres": [
+        {
+          "id": 878,
+          "name": "Ciencia ficción"
+        },
+        {
+          "id": 27,
+          "name": "Terror"
+        },
+        {
+          "id": 35,
+          "name": "Comedia"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "",
+      "id": 933260,
+      "imdb_id": "tt17526714",
+      "origin_country": ["GB"],
+      "original_language": "en",
+      "original_title": "The Substance",
+      "overview": "\"Tú, pero mejor en todos los sentidos\". Esa es la promesa de La Sustancia, un producto revolucionario basado en la división celular, que crea un alter ego más joven, más bello, más perfecto.",
+      "popularity": 1492.249,
+      "poster_path": "/uZXQExGj9YfVNH2XCS5yVjx0auh.jpg",
+      "production_companies": [
+        {
+          "id": 10163,
+          "logo_path": "/16KWBMmfPX0aJzDExDrPxSLj0Pg.png",
+          "name": "Working Title Films",
+          "origin_country": "GB"
+        },
+        {
+          "id": 233939,
+          "logo_path": null,
+          "name": "Blacksmith",
+          "origin_country": "FR"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "FR",
+          "name": "France"
+        },
+        {
+          "iso_3166_1": "GB",
+          "name": "United Kingdom"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-09-07",
+      "revenue": 16846463,
+      "runtime": 141,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "La sustancia",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 241
+    }
+  },
+  {
+    "id": 889737,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/reNf6GBzOe48l9WEnFOxXgW56Vg.jpg",
+      "belongs_to_collection": {
+        "id": 987044,
+        "name": "Joker - Colección",
+        "poster_path": "/jmopX21dlCinxmzd8KLOBFeN2P9.jpg",
+        "backdrop_path": "/k1YC7mFLvxX4bbD7P8lkcML0Jek.jpg"
+      },
+      "budget": 195000000,
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 80,
+          "name": "Crimen"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        }
+      ],
+      "homepage": "https://www.warnerbros.es/peliculas/joker-folie-a-deux",
+      "id": 889737,
+      "imdb_id": "tt11315808",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Joker: Folie à Deux",
+      "overview": "Secuela de \"Joker (2019), de nuevo con Phoenix como Arthur Fleck, y que muestra su relación con el personaje de Harley Quinn, interpretado por Lady Gaga.",
+      "popularity": 1164.723,
+      "poster_path": "/tMMYwxrPwVPrxz3DqXs8DnVIOx0.jpg",
+      "production_companies": [
+        {
+          "id": 174,
+          "logo_path": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 83036,
+          "logo_path": null,
+          "name": "Joint Effort",
+          "origin_country": "US"
+        },
+        {
+          "id": 216687,
+          "logo_path": null,
+          "name": "Domain Entertainment",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-10-01",
+      "revenue": 114678467,
+      "runtime": 138,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "El mundo es un escenario.",
+      "title": "Joker: Folie à Deux",
+      "video": false,
+      "vote_average": 5.79,
+      "vote_count": 518
+    }
+  },
+  {
+    "id": 1051891,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/vUjXI9x6HxiExTrvDfhVxSZfDEX.jpg",
+      "belongs_to_collection": null,
+      "budget": 5000000,
+      "genres": [
+        {
+          "id": 28,
+          "name": "Acción"
+        },
+        {
+          "id": 35,
+          "name": "Comedia"
+        },
+        {
+          "id": 12,
+          "name": "Aventura"
+        }
+      ],
+      "homepage": "",
+      "id": 1051891,
+      "imdb_id": "tt23778968",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Thelma",
+      "overview": "Thelma Post, una abuela de 90 años, es engañada por un estafador telefónico que se hace pasar por su nieto y emprende una búsqueda para recuperar lo que le fue arrebatado.",
+      "popularity": 146.874,
+      "poster_path": "/rUcuageYgv9SsJoWuc0seRWG6JC.jpg",
+      "production_companies": [
+        {
+          "id": 215760,
+          "logo_path": "/prrdpYWEB11d2qfvgOePM0WJdO1.png",
+          "name": "Zurich Avenue",
+          "origin_country": "CH"
+        },
+        {
+          "id": 215761,
+          "logo_path": null,
+          "name": "Invention Studios",
+          "origin_country": ""
+        },
+        {
+          "id": 215762,
+          "logo_path": null,
+          "name": "Bandwagon",
+          "origin_country": ""
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "CH",
+          "name": "Switzerland"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-06-21",
+      "revenue": 9818454,
+      "runtime": 98,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Thelma",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 122
+    }
+  },
+  {
+    "id": 1214509,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/buawWBeKYjYfeiPoS2jIcjOrghZ.jpg",
+      "belongs_to_collection": {
+        "id": 1321891,
+        "name": "In a Violent Nature Collection",
+        "poster_path": "/axNzyQa4b6nHe3J6EwR2Z9zfx8x.jpg",
+        "backdrop_path": "/ktvCaLgCV5hI3TjivxDGknNQQ20.jpg"
+      },
+      "budget": 600000,
+      "genres": [
+        {
+          "id": 27,
+          "name": "Terror"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        }
+      ],
+      "homepage": "",
+      "id": 1214509,
+      "imdb_id": "tt30321146",
+      "origin_country": ["CA"],
+      "original_language": "en",
+      "original_title": "In a Violent Nature",
+      "overview": "Una voraz criatura zombi se abre paso a través de un bosque aislado.",
+      "popularity": 139.162,
+      "poster_path": "/prSfoAdwrOBMA9kJVwMVBdi0Gxg.jpg",
+      "production_companies": [
+        {
+          "id": 142877,
+          "logo_path": "/c0Qhy9uvdXfvAZQ9e8GnT5Nb75m.png",
+          "name": "Shudder",
+          "origin_country": "US"
+        },
+        {
+          "id": 59558,
+          "logo_path": null,
+          "name": "Low Sky Productions",
+          "origin_country": "CA"
+        },
+        {
+          "id": 224036,
+          "logo_path": null,
+          "name": "Zygote Pictures",
+          "origin_country": "CA"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "CA",
+          "name": "Canada"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-05-31",
+      "revenue": 4258197,
+      "runtime": 94,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "De naturaleza violenta",
+      "video": false,
+      "vote_average": 5.726,
+      "vote_count": 195
+    }
+  },
+  {
+    "id": 475557,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/gZWl93sf8AxavYpVT1Un6EF3oCj.jpg",
+      "belongs_to_collection": {
+        "id": 987044,
+        "name": "Joker - Colección",
+        "poster_path": "/jmopX21dlCinxmzd8KLOBFeN2P9.jpg",
+        "backdrop_path": "/k1YC7mFLvxX4bbD7P8lkcML0Jek.jpg"
+      },
+      "budget": 55000000,
+      "genres": [
+        {
+          "id": 80,
+          "name": "Crimen"
+        },
+        {
+          "id": 53,
+          "name": "Suspense"
+        },
+        {
+          "id": 18,
+          "name": "Drama"
+        }
+      ],
+      "homepage": "",
+      "id": 475557,
+      "imdb_id": "tt7286456",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Joker",
+      "overview": "Arthur Fleck es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír. Pero una serie de trágicos acontecimientos le llevarán a ver el mundo de otra forma. Película basada en Joker, el popular personaje de DC Comics y archivillano de Batman, pero que en este film toma un cariz más realista y oscuro.",
+      "popularity": 810.12,
+      "poster_path": "/v0eQLbzT6sWelfApuYsEkYpzufl.jpg",
+      "production_companies": [
+        {
+          "id": 174,
+          "logo_path": "/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png",
+          "name": "Warner Bros. Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 83036,
+          "logo_path": null,
+          "name": "Joint Effort",
+          "origin_country": "US"
+        },
+        {
+          "id": 79,
+          "logo_path": "/at4uYdwAAgNRKhZuuFX8ShKSybw.png",
+          "name": "Village Roadshow Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 13240,
+          "logo_path": "/aTc07YaNHo8WNgkQSnvLmG6w4nW.png",
+          "name": "Bron Studios",
+          "origin_country": "CA"
+        },
+        {
+          "id": 128064,
+          "logo_path": "/13F3Jf7EFAcREU0xzZqJnVnyGXu.png",
+          "name": "DC Films",
+          "origin_country": "US"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "CA",
+          "name": "Canada"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2019-10-01",
+      "revenue": 1078958629,
+      "runtime": 122,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "Alegra esa cara.",
+      "title": "Joker",
+      "video": false,
+      "vote_average": 8.154,
+      "vote_count": 25342
+    }
+  },
+  {
+    "id": 1029955,
+    "data": {
+      "adult": false,
+      "backdrop_path": "/4gOB72zD9udHk3jAR0reHwgURZp.jpg",
+      "belongs_to_collection": null,
+      "budget": 15000000,
+      "genres": [
+        {
+          "id": 18,
+          "name": "Drama"
+        },
+        {
+          "id": 35,
+          "name": "Comedia"
+        }
+      ],
+      "homepage": "",
+      "id": 1029955,
+      "imdb_id": "tt22408160",
+      "origin_country": ["US"],
+      "original_language": "en",
+      "original_title": "Kinds of Kindness",
+      "overview": "Fábula en forma de tríptico que narra tres historias: la de un hombre atrapado que intenta tomar las riendas de su propia vida; la de un policía aterrado porque su mujer, que había desaparecido en el mar, ha vuelto y parece otra persona; y la de una mujer decidida a encontrar a alguien con un don especial, destinado a convertirse en un prodigioso líder espiritual.",
+      "popularity": 87.297,
+      "poster_path": "/7M8gZDAQsJP3BjibSt1kZ1tBvXl.jpg",
+      "production_companies": [
+        {
+          "id": 127929,
+          "logo_path": "/7DLKyL15ETI9645XSr9JcbMV79c.png",
+          "name": "Searchlight Pictures",
+          "origin_country": "US"
+        },
+        {
+          "id": 6705,
+          "logo_path": "/e8EXNSfwr5E9d3TR8dHKbQnQK4W.png",
+          "name": "Film4 Productions",
+          "origin_country": "GB"
+        },
+        {
+          "id": 22213,
+          "logo_path": "/qx9K6bFWJupwde0xQDwOvXkOaL8.png",
+          "name": "TSG Entertainment",
+          "origin_country": "US"
+        },
+        {
+          "id": 3353,
+          "logo_path": "/qv2v9HaStUTRjqonODM29YG0oFX.png",
+          "name": "Element Pictures",
+          "origin_country": "IE"
+        },
+        {
+          "id": 72597,
+          "logo_path": null,
+          "name": "Limp",
+          "origin_country": "GB"
+        }
+      ],
+      "production_countries": [
+        {
+          "iso_3166_1": "IE",
+          "name": "Ireland"
+        },
+        {
+          "iso_3166_1": "GB",
+          "name": "United Kingdom"
+        },
+        {
+          "iso_3166_1": "US",
+          "name": "United States of America"
+        }
+      ],
+      "release_date": "2024-05-30",
+      "revenue": 15838084,
+      "runtime": 164,
+      "spoken_languages": [
+        {
+          "english_name": "English",
+          "iso_639_1": "en",
+          "name": "English"
+        }
+      ],
+      "status": "Released",
+      "tagline": "",
+      "title": "Kinds of Kindness",
+      "video": false,
+      "vote_average": 6.623,
+      "vote_count": 657
+    }
+  }
+]

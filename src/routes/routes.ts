@@ -4,4 +4,5 @@ export const PATHS = {
   ABOUT_US: "/about-us",
   PROFILE: "/profile",
   ERROR: "*",
+  DETAIL: "/detail/:id"
 };
