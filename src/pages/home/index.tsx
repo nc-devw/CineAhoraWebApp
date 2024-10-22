@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Offer1, Offer2, Offer3 } from "@/assets";
 import NOW_PLAYING from "@/assets/rawData/now_playing.json";
-import UPCOMING from "@/assets/rawData/UPCOMING.json";
+import UPCOMING from "@/assets/rawData/upcoming.json";
 import { Card, Carousel } from "@/components";
 import { Movie } from "@/models";
 import { PATHS } from "@/routes";
