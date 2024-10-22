@@ -7,7 +7,7 @@ interface ModalProps {
   message: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, closeModal, title, message }) => {
+export const Modal: React.FC<ModalProps> = ({ isOpen, closeModal, title, message }) => {
   const stopPropagation = (e: MouseEvent<HTMLDivElement>): void => {
     e.stopPropagation();
   };
@@ -40,4 +40,3 @@ const Modal: React.FC<ModalProps> = ({ isOpen, closeModal, title, message }) => 
   );
 };
 
-export default Modal;

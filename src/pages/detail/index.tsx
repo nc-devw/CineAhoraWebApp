@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FilmsService } from "@/services";
-import Modal from "../../components/modal";
+import { Modal, Loading } from "@/components";
 import { Film, Genre } from "@/models";
 
 export const Detail: React.FC = () => {
@@ -35,18 +35,7 @@ export const Detail: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-[80vh]">
-        <div
-          className="text-primary inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
-          role="status"
-        >
-          <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-            Loading...
-          </span>
-        </div>
-      </div>
-    );
+    return <Loading />
   }
 
   return (
