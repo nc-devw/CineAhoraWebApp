@@ -5,7 +5,7 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: command === 'serve' ? '/' : '/CineAhoraWebApp/',
+  base: command === "serve" ? "/" : "/CineAhoraWebApp/",
   resolve: {
     alias: {
       "@/": path.resolve(__dirname, "./src"),
@@ -16,6 +16,7 @@ export default defineConfig(({ command }) => ({
       "@/pages": path.resolve(__dirname, "./src/pages"),
       "@/routes": path.resolve(__dirname, "./src/routes"),
       "@/services": path.resolve(__dirname, "./src/services"),
+      "@/utils": path.resolve(__dirname, "./src/utils"),
     },
   },
 }));
