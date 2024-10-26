@@ -1,12 +1,13 @@
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { Modal, Loading } from "@/components";
+import { useNavigate, useParams } from "react-router-dom";
+import { useCallback, useEffect, useState } from "react";
+import { Modal, Loading, Button } from "@/components";
 import { Film, Genre } from "@/models";
 import { FilmsService } from "@/services";
 
 export const Detail: React.FC = () => {
   const { id } = useParams();
-  const [film, setFilm] = useState<Film | false>();
+  const navigate = useNavigate();
+  const [film, setFilm] = useState<Film>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [modalTitle, setModalTitle] = useState<string>("");
@@ -14,6 +15,10 @@ export const Detail: React.FC = () => {
 
   const openModal = (): void => setIsOpen(true);
   const closeModal = (): void => setIsOpen(false);
+
+  const handleSessionMovie = useCallback(() => {
+    navigate(`/session?title=${film?.title}`);
+  }, [film?.title, navigate]);
 
   const getGenres = (genres: Genre[]) =>
     genres.map((genre) => genre.name).join(", ");
@@ -86,6 +91,9 @@ export const Detail: React.FC = () => {
             <div className="text-white font-bold">{film && film?.overview}</div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center mt-4">
+        <Button onClick={handleSessionMovie} />
       </div>
     </div>
   );
