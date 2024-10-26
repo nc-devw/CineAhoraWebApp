@@ -1,8 +1,8 @@
-import { Movie } from "@/models";
+import { Film } from "@/models";
 import React from "react";
 
 interface Props {
-  movie: Movie;
+  movie: Film;
   image: string;
 }
 export const Card: React.FC<Props> = ({ movie, image }) => {

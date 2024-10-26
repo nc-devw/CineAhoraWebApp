@@ -1,27 +1,19 @@
-import DETAIL_DATA from "@/assets/rawData/detail.json";
-import { Film } from "@/models";
+import { Film, FilmsData } from "@/models";
+import { movieClient } from "./clients";
 
-export const FilmsService = {
+export class FilmsService {
+  public static async getFilms(): Promise<FilmsData> {
+    const nowPlaying = await movieClient.getNowPlayingFilms();
+    const upcoming = await movieClient.getUpcomingFilms();
 
-    getFilmById: (id: string | undefined): Promise<Film | false> => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                const result = getFilmByIdMock(Number(id), DETAIL_DATA)
-                resolve(result);  // Devuelve el id después de 1 segundo
-                //reject(id);  // Devuelve el id después de 1 segundo
-            }, 1000);  // 1000 ms = 1 segundo
-        });
-    },
-    
+    return {
+      nowPlaying: nowPlaying,
+      upcoming: upcoming,
+    };
+  }
+
+  public static async getFilmById(id?: string): Promise<Film> {
+    const result = await movieClient.getFilmById(id);
+    return result;
+  }
 }
-
-const getFilmByIdMock = (id: number, data: Film[]): Film | false => {
-  console.log({data});
-  
-  const result = data.find(film => film.id === id);
-  console.log({id});
-  
-  return result === undefined ? false : result;
-};
-
-

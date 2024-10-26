@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { FilmsService } from "@/services";
 import { Modal, Loading } from "@/components";
 import { Film, Genre } from "@/models";
+import { FilmsService } from "@/services";
 
 export const Detail: React.FC = () => {
   const { id } = useParams();
@@ -22,7 +22,6 @@ export const Detail: React.FC = () => {
     FilmsService.getFilmById(id)
       .then((result) => {
         setFilm(result);
-        console.log({ result });
       })
       .catch(() => {
         setModalMsg("Ha ocurrido un error al obtener la película");
@@ -32,10 +31,10 @@ export const Detail: React.FC = () => {
       .finally(() => {
         setIsLoading(false);
       });
-  }, []);
+  }, [id]);
 
   if (isLoading) {
-    return <Loading />
+    return <Loading />;
   }
 
   return (
@@ -52,23 +51,21 @@ export const Detail: React.FC = () => {
           <div className="flex justify-center gap-y-3">
             <div>
               <div className="flex justify-center shadow h-[180px] sm:h-[600px]">
-                {film && film.data?.poster_path && (
+                {film && film?.poster_path && (
                   <img
                     src={`https://image.tmdb.org/t/p/w500/${
-                      film.data.poster_path || ""
+                      film.poster_path || ""
                     }`}
                     className="h-full border-2 border-primary"
                   />
                 )}
               </div>
               <span className="text-center text-white font-bold">
-                {film &&
-                  film.data?.genres &&
-                  `Género: ${getGenres(film.data.genres)}`}
+                {film && film?.genres && `Género: ${getGenres(film.genres)}`}
               </span>
               <br />
               <span className="text-center text-white font-bold">
-                {`Duración: ${film && film?.data?.runtime} min`}
+                {`Duración: ${film && film?.runtime} min`}
               </span>
             </div>
           </div>
@@ -76,19 +73,17 @@ export const Detail: React.FC = () => {
         <div className="col-span-1">
           <div className="flex flex-col gap-y-2">
             <div className="border-2 border-primary shadow w-full h-[180px] sm:h-[400px]">
-              {film && film.data?.backdrop_path && (
+              {film && film?.backdrop_path && (
                 <img
-                  src={`https://image.tmdb.org/t/p/w500/${film.data.backdrop_path}`}
+                  src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path}`}
                   className="h-full w-full"
                 />
               )}
             </div>
             <h1 className="text-center text-white font-bold text-2xl">
-              {film && film.data?.title}
+              {film && film?.title}
             </h1>
-            <div className="text-white font-bold">
-              {film && film.data?.overview}
-            </div>
+            <div className="text-white font-bold">{film && film?.overview}</div>
           </div>
         </div>
       </div>

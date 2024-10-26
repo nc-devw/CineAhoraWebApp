@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import { Offer1, Offer2, Offer3 } from "@/assets";
-import NOW_PLAYING from "@/assets/rawData/now_playing.json";
-import UPCOMING from "@/assets/rawData/upcoming.json";
-import { Card, Carousel } from "@/components";
-import { Movie } from "@/models";
+import { Card, Carousel, Loading, Modal } from "@/components";
+import { Film, FilmsData } from "@/models";
 import { PATHS } from "@/routes";
+import { useEffect, useState } from "react";
+import { FilmsService } from "@/services";
 
 const slides = [Offer1, Offer2, Offer3];
 
 const ListOfMovies: React.FC<{
   title: string;
-  movies: Movie[];
+  movies: Film[];
   className?: string;
 }> = ({ title, movies, className }) => {
   return (
@@ -30,8 +30,43 @@ const ListOfMovies: React.FC<{
   );
 };
 export const HomePage: React.FC = () => {
+  const [films, setFilms] = useState<FilmsData>();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [modalTitle, setModalTitle] = useState<string>("");
+  const [modalMsg, setModalMsg] = useState<string>("");
+
+  const openModal = (): void => setIsOpen(true);
+  const closeModal = (): void => setIsOpen(false);
+
+  useEffect(() => {
+    FilmsService.getFilms()
+      .then((result) => {
+        setFilms(result);
+      })
+      .catch(() => {
+        setModalMsg("Ha ocurrido un error al obtener las películas");
+        setModalTitle("Error");
+        openModal();
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <div>
+      <Modal
+        title={modalTitle}
+        message={modalMsg}
+        isOpen={isOpen}
+        closeModal={closeModal}
+      />
+
       {/* Carousel */}
       <div className="mb-4 flex">
         <Carousel slides={slides} />
@@ -40,9 +75,9 @@ export const HomePage: React.FC = () => {
       <ListOfMovies
         className="mb-16"
         title="Cartelera"
-        movies={NOW_PLAYING.results}
+        movies={films?.nowPlaying ?? []}
       />
-      <ListOfMovies title="Proximamente" movies={UPCOMING.results} />
+      <ListOfMovies title="Proximamente" movies={films?.upcoming ?? []} />
     </div>
   );
 };
