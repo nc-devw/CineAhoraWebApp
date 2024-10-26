@@ -4,7 +4,7 @@ import { Card, Carousel, Loading, Modal } from "@/components";
 import { Film, FilmsData } from "@/models";
 import { PATHS } from "@/routes";
 import { useEffect, useState } from "react";
-import { filmsService } from "@/services";
+import { FilmsService } from "@/services";
 
 const slides = [Offer1, Offer2, Offer3];
 
@@ -40,8 +40,7 @@ export const HomePage: React.FC = () => {
   const closeModal = (): void => setIsOpen(false);
 
   useEffect(() => {
-    filmsService
-      .getFilms()
+    FilmsService.getFilms()
       .then((result) => {
         setFilms(result);
       })

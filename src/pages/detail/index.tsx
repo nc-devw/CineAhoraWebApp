@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Modal, Loading } from "@/components";
 import { Film, Genre } from "@/models";
-import { filmsService } from "@/services";
+import { FilmsService } from "@/services";
 
 export const Detail: React.FC = () => {
   const { id } = useParams();
@@ -19,8 +19,7 @@ export const Detail: React.FC = () => {
     genres.map((genre) => genre.name).join(", ");
 
   useEffect(() => {
-    filmsService
-      .getFilmById(id)
+    FilmsService.getFilmById(id)
       .then((result) => {
         setFilm(result);
       })
