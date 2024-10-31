@@ -4,9 +4,11 @@ export const CaretLeftIcon: React.FC<IconProps> = ({
   width,
   height,
   fill,
+  onClick,
   ...props
 }) => (
   <svg
+    onClick={onClick}
     xmlns="http://www.w3.org/2000/svg"
     width={width ?? 32}
     height={height ?? 32}
