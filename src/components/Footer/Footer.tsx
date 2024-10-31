@@ -1,9 +1,13 @@
 import React from "react";
 
 const Footer: React.FC = () => {
-  return <footer>Soy un Footer</footer>;
+  const currentYear = new Date().getFullYear();
+  
+  return (
+    <footer className="bg-zinc-800 text-gray-200 text-sm py-4 text-center border-t border-zinc-700">
+      © {currentYear} CineAhora. Todos los derechos reservados.
+    </footer>
+  );
 };
-
-Footer.displayName = "Footer";
 
 export { Footer };
