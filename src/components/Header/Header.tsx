@@ -1,9 +1,10 @@
 import React from "react";
 import { logo, UserIcon } from "@/assets";
-import { colorMap } from "@/constants";
 import { Link } from "react-router-dom";
 import { PATHS } from "@/routes";
 import { Sidebar } from "@/components";
+import MenuUser from "./MenuUser"
+
 
 const getRoutes = () => {
   return (
@@ -22,6 +23,8 @@ const getRoutes = () => {
 };
 
 const Header: React.FC = () => {
+  //return <MenuUser />
+
   return (
     <nav className="flex bg-black px-2 py-4 items-center">
       <Sidebar routes={getRoutes()} />
@@ -38,9 +41,7 @@ const Header: React.FC = () => {
       <div className="flex flex-row justify-center text-white font-bold gap-x-4 hidden sm:flex sm:flex-1">
         {getRoutes()}
       </div>
-      <Link to={PATHS.PROFILE}>
-        <UserIcon fill={colorMap.WHITE} />
-      </Link>
+      <MenuUser />
     </nav>
   );
 };
