@@ -23,7 +23,6 @@ const getRoutes = () => {
 };
 
 const Header: React.FC = () => {
-  //return <MenuUser />
 
   return (
     <nav className="flex bg-black px-2 py-4 items-center">
