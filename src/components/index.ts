@@ -5,3 +5,4 @@ export * from "./Sidebar";
 export * from "./Footer";
 export * from "./modal/modal";
 export * from "./loading";
+export * from "./OfferCard";
