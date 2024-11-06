@@ -25,7 +25,9 @@ export const MyTicketsPage: React.FC = () => {
         //const userTickets = await TicketService.getTicketsByUserId(userId);
         const userTickets = await TicketService.getMockedTickets();
         setTickets(userTickets);
-      } catch (error) {
+      } catch{
+      //} catch (error) {
+        //TODO: Agregar un logger para guardar estas excepciones
         openModal("Error", "Error al cargar los tickets");
       }
     };
