@@ -4,3 +4,4 @@ export * from "./error";
 export * from "./home";
 export * from "./offers";
 export * from "./session";
+export * from "./my-tickets";
