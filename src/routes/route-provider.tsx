@@ -1,15 +1,7 @@
 import { Routes, Route, HashRouter } from "react-router-dom";
 import { PATHS } from "@/routes";
 import { Layout } from "@/components/Layout";
-import {
-  ErrorPage,
-  HomePage,
-  Offers,
-  AboutUs,
-  Detail,
-  SessionPage,
-  MyTicketsPage,
-} from "@/pages";
+import {   ErrorPage, HomePage, Offers, AboutUs, Detail, SessionPage, MyTicketsPage, } from "@/pages";
 
 export const RoutesProvider = () => {
   return (
