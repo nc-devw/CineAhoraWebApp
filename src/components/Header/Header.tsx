@@ -1,5 +1,5 @@
 import React from "react";
-import { logo, UserIcon } from "@/assets";
+import { logo} from "@/assets";
 import { Link } from "react-router-dom";
 import { PATHS } from "@/routes";
 import { Sidebar } from "@/components";
