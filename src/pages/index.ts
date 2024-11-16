@@ -1,4 +1,5 @@
 export * from "./about-us";
+export * from "./confirmation";
 export * from "./detail";
 export * from "./error";
 export * from "./home";
