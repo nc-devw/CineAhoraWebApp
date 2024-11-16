@@ -1,3 +1,4 @@
+import { Button } from "@/components";
 import { useBooking } from "@/hooks";
 import { PATHS } from "@/routes";
 import { useState } from "react";
@@ -49,21 +50,17 @@ export const SessionPage = () => {
             <h2 className="text-lg text-white font-semibold mb-4">Fecha</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {dates.map((date) => (
-                <button
+                <Button
                   key={date}
+                  variant={selectedDate === date ? "primary" : "secondary"}
                   onClick={() => setSelectedDate(date)}
-                  className={`p-3 rounded-lg border text-white ${
-                    selectedDate === date
-                      ? "bg-blue-500 border-blue-500"
-                      : "border-gray-300 hover:border-blue-500"
-                  }`}
                 >
                   {new Date(date).toLocaleDateString("es-ES", {
                     weekday: "short",
                     month: "short",
                     day: "numeric",
                   })}
-                </button>
+                </Button>
               ))}
             </div>
           </div>
@@ -72,33 +69,24 @@ export const SessionPage = () => {
             <h2 className="text-lg text-white font-semibold mb-4">Horario</h2>
             <div className="grid grid-cols-3 md:grid-cols-5 gap-3">
               {times.map((time) => (
-                <button
+                <Button
                   key={time}
+                  variant={selectedTime === time ? "primary" : "secondary"}
                   onClick={() => setSelectedTime(time)}
-                  className={`p-3 rounded-lg border text-white ${
-                    selectedTime === time
-                      ? "bg-blue-500 border-blue-500"
-                      : "border-gray-300 hover:border-blue-500"
-                  }`}
                 >
                   {time}
-                </button>
+                </Button>
               ))}
             </div>
           </div>
         </div>
-        <button
+        <Button
           onClick={handleSubmit}
           disabled={!selectedDate || !selectedTime}
-          className={`w-full py-3 rounded-lg text-white font-semibold
-            ${
-              selectedDate && selectedTime
-                ? "bg-primary hover:bg-primaryHover"
-                : "bg-gray-300 cursor-not-allowed"
-            }`}
+          fullWidth
         >
           Continuar
-        </button>
+        </Button>
       </div>
     </div>
   );

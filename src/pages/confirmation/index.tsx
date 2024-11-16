@@ -1,3 +1,4 @@
+import { Button } from "@/components";
 import { useBooking } from "@/hooks";
 import { useNavigate } from "react-router-dom";
 
@@ -57,12 +58,9 @@ export const ConfirmationPage = () => {
           </div>
         </div>
 
-        <button
-          onClick={handlePayment}
-          className="w-full py-3 rounded-lg text-white font-semibold bg-primary hover:bg-primaryHover"
-        >
+        <Button onClick={handlePayment} fullWidth>
           Continuar con el pago
-        </button>
+        </Button>
       </div>
     </div>
   );

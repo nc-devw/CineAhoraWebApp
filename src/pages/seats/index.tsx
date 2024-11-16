@@ -1,3 +1,4 @@
+import { Button } from "@/components";
 import { useBooking } from "@/hooks";
 import { PATHS } from "@/routes";
 import { useState } from "react";
@@ -114,20 +115,9 @@ export const SeatsPage = () => {
           </div>
         )}
 
-        <button
-          onClick={handleContinue}
-          disabled={!selectedSeat}
-          className={`
-            w-full py-3 rounded-lg text-white font-semibold
-            ${
-              selectedSeat
-                ? "bg-primary hover:bg-primaryHover"
-                : "bg-gray-300 cursor-not-allowed"
-            }
-          `}
-        >
+        <Button onClick={handleContinue} disabled={!selectedSeat} fullWidth>
           Continuar
-        </button>
+        </Button>
       </div>
     </div>
   );

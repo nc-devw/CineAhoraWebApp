@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Modal, Loading } from "@/components";
+import { Modal, Loading, Button } from "@/components";
 import { Film, Genre } from "@/models";
 import { FilmsService } from "@/services";
 import { useBooking } from "@/hooks";
@@ -89,15 +89,14 @@ export const Detail: React.FC = () => {
             </h1>
             <div className="text-white font-bold">{film && film?.overview}</div>
           </div>
-          <button
+          <Button
             onClick={() => {
               setMovieInfo(film?.title ?? "", film?.poster_path ?? "");
               navigate(PATHS.SESSION);
             }}
-            className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primaryHover"
           >
             Seleccionar horario
-          </button>
+          </Button>
         </div>
       </div>
     </div>
