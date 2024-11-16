@@ -25,7 +25,9 @@
     "paths": {
       "@/*": ["src/*"],
       "@/constants/*": ["src/constants/*"],
+      "@/context/*": ["src/context/*"],
       "@/assets/*": ["src/assets/*"],
+      "@/hooks/*": ["src/hooks/*"],
       "@/models/*": ["src/models/*"],
       "@/components/*": ["src/components/*"],
       "@/pages/*": ["src/pages/*"],
