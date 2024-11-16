@@ -42,7 +42,7 @@ export const Detail: React.FC = () => {
   }
 
   return (
-    <div className="container mt-10">
+    <div className="container">
       <Modal
         title={modalTitle}
         message={modalMsg}
@@ -50,8 +50,8 @@ export const Detail: React.FC = () => {
         closeModal={closeModal}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="col-span-1 grid">
+      <div className="flex flex-col md:flex-row gap-x-4">
+        <div className="w-full md:w-1/3 flex justify-center">
           <div className="flex justify-center gap-y-3">
             <div>
               <div className="flex justify-center shadow h-[180px] sm:h-[600px]">
@@ -74,7 +74,7 @@ export const Detail: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1 flex flex-col items-center gap-y-4">
+        <div className="w-full md:w-2/3 flex flex-col items-center gap-y-4">
           <div className="flex flex-col gap-y-2">
             <div className="border-2 border-primary shadow w-full h-[180px] sm:h-[400px]">
               {film && film?.backdrop_path && (
@@ -89,15 +89,17 @@ export const Detail: React.FC = () => {
             </h1>
             <div className="text-white font-bold">{film && film?.overview}</div>
           </div>
-          <Button
-            onClick={() => {
-              setMovieInfo(film?.title ?? "", film?.poster_path ?? "");
-              navigate(PATHS.SESSION);
-            }}
-          >
-            Seleccionar horario
-          </Button>
         </div>
+      </div>
+      <div className="flex justify-center">
+        <Button
+          onClick={() => {
+            setMovieInfo(film?.title ?? "", film?.poster_path ?? "");
+            navigate(PATHS.SESSION);
+          }}
+        >
+          Seleccionar horario
+        </Button>
       </div>
     </div>
   );
