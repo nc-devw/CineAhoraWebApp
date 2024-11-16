@@ -6,6 +6,7 @@ export const PATHS = {
   DETAIL: "/detail/:id",
   SESSION: "/session",
   SEATS: "/seats",
+  CONFIRMATION: "/confirmation",
   MY_TICKETS: "/my-tickets",
   ERROR: "*",
 };

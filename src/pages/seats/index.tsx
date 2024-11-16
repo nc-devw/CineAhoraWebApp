@@ -21,7 +21,11 @@ export const SeatsPage = () => {
 
   const handleContinue = () => {
     if (selectedSeat) {
-      navigate(`/confirmation?seat=${selectedSeat}`);
+      const date = searchParams.get("date");
+      const time = searchParams.get("time");
+      navigate(
+        `/confirmation?seat=${selectedSeat}&movie=${movie}&poster_path=${poster_path}&date=${date}&time=${time}`
+      );
     }
   };
 
