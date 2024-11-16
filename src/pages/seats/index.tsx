@@ -1,14 +1,13 @@
+import { useBooking } from "@/hooks";
+import { PATHS } from "@/routes";
 import { useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const SeatsPage = () => {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const { movieTitle, posterPath, setSeatInfo } = useBooking();
 
   const [selectedSeat, setSelectedSeat] = useState<string | null>(null);
-
-  const movie = searchParams.get("movie");
-  const poster_path = searchParams.get("poster_path");
 
   const rows = ["A", "B", "C", "D", "E"];
   const columns = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -21,22 +20,21 @@ export const SeatsPage = () => {
 
   const handleContinue = () => {
     if (selectedSeat) {
-      const date = searchParams.get("date");
-      const time = searchParams.get("time");
-      navigate(
-        `/confirmation?seat=${selectedSeat}&movie=${movie}&poster_path=${poster_path}&date=${date}&time=${time}`
-      );
+      setSeatInfo(selectedSeat);
+      navigate(PATHS.CONFIRMATION);
     }
   };
 
   return (
     <div className="flex justify-around">
       <div className="text-white">
-        <h1 className="text-center text-white font-bold text-2xl">{movie}</h1>
+        <h1 className="text-center text-white font-bold text-2xl">
+          {movieTitle}
+        </h1>
         <div className="flex justify-center shadow h-[180px] sm:h-[600px]">
-          {poster_path && (
+          {posterPath && (
             <img
-              src={`https://image.tmdb.org/t/p/w500/${poster_path || ""}`}
+              src={`https://image.tmdb.org/t/p/w500/${posterPath}`}
               className="h-full border-2 border-primary"
             />
           )}

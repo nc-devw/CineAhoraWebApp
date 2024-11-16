@@ -1,6 +1,6 @@
 import { createContext, useState, ReactNode } from "react";
 
-interface BookingContextType {
+export interface BookingContextType {
   movieTitle: string;
   posterPath: string;
   selectedDate: string;

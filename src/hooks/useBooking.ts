@@ -1,9 +1,8 @@
 import { useContext } from "react";
-import { BookingContext } from "@/context";
+import { BookingContext, BookingContextType } from "@/context";
+
 export const useBooking = () => {
-  const context = useContext(BookingContext);
-  if (context === undefined) {
-    throw new Error("useBooking must be used within a BookingProvider");
-  }
+  const context = useContext(BookingContext) as BookingContextType;
+
   return context;
 };

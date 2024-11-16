@@ -1,14 +1,13 @@
+import { useBooking } from "@/hooks";
+import { PATHS } from "@/routes";
 import { useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const SessionPage = () => {
-  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const { movieTitle, posterPath, setSessionInfo } = useBooking();
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
-
-  const movie = searchParams.get("movie");
-  const poster_path = searchParams.get("poster_path");
 
   const dates = [...Array(7)].map((_, i) => {
     const date = new Date();
@@ -20,20 +19,21 @@ export const SessionPage = () => {
 
   const handleSubmit = () => {
     if (selectedDate && selectedTime) {
-      navigate(
-        `/seats?date=${selectedDate}&time=${selectedTime}&movie=${movie}&poster_path=${poster_path}`
-      );
+      setSessionInfo(selectedDate, selectedTime);
+      navigate(PATHS.SEATS);
     }
   };
 
   return (
     <div className="flex justify-around">
       <div className="text-white">
-        <h1 className="text-center text-white font-bold text-2xl">{movie}</h1>
+        <h1 className="text-center text-white font-bold text-2xl">
+          {movieTitle}
+        </h1>
         <div className="flex justify-center shadow h-[180px] sm:h-[600px]">
-          {poster_path && (
+          {posterPath && (
             <img
-              src={`https://image.tmdb.org/t/p/w500/${poster_path || ""}`}
+              src={`https://image.tmdb.org/t/p/w500/${posterPath}`}
               className="h-full border-2 border-primary"
             />
           )}

@@ -1,14 +1,10 @@
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useBooking } from "@/hooks";
+import { useNavigate } from "react-router-dom";
 
 export const ConfirmationPage = () => {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-
-  const movie = searchParams.get("movie");
-  const poster_path = searchParams.get("poster_path");
-  const seat = searchParams.get("seat");
-  const date = searchParams.get("date");
-  const time = searchParams.get("time");
+  const { movieTitle, posterPath, selectedSeat, selectedDate, selectedTime } =
+    useBooking();
 
   const handlePayment = () => {
     navigate("/");
@@ -17,11 +13,13 @@ export const ConfirmationPage = () => {
   return (
     <div className="flex justify-around">
       <div className="text-white">
-        <h1 className="text-center text-white font-bold text-2xl">{movie}</h1>
+        <h1 className="text-center text-white font-bold text-2xl">
+          {movieTitle}
+        </h1>
         <div className="flex justify-center shadow h-[180px] sm:h-[600px]">
-          {poster_path && (
+          {posterPath && (
             <img
-              src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+              src={`https://image.tmdb.org/t/p/w500/${posterPath}`}
               className="h-full border-2 border-primary"
             />
           )}
@@ -36,16 +34,9 @@ export const ConfirmationPage = () => {
 
           <div className="space-y-4 mb-8">
             <div>
-              <h2 className="text-lg text-white font-semibold mb-2">
-                Película
-              </h2>
-              <p className="text-white">{movie}</p>
-            </div>
-
-            <div>
               <h2 className="text-lg text-white font-semibold mb-2">Fecha</h2>
               <p className="text-white">
-                {new Date(date || "").toLocaleDateString("es-ES", {
+                {new Date(selectedDate || "").toLocaleDateString("es-ES", {
                   weekday: "long",
                   year: "numeric",
                   month: "long",
@@ -56,12 +47,12 @@ export const ConfirmationPage = () => {
 
             <div>
               <h2 className="text-lg text-white font-semibold mb-2">Horario</h2>
-              <p className="text-white">{time}</p>
+              <p className="text-white">{selectedTime}</p>
             </div>
 
             <div>
               <h2 className="text-lg text-white font-semibold mb-2">Asiento</h2>
-              <p className="text-white">{seat}</p>
+              <p className="text-white">{selectedSeat}</p>
             </div>
           </div>
         </div>
