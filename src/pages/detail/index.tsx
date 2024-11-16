@@ -1,12 +1,15 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Modal, Loading } from "@/components";
+import { Modal, Loading, Button } from "@/components";
 import { Film, Genre } from "@/models";
 import { FilmsService } from "@/services";
+import { useBooking } from "@/hooks";
+import { PATHS } from "@/routes";
 
 export const Detail: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { setMovieInfo } = useBooking();
   const [film, setFilm] = useState<Film>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -86,18 +89,14 @@ export const Detail: React.FC = () => {
             </h1>
             <div className="text-white font-bold">{film && film?.overview}</div>
           </div>
-          <button
-            onClick={() =>
-              navigate(
-                `/session?movie=${
-                  film?.title
-                }&poster_path=${`https://image.tmdb.org/t/p/w500/${film?.poster_path}`}`
-              )
-            }
-            className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primaryHover"
+          <Button
+            onClick={() => {
+              setMovieInfo(film?.title ?? "", film?.poster_path ?? "");
+              navigate(PATHS.SESSION);
+            }}
           >
             Seleccionar horario
-          </button>
+          </Button>
         </div>
       </div>
     </div>
