@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export const SeatsPage = () => {
   const navigate = useNavigate();
-  const { posterPath, setSeatInfo } = useBooking();
+  const { movie, setSeatInfo } = useBooking();
 
   const [selectedSeat, setSelectedSeat] = useState<string | null>(null);
 
@@ -32,19 +32,19 @@ export const SeatsPage = () => {
         <div className="w-full md:w-1/3 flex justify-center">
           <div>
             <div className="flex justify-center shadow h-[180px] sm:h-[600px]">
-              {posterPath && (
+              {movie?.poster_path && (
                 <img
-                  src={`https://image.tmdb.org/t/p/w500/${posterPath}`}
+                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   className="h-full border-2 border-primary"
                 />
               )}
             </div>
             <span className="text-center text-white font-bold">
-              Género: Acción, Aventura
+              Género: {movie?.genres.map((genre) => genre.name).join(", ")}
             </span>
             <br />
             <span className="text-center text-white font-bold">
-              Duración: 120 min
+              Duración: {movie?.runtime} min
             </span>
           </div>
         </div>

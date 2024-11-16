@@ -94,7 +94,7 @@ export const Detail: React.FC = () => {
       <div className="flex justify-center">
         <Button
           onClick={() => {
-            setMovieInfo(film?.title ?? "", film?.poster_path ?? "");
+            setMovieInfo(film);
             navigate(PATHS.SESSION);
           }}
         >
