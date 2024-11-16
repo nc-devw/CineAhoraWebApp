@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Modal, Loading } from "@/components";
 import { Film, Genre } from "@/models";
@@ -6,7 +6,8 @@ import { FilmsService } from "@/services";
 
 export const Detail: React.FC = () => {
   const { id } = useParams();
-  const [film, setFilm] = useState<Film | false>();
+  const navigate = useNavigate();
+  const [film, setFilm] = useState<Film>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [modalTitle, setModalTitle] = useState<string>("");
@@ -70,7 +71,7 @@ export const Detail: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 flex flex-col items-center gap-y-4">
           <div className="flex flex-col gap-y-2">
             <div className="border-2 border-primary shadow w-full h-[180px] sm:h-[400px]">
               {film && film?.backdrop_path && (
@@ -85,6 +86,18 @@ export const Detail: React.FC = () => {
             </h1>
             <div className="text-white font-bold">{film && film?.overview}</div>
           </div>
+          <button
+            onClick={() =>
+              navigate(
+                `/session?movie=${
+                  film?.title
+                }&poster_path=${`https://image.tmdb.org/t/p/w500/${film?.poster_path}`}`
+              )
+            }
+            className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primaryHover"
+          >
+            Seleccionar horario
+          </button>
         </div>
       </div>
     </div>
