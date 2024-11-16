@@ -1,12 +1,12 @@
+import { Film } from "@/models";
 import { createContext, useState, ReactNode } from "react";
 
 export interface BookingContextType {
-  movieTitle: string;
-  posterPath: string;
+  movie?: Film;
   selectedDate: string;
   selectedTime: string;
   selectedSeat: string;
-  setMovieInfo: (title: string, poster: string) => void;
+  setMovieInfo: (movie?: Film) => void;
   setSessionInfo: (date: string, time: string) => void;
   setSeatInfo: (seat: string) => void;
   clearBooking: () => void;
@@ -17,15 +17,13 @@ export const BookingContext = createContext<BookingContextType | undefined>(
 );
 
 export const BookingProvider = ({ children }: { children: ReactNode }) => {
-  const [movieTitle, setMovieTitle] = useState("");
-  const [posterPath, setPosterPath] = useState("");
+  const [movie, setMovie] = useState<Film>();
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [selectedSeat, setSelectedSeat] = useState("");
 
-  const setMovieInfo = (title: string, poster: string) => {
-    setMovieTitle(title);
-    setPosterPath(poster);
+  const setMovieInfo = (movie?: Film) => {
+    setMovie(movie);
   };
 
   const setSessionInfo = (date: string, time: string) => {
@@ -38,8 +36,7 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const clearBooking = () => {
-    setMovieTitle("");
-    setPosterPath("");
+    setMovie(undefined);
     setSelectedDate("");
     setSelectedTime("");
     setSelectedSeat("");
@@ -48,8 +45,7 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
   return (
     <BookingContext.Provider
       value={{
-        movieTitle,
-        posterPath,
+        movie,
         selectedDate,
         selectedTime,
         selectedSeat,
