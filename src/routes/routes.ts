@@ -5,7 +5,7 @@ export const PATHS = {
   PROFILE: "/profile",
   DETAIL: "/detail/:id",
   SESSION: "/session",
+  SEATS: "/seats",
   MY_TICKETS: "/my-tickets",
   ERROR: "*",
-
 };

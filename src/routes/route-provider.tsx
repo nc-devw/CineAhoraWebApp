@@ -9,6 +9,7 @@ import {
   Detail,
   MyTicketsPage,
   SessionPage,
+  SeatsPage,
 } from "@/pages";
 
 export const RoutesProvider = () => {
@@ -22,6 +23,7 @@ export const RoutesProvider = () => {
           <Route path={PATHS.DETAIL} element={<Detail />} />
           <Route path={PATHS.MY_TICKETS} element={<MyTicketsPage />} />
           <Route path={PATHS.SESSION} element={<SessionPage />} />
+          <Route path={PATHS.SEATS} element={<SeatsPage />} />
         </Route>
         {/* 404 - Error */}
         <Route path={PATHS.ERROR} element={<ErrorPage />} />

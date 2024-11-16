@@ -20,7 +20,9 @@ export const SessionPage = () => {
 
   const handleSubmit = () => {
     if (selectedDate && selectedTime) {
-      navigate(`/confirmation?date=${selectedDate}&time=${selectedTime}`);
+      navigate(
+        `/seats?date=${selectedDate}&time=${selectedTime}&movie=${movie}&poster_path=${poster_path}`
+      );
     }
   };
 
