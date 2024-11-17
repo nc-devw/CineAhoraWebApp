@@ -8,4 +8,4 @@ export * from "./offers";
 export * from "./session";
 export * from "./seats";
 export * from "./admin";
-export * from "../components/AdminSidebar/AdminSidebar";
+export * from "./admin/dataList";

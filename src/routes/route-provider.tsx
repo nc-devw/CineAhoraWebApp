@@ -11,7 +11,8 @@ import {
   SessionPage,
   SeatsPage,
   ConfirmationPage,
-  Admin
+  Admin,
+  DataListAdmin
 } from "@/pages";
 
 export const RoutesProvider = () => {
@@ -31,6 +32,7 @@ export const RoutesProvider = () => {
         {/* 404 - Error */}
         <Route path={PATHS.ERROR} element={<ErrorPage />} />
         <Route path={PATHS.ADMIN} element={<Admin />} />
+        <Route path={PATHS.ADMIN_DATALIST} element={<DataListAdmin />} />
       </Routes>
     </HashRouter>
   );
