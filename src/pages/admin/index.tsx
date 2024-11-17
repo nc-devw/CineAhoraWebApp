@@ -1,4 +1,5 @@
 import { AdminSidebar } from "@/components/AdminSidebar";
+import { PanelAdmin } from "./PanelAdmin";
 
 export const Admin: React.FC = () => {
   return (
@@ -7,9 +8,8 @@ export const Admin: React.FC = () => {
         <div>
           <AdminSidebar />
         </div>
-        <div className="w-full" >
-          {/* Trabajar aqui */}
-
+        <div className="w-full h-screen overflow-y-auto" >
+          <PanelAdmin />
         </div>
       </div>
     </>
