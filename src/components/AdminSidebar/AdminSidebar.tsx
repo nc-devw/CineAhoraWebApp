@@ -82,7 +82,7 @@ export const AdminSidebar: React.FC = () => {
                   ></path>
                 </svg>
               </div>
-              <span>Log Out</span>
+              <span>Cerrar sesión</span>
             </div>
           </Link>
         </nav>

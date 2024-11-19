@@ -7,13 +7,24 @@ interface Option {
 
 interface SelectProps {
   options: Option[];
-  props?: any;
+  isMulti?: boolean;
+  value?: any;
+  onChange?: (value: any) => void;
 }
 
-export const Select: React.FC<SelectProps> = ({ options, props }) => (
+export const Select: React.FC<SelectProps> = ({
+  options,
+  isMulti,
+  value,
+  onChange,
+  ...props
+}) => (
   <SelectReact
     placeholder="Selecciona una opción"
+    isMulti={isMulti}
+    value={value}
     options={options}
+    onChange={onChange}
     {...props}
   />
 );
