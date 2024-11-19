@@ -3,10 +3,30 @@ import { ModalConfirmation } from "@/components";
 
 export const Table: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const openModal = (): void => setIsOpen(true);
-  const closeModal = (): void => setIsOpen(false);
+  const [items, setItems] = useState([
+    "Superman",
+    "Batman",
+    "Los Vengadores",
+    "Barby",
+  ]);
+  const [itemToDeleteId, setItemToDeleteId] = useState<number | null>(null);
 
-  const functions = ["Superman", "Batman", "Los Vengadores", "Barby"];
+  const openModal = (id: number): void => {
+    setItemToDeleteId(id);
+    setIsOpen(true);
+  };
+
+  const closeModal = (): void => {
+    setItemToDeleteId(null);
+    setIsOpen(false);
+  };
+
+  const handleDelete = () => {
+    if (itemToDeleteId !== null) {
+      setItems(items.filter((_, index) => index !== itemToDeleteId - 1));
+      closeModal();
+    }
+  };
 
   return (
     <div className="flex flex-col">
@@ -14,7 +34,7 @@ export const Table: React.FC = () => {
         title={"ATENCIÓN"}
         message={"¿Está seguro que desea eliminar la función?"}
         isOpen={isOpen}
-        closeModal={closeModal}
+        closeModal={handleDelete}
       />
       <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
@@ -34,9 +54,14 @@ export const Table: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {functions.map((name, id) => {
+                {items.map((name, id) => {
                   return (
-                    <Row key={id} id={id + 1} name={name} openModal={openModal} />
+                    <Row
+                      key={id}
+                      id={id + 1}
+                      name={name}
+                      openModal={() => openModal(id + 1)}
+                    />
                   );
                 })}
               </tbody>
