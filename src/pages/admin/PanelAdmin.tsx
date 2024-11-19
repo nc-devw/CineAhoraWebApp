@@ -47,11 +47,16 @@ export const PanelAdmin: React.FC = () => {
   const handleSaveFunction = useCallback((): void => {
     openModal();
 
+    const resetSchedules = DAYS_OF_WEEK.reduce((acc, day) => {
+      acc[day] = null;
+      return acc;
+    }, {} as Record<string, null>);
+
     setSelectedMovie(null);
     setSelectedRoom(null);
-    setSelectedSchedules({});
     setStartDate("");
     setEndDate("");
+    setSelectedSchedules(resetSchedules);
   }, [openModal]);
 
   return (
