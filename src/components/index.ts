@@ -7,3 +7,5 @@ export * from "./Footer";
 export * from "./modal/modal";
 export * from "./loading";
 export * from "./OfferCard";
+export * from "./Select";
+export * from "./modalConfirmation"

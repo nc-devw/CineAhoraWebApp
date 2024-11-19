@@ -9,4 +9,7 @@ export const PATHS = {
   CONFIRMATION: "/confirmation",
   MY_TICKETS: "/my-tickets",
   ERROR: "*",
+  ADMIN: "/admin",
+  ADMIN_DATALIST: "/admin/functions",
+  LOGIN: "/login"
 };
