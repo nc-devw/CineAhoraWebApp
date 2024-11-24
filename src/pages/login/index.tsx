@@ -1,10 +1,32 @@
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 export const Login: React.FC = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+
+  useEffect(() => {
+    console.log({email, password})
+  }, [email, password])
 
   const handleNavigation = () => {
     navigate("/admin");
   };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    switch (name) {
+      case "username":
+        setEmail(value);
+        break;
+      case "password":
+        setPassword(value);
+        break;
+      default:
+        break;
+    }
+  }
 
   return (
     <div className="font-[sans-serif]">
@@ -21,6 +43,7 @@ export const Login: React.FC = () => {
                 </label>
                 <div className="relative flex items-center">
                   <input
+                    onChange={handleChange}
                     name="username"
                     type="email"
                     required
@@ -54,6 +77,7 @@ export const Login: React.FC = () => {
                 </label>
                 <div className="relative flex items-center">
                   <input
+                    onChange={handleChange}
                     name="password"
                     type="password"
                     required
