@@ -30,5 +30,9 @@ export class SessionService {
         ...session
     }
   }
+  public static deleteSession() {
+    localStorage.removeItem('session')
+  }
+
 }
 
