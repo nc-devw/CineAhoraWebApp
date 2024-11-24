@@ -1,16 +1,33 @@
 import { Film } from "@/models";
 import { createContext, useState, ReactNode } from "react";
 
+interface SessionData {
+  name: string;
+  email: string;
+  isAdmin: boolean;
+  isLogged: boolean;
+}
+
 export interface BookingContextType {
   movie?: Film;
   selectedDate: string;
   selectedTime: string;
   selectedSeat: string;
+  session: SessionData | null;
   setMovieInfo: (movie?: Film) => void;
   setSessionInfo: (date: string, time: string) => void;
   setSeatInfo: (seat: string) => void;
   clearBooking: () => void;
+  setSession: (session: SessionData) => void;
+  resetSession: () => void;
 }
+
+const sessionInit = {
+    name: "",
+    email: "",
+    isAdmin: false,
+    isLogged: false,
+  }
 
 export const BookingContext = createContext<BookingContextType | undefined>(
   undefined
@@ -21,6 +38,7 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [selectedSeat, setSelectedSeat] = useState("");
+  const [session, setSession] = useState<SessionData | null>(sessionInit);
 
   const setMovieInfo = (movie?: Film) => {
     setMovie(movie);
@@ -42,6 +60,10 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
     setSelectedSeat("");
   };
 
+  const resetSession = () => {
+    setSession(sessionInit);
+  };
+
   return (
     <BookingContext.Provider
       value={{
@@ -49,10 +71,13 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
         selectedDate,
         selectedTime,
         selectedSeat,
+        session,
         setMovieInfo,
         setSessionInfo,
         setSeatInfo,
         clearBooking,
+        setSession,
+        resetSession
       }}
     >
       {children}
