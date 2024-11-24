@@ -1,13 +1,21 @@
+import { useEffect, useState } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { UserIcon } from "@/assets";
 import { Link } from "react-router-dom";
 import { PATHS } from "@/routes";
+import { SessionService } from "@/services";
+import { useBooking } from "@/hooks";
 
 export default function MenuUser() {
+  const { session } = useBooking();
+
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <MenuButton className="text-white border border-white-700 hover:bg-gray-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-gray-500 dark:text-gray-500 dark:hover:text-white dark:focus:ring-gray-800 dark:hover:bg-gray-500">
+          {session && session.isLogged && session.name &&
+          <div className="mr-1">{`Hola ${session.name}!`}</div>
+          }
           <UserIcon />
         </MenuButton>
       </div>
@@ -31,6 +39,14 @@ export default function MenuUser() {
               className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
             >
               Mi cuenta
+            </a>
+          </MenuItem>
+          <MenuItem>
+            <a
+              href="#/admin"
+              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+            >
+            Administración
             </a>
           </MenuItem>
           <MenuItem>

@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { SessionService } from "@/services";
+import { useBooking } from "@/hooks";
 
 export const Login: React.FC = () => {
   const navigate = useNavigate();
+  const { setSession } = useBooking();
 
   const formik = useFormik({
     initialValues: {
@@ -18,26 +20,38 @@ export const Login: React.FC = () => {
         .required("Obligatorio"),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      // MOCK ROLES LOGIN TODO
+      if(values.email.includes("admin")){
+        setSession({
+          name: "Cristian",
+          email: values.email,
+          isAdmin: true,
+          isLogged: true
+        })
+        SessionService.saveSession({
+          name: "Cristian",
+          email: values.email,
+          isAdmin: true,
+        })
+      }else{
+        SessionService.saveSession({
+          name: "Tadeo",
+          email: values.email,
+          isAdmin: false,
+        })
+        setSession({
+          name: "Tadeo",
+          email: values.email,
+          isAdmin: false,
+          isLogged: true
+        })
+      }
+      handleNavigation()
     },
   });
 
   const handleNavigation = () => {
-    navigate("/admin");
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    switch (name) {
-      case "username":
-        setEmail(value);
-        break;
-      case "password":
-        setPassword(value);
-        break;
-      default:
-        break;
-    }
+    navigate("/");
   };
 
   return (
