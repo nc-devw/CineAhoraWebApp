@@ -1,12 +1,15 @@
 import { Button } from "@/components";
 import { useBooking } from "@/hooks";
 import { useNavigate } from "react-router-dom";
+import { useSnackbar } from 'notistack'
 
 export const ConfirmationPage = () => {
   const navigate = useNavigate();
   const { movie, selectedSeat, selectedDate, selectedTime } = useBooking();
+  const { enqueueSnackbar } = useSnackbar();
 
   const handlePayment = () => {
+    enqueueSnackbar("¡Su pago se registró con éxito!", { variant: "success" });
     navigate("/");
   };
 
