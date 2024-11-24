@@ -1,14 +1,26 @@
-import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+
 export const Login: React.FC = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
 
-
-  useEffect(() => {
-    console.log({email, password})
-  }, [email, password])
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email("Email no válido").required("Obligatorio"),
+      password: Yup.string()
+        .min(8, "6 caracteres como mínimo")
+        .required("Obligatorio"),
+    }),
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
 
   const handleNavigation = () => {
     navigate("/admin");
@@ -26,7 +38,7 @@ export const Login: React.FC = () => {
       default:
         break;
     }
-  }
+  };
 
   return (
     <div className="font-[sans-serif]">
@@ -36,19 +48,21 @@ export const Login: React.FC = () => {
             <h2 className="text-gray-800 text-center text-2xl font-bold">
               Login
             </h2>
-            <form className="mt-8 space-y-4">
+            <form onSubmit={formik.handleSubmit} className="mt-8 space-y-4">
               <div>
                 <label className="text-gray-800 text-sm mb-2 block">
                   Email
                 </label>
                 <div className="relative flex items-center">
                   <input
-                    onChange={handleChange}
-                    name="username"
+                    name="email"
                     type="email"
                     required
                     className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
                     placeholder="example@email.com"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +83,11 @@ export const Login: React.FC = () => {
                     ></path>
                   </svg>
                 </div>
+                <div className="text-red-800">
+                  {formik.touched.email && formik.errors.email ? (
+                    <div>{formik.errors.email}</div>
+                  ) : null}
+                </div>
               </div>
 
               <div>
@@ -77,12 +96,14 @@ export const Login: React.FC = () => {
                 </label>
                 <div className="relative flex items-center">
                   <input
-                    onChange={handleChange}
                     name="password"
                     type="password"
                     required
                     className="w-full text-gray-800 text-sm border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
                     placeholder="*******"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.password}
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -96,6 +117,11 @@ export const Login: React.FC = () => {
                       data-original="#000000"
                     ></path>
                   </svg>
+                </div>
+                <div className="text-red-800">
+                  {formik.touched.password && formik.errors.password ? (
+                    <div>{formik.errors.password}</div>
+                  ) : null}
                 </div>
               </div>
 
@@ -112,8 +138,8 @@ export const Login: React.FC = () => {
 
               <div className="!mt-8">
                 <button
-                  onClick={handleNavigation}
-                  type="button"
+                  //onClick={handleNavigation}
+                  type="submit"
                   className="w-full py-3 px-4 text-sm tracking-wide rounded-lg text-black bg-[#FFC121] hover:bg-[#f0ce78] focus:outline-none"
                 >
                   <b>Ingresar</b>
