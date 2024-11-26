@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { UserIcon } from "@/assets";
 import { Link } from "react-router-dom";
 import { PATHS } from "@/routes";
 import { useBooking } from "@/hooks";
 import { SessionService } from "@/services";
-import { Modal  } from "@/components";
+import { Modal } from "@/components";
 
 export default function MenuUser() {
   const { session, resetSession } = useBooking();
@@ -15,10 +15,10 @@ export default function MenuUser() {
   const closeModal = (): void => setIsOpen(false);
 
   const logout = () => {
-    SessionService.deleteSession()
-    resetSession()
-    openModal()
-  }
+    SessionService.deleteSession();
+    resetSession();
+    openModal();
+  };
 
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -26,7 +26,9 @@ export default function MenuUser() {
         title={"INFO"}
         message={"Ha cerrado sesión"}
         isOpen={isOpen}
-        closeModal={closeModal}
+        closeModal={() => {
+          closeModal();
+        }}
       />
       <div>
         <MenuButton className="text-white border border-white-700 hover:bg-gray-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-gray-500 dark:text-gray-500 dark:hover:text-white dark:focus:ring-gray-800 dark:hover:bg-gray-500">
