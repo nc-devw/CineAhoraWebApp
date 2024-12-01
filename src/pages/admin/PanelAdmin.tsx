@@ -1,11 +1,5 @@
 import { useCallback, useState } from "react";
-import { Select, Modal } from "@/components";
-
-const MOVIES = [
-  { value: "pelicula1", label: "Los Vengadores" },
-  { value: "pelicula2", label: "Superman" },
-  { value: "pelicula3", label: "Batman" },
-];
+import { Select, Modal, CineInput, CineTextArea } from "@/components";
 
 const ROOMS = [
   { value: "sala1", label: "Sala 1" },
@@ -33,7 +27,8 @@ const DAYS_OF_WEEK = [
 
 export const PanelAdmin: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [movieTitle, setMovieTitle] = useState("");
+  const [movieDescription, setMovieDescription] = useState("");
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [selectedSchedules, setSelectedSchedules] = useState<
     Record<string, any>
@@ -52,7 +47,8 @@ export const PanelAdmin: React.FC = () => {
       return acc;
     }, {} as Record<string, null>);
 
-    setSelectedMovie(null);
+    setMovieTitle("");
+    setMovieDescription("");
     setSelectedRoom(null);
     setStartDate("");
     setEndDate("");
@@ -70,17 +66,35 @@ export const PanelAdmin: React.FC = () => {
         <div className="w-full">
           <h2 className="text-xl text-[#4F46E5]">1. Seleccionar Película</h2>
           <div className="w-2/4 mt-3">
-            <Select
-              options={MOVIES}
-              value={selectedMovie}
-              onChange={(value: any) => setSelectedMovie(value)}
+            <CineInput
+              placeholder="Escribe el nombre de la película"
+              value={movieTitle}
+              onChange={(event: any) => {
+                setMovieTitle(event.target.value);
+              }}
             />
           </div>
         </div>
       </div>
       <div className="flex flex-wrap mt-6">
         <div className="w-full">
-          <h2 className="text-xl text-[#4F46E5]">2. Seleccionar sala</h2>
+          <h2 className="text-xl text-[#4F46E5]">
+            2. Descripción de la película
+          </h2>
+          <div className="w-2/4 mt-3">
+            <CineTextArea
+              placeholder="Escribe una breve descripción de la película"
+              value={movieDescription}
+              onChange={(event: any) => {
+                setMovieDescription(event.target.value);
+              }}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-wrap mt-6">
+        <div className="w-full">
+          <h2 className="text-xl text-[#4F46E5]">3. Seleccionar sala</h2>
           <div className="w-2/4 mt-3">
             <Select
               options={ROOMS}
@@ -93,7 +107,7 @@ export const PanelAdmin: React.FC = () => {
       <div className="flex flex-wrap mt-6">
         <div className="w-full">
           <h2 className="text-xl text-[#4F46E5]">
-            3. Seleccionar horarios de función
+            4. Seleccionar horarios de función
           </h2>
           {/* Days */}
           {DAYS_OF_WEEK.map((day, i) => {
@@ -118,7 +132,7 @@ export const PanelAdmin: React.FC = () => {
       <div className="flex flex-wrap mt-6">
         <div className="w-full">
           <h2 className="text-xl text-[#4F46E5]">
-            4. Vigencia de la programación
+            5. Vigencia de la programación
           </h2>
           <div className="flex mb-6 mt-6 w-2/4">
             <div>
