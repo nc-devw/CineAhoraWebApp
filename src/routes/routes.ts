@@ -11,5 +11,6 @@ export const PATHS = {
   ERROR: "*",
   ADMIN: "/admin",
   ADMIN_DATALIST: "/admin/functions",
-  LOGIN: "/login"
+  ADMIN_NEW_FUNCTION: "/admin/functions/new",
+  LOGIN: "/login",
 };
