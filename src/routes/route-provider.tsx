@@ -1,6 +1,6 @@
 import { Routes, Route, HashRouter } from "react-router-dom";
 import { PATHS } from "@/routes";
-import { Layout } from "@/components/Layout";
+import { AdminLayout, Layout } from "@/components/Layout";
 import {
   ErrorPage,
   HomePage,
@@ -13,8 +13,9 @@ import {
   ConfirmationPage,
   Admin,
   DataListAdmin,
-  Login
+  Login,
 } from "@/pages";
+import { NewFunctionAdmin } from "@/pages/admin/panel/new-function";
 
 export const RoutesProvider = () => {
   return (
@@ -33,8 +34,14 @@ export const RoutesProvider = () => {
         </Route>
         {/* 404 - Error */}
         <Route path={PATHS.ERROR} element={<ErrorPage />} />
-        <Route path={PATHS.ADMIN} element={<Admin />} />
-        <Route path={PATHS.ADMIN_DATALIST} element={<DataListAdmin />} />
+        <Route path={PATHS.HOME} element={<AdminLayout />}>
+          <Route path={PATHS.ADMIN} element={<Admin />} />
+          <Route
+            path={PATHS.ADMIN_NEW_FUNCTION}
+            element={<NewFunctionAdmin />}
+          />
+          <Route path={PATHS.ADMIN_DATALIST} element={<DataListAdmin />} />
+        </Route>
       </Routes>
     </HashRouter>
   );
