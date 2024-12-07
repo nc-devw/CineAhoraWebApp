@@ -1,11 +1,12 @@
 import { RestClient } from "./rest";
 import { http } from "./http";
-import { Ticket, TicketRequest } from "@/models/ticket";
+import { TicketRequest, TicketResponse } from "@/models/ticket";
 
 export class TicketClient extends RestClient {
-  public async getTicketsByUserId(userId: number): Promise<Ticket[]> {
+  public async getTicketsByUserId(userId: string): Promise<TicketResponse[]> {
     const response = await http.get(this.getUrl(`tickets/user/${userId}`));
-    return response.results;
+
+    return response.responseObject;
   }
 
   public async createTicket(ticket: TicketRequest): Promise<any> {

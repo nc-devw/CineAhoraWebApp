@@ -27,6 +27,7 @@ export interface Function {
   end_time: string;
   ticket_price: number;
   seats: Seat[];
+  film?: Film;
 }
 
 export interface Seat {
