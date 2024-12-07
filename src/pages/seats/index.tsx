@@ -1,5 +1,6 @@
 import { Button } from "@/components";
 import { useBooking } from "@/hooks";
+import { Seat } from "@/models";
 import { PATHS } from "@/routes";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -8,20 +9,19 @@ export const SeatsPage = () => {
   const navigate = useNavigate();
   const { movie, setSeatInfo } = useBooking();
 
-  const [selectedSeat, setSelectedSeat] = useState<string | null>(null);
+  const [selectedSeat, setSelectedSeat] = useState<Seat | null>(null);
 
   const rows = ["A", "B", "C", "D", "E"];
-  const columns = [1, 2, 3, 4, 5, 6, 7, 8];
+  const columns = Array.from({ length: 8 }, (_, i) => i + 1);
 
-  const occupiedSeats = ["A3", "B5", "C7", "E2"];
-
-  const handleSeatSelect = (seat: string) => {
-    setSelectedSeat(seat === selectedSeat ? null : seat);
+  const handleSeatSelect = (seat: Seat) => {
+    if (seat.isOccupied) return;
+    setSelectedSeat(selectedSeat?.seat_id === seat.seat_id ? null : seat);
   };
 
   const handleContinue = () => {
     if (selectedSeat) {
-      setSeatInfo(selectedSeat);
+      setSeatInfo(selectedSeat.seat_number);
       navigate(PATHS.CONFIRMATION);
     }
   };
@@ -62,33 +62,38 @@ export const SeatsPage = () => {
           <div className="mb-8">
             {rows.map((row) => (
               <div key={row} className="flex justify-center gap-2 mb-2">
-                <div className="w-8 h-8 flex items-center justify-center font-semibold text-white ">
+                <div className="w-8 h-8 flex items-center justify-center font-semibold text-white">
                   {row}
                 </div>
 
                 {columns.map((col) => {
-                  const seatId = `${row}${col}`;
-                  const isOccupied = occupiedSeats.includes(seatId);
-                  const isSelected = selectedSeat === seatId;
+                  const currentSeat = movie?.functions[0]?.seats.find(
+                    (seat) => seat.row_identifier === row && seat.column === col
+                  );
+
+                  const isSelected =
+                    selectedSeat?.seat_id === currentSeat?.seat_id;
 
                   return (
                     <button
-                      key={seatId}
-                      disabled={isOccupied}
-                      onClick={() => handleSeatSelect(seatId)}
-                      className={`
-                      w-8 h-8 rounded-t-lg
-                      ${
-                        isOccupied
-                          ? "bg-gray-300 cursor-not-allowed"
-                          : isSelected
-                          ? "bg-primary text-white"
-                          : "bg-gray-100 hover:bg-blue-200"
+                      key={`${row}${col}`}
+                      disabled={currentSeat?.isOccupied || !currentSeat}
+                      onClick={() =>
+                        currentSeat && handleSeatSelect(currentSeat)
                       }
-                      flex items-center justify-center
-                      border border-gray-300
-                      transition-colors
-                    `}
+                      className={`
+                        w-8 h-8 rounded-t-lg
+                        ${
+                          currentSeat?.isOccupied
+                            ? "bg-gray-300 cursor-not-allowed"
+                            : isSelected
+                            ? "bg-primary text-white"
+                            : "bg-gray-100 hover:bg-blue-200"
+                        }
+                        flex items-center justify-center
+                        border border-gray-300
+                        transition-colors
+                      `}
                     >
                       {col}
                     </button>
@@ -115,9 +120,9 @@ export const SeatsPage = () => {
 
           {selectedSeat && (
             <div className="text-center mb-6">
-              <p className="text-lg text-white ">
+              <p className="text-lg text-white">
                 Asiento seleccionado:{" "}
-                <span className="font-bold">{selectedSeat}</span>
+                <span className="font-bold">{selectedSeat.seat_number}</span>
               </p>
             </div>
           )}
