@@ -1,4 +1,4 @@
-import { Film } from "@/models";
+import { Film, Function, Seat } from "@/models";
 import { createContext, useState, ReactNode } from "react";
 
 interface SessionData {
@@ -10,24 +10,23 @@ interface SessionData {
 
 export interface BookingContextType {
   movie?: Film;
-  selectedDate: string;
-  selectedTime: string;
-  selectedSeat: string;
+  selectedSeat: Seat | undefined;
+  selectedFunction: Function | undefined;
   session: SessionData | null;
   setMovieInfo: (movie?: Film) => void;
-  setSessionInfo: (date: string, time: string) => void;
-  setSeatInfo: (seat: string) => void;
+  setSessionInfo: (functionData: Function) => void;
+  setSeatInfo: (seat: Seat) => void;
   clearBooking: () => void;
   setSession: (session: SessionData) => void;
   resetSession: () => void;
 }
 
 const sessionInit = {
-    name: "",
-    email: "",
-    isAdmin: false,
-    isLogged: false,
-  }
+  name: "",
+  email: "",
+  isAdmin: false,
+  isLogged: false,
+};
 
 export const BookingContext = createContext<BookingContextType | undefined>(
   undefined
@@ -35,29 +34,26 @@ export const BookingContext = createContext<BookingContextType | undefined>(
 
 export const BookingProvider = ({ children }: { children: ReactNode }) => {
   const [movie, setMovie] = useState<Film>();
-  const [selectedDate, setSelectedDate] = useState("");
-  const [selectedTime, setSelectedTime] = useState("");
-  const [selectedSeat, setSelectedSeat] = useState("");
+  const [selectedSeat, setSelectedSeat] = useState<Seat | undefined>();
+  const [selectedFunction, setSelectedFunction] = useState<Function>();
   const [session, setSession] = useState<SessionData | null>(sessionInit);
 
   const setMovieInfo = (movie?: Film) => {
     setMovie(movie);
   };
 
-  const setSessionInfo = (date: string, time: string) => {
-    setSelectedDate(date);
-    setSelectedTime(time);
+  const setSessionInfo = (functionData: Function) => {
+    setSelectedFunction(functionData);
   };
 
-  const setSeatInfo = (seat: string) => {
+  const setSeatInfo = (seat: Seat) => {
     setSelectedSeat(seat);
   };
 
   const clearBooking = () => {
     setMovie(undefined);
-    setSelectedDate("");
-    setSelectedTime("");
-    setSelectedSeat("");
+    setSelectedFunction(undefined);
+    setSelectedSeat(undefined);
   };
 
   const resetSession = () => {
@@ -68,16 +64,15 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
     <BookingContext.Provider
       value={{
         movie,
-        selectedDate,
-        selectedTime,
         selectedSeat,
+        selectedFunction,
         session,
         setMovieInfo,
         setSessionInfo,
         setSeatInfo,
         clearBooking,
         setSession,
-        resetSession
+        resetSession,
       }}
     >
       {children}

@@ -3,10 +3,8 @@ import { http } from "./http";
 import { Film } from "@/models";
 
 export class MovieClient extends RestClient {
-  public baseUrl = "http://localhost:8080/films";
-
   public async getNowPlayingFilms(): Promise<Film[]> {
-    const response = await http.get(this.getUrl(`/now_playing`), {
+    const response = await http.get(this.getUrl(`films/now_playing`), {
       params: {
         language: "es-AR",
       },
@@ -16,7 +14,7 @@ export class MovieClient extends RestClient {
   }
 
   public async getUpcomingFilms(): Promise<Film[]> {
-    const response = await http.get(this.getUrl(`/upcoming`), {
+    const response = await http.get(this.getUrl(`films/upcoming`), {
       params: {
         language: "es-AR",
       },
@@ -26,7 +24,7 @@ export class MovieClient extends RestClient {
   }
 
   public async getFilmById(id?: string): Promise<Film> {
-    const response = await http.get(this.getUrl(`/${id}`), {
+    const response = await http.get(this.getUrl(`films/${id}`), {
       params: {
         language: "es-AR",
       },

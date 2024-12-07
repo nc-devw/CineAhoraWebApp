@@ -7,12 +7,17 @@ import { useNavigate } from "react-router-dom";
 
 export const SeatsPage = () => {
   const navigate = useNavigate();
-  const { movie, setSeatInfo } = useBooking();
+  const { movie, selectedFunction, setSeatInfo } = useBooking();
 
   const [selectedSeat, setSelectedSeat] = useState<Seat | null>(null);
 
-  const rows = ["A", "B", "C", "D", "E"];
-  const columns = Array.from({ length: 8 }, (_, i) => i + 1);
+  const seats = selectedFunction?.seats || [];
+  const rows = Array.from(
+    new Set(seats.map((seat) => seat.row_identifier))
+  ).sort();
+  const columns = Array.from(new Set(seats.map((seat) => seat.column))).sort(
+    (a, b) => a - b
+  );
 
   const handleSeatSelect = (seat: Seat) => {
     if (seat.isOccupied) return;
@@ -21,7 +26,7 @@ export const SeatsPage = () => {
 
   const handleContinue = () => {
     if (selectedSeat) {
-      setSeatInfo(selectedSeat.seat_number);
+      setSeatInfo(selectedSeat);
       navigate(PATHS.CONFIRMATION);
     }
   };
@@ -40,7 +45,7 @@ export const SeatsPage = () => {
               )}
             </div>
             <span className="text-center text-white font-bold">
-              Género: {movie?.genres.map((genre) => genre.name).join(", ")}
+              Género: {movie?.genres.join(", ")}
             </span>
             <br />
             <span className="text-center text-white font-bold">
@@ -67,7 +72,7 @@ export const SeatsPage = () => {
                 </div>
 
                 {columns.map((col) => {
-                  const currentSeat = movie?.functions[0]?.seats.find(
+                  const currentSeat = selectedFunction?.seats.find(
                     (seat) => seat.row_identifier === row && seat.column === col
                   );
 

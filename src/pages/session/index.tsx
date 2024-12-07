@@ -1,5 +1,6 @@
 import { Button } from "@/components";
 import { useBooking } from "@/hooks";
+import { Function } from "@/models";
 import { PATHS } from "@/routes";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -18,7 +19,10 @@ export const SessionPage = () => {
 
   const handleSubmit = () => {
     if (selectedDate && selectedTime) {
-      setSessionInfo(selectedDate, selectedTime);
+      const selectedFunction = movie?.functions.find(
+        (func) => func.start_time.substring(0, 5) === selectedTime
+      );
+      setSessionInfo(selectedFunction as Function);
       navigate(PATHS.SEATS);
     }
   };
