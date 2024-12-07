@@ -4,6 +4,7 @@ import { useCallback, useState } from "react";
 import { useBooking } from "@/hooks";
 import { SessionService } from "@/services";
 import { Modal } from "../modal";
+import { FilmFunctionIcon, FilmIcon } from "@/assets";
 
 export const AdminSidebar: React.FC = () => {
   const navigate = useNavigate();
@@ -45,22 +46,9 @@ export const AdminSidebar: React.FC = () => {
                 className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none text-white"
               >
                 <div className="grid place-items-center mr-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="size-6 text-white"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                    />
-                  </svg>
+                  <FilmFunctionIcon />
                 </div>
-                <span>Listado funciones</span>
+                <span>Funciones</span>
               </div>
             </Link>
             <Link to={PATHS.ADMIN_NEW_FUNCTION}>
@@ -69,22 +57,9 @@ export const AdminSidebar: React.FC = () => {
                 className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-gray-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none text-white"
               >
                 <div className="grid place-items-center mr-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="size-6 text-white"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                    />
-                  </svg>
+                  <FilmIcon />
                 </div>
-                <span>Alta Función</span>
+                <span>Peliculas</span>
               </div>
             </Link>
           </div>

@@ -12,10 +12,9 @@ import {
   SeatsPage,
   ConfirmationPage,
   Admin,
-  DataListAdmin,
   Login,
 } from "@/pages";
-import { NewFunctionAdmin } from "@/pages/admin/panel/new-function";
+import { DataListAdmin, NewFunctionAdmin } from "@/pages/admin";
 
 export const RoutesProvider = () => {
   return (
