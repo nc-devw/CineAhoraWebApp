@@ -3,7 +3,7 @@ import { http } from "./http";
 import { Film } from "@/models";
 
 export class MovieClient extends RestClient {
-  public baseUrl = "https://api.themoviedb.org/3/movie";
+  public baseUrl = "http://localhost:8080/films";
 
   public async getNowPlayingFilms(): Promise<Film[]> {
     const response = await http.get(this.getUrl(`/now_playing`), {
@@ -12,7 +12,7 @@ export class MovieClient extends RestClient {
       },
     });
 
-    return response.results;
+    return response.responseObject;
   }
 
   public async getUpcomingFilms(): Promise<Film[]> {
@@ -22,7 +22,7 @@ export class MovieClient extends RestClient {
       },
     });
 
-    return response.results;
+    return response.responseObject;
   }
 
   public async getFilmById(id?: string): Promise<Film> {
@@ -32,7 +32,7 @@ export class MovieClient extends RestClient {
       },
     });
 
-    return response;
+    return response.responseObject;
   }
 }
 

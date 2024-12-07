@@ -1,7 +1,7 @@
 import { Genre } from "./genre";
 
 export type Film = {
-  id: number;
+  film_id: number;
   poster_path: string;
   backdrop_path: string;
   overview: string;
