@@ -46,33 +46,33 @@ export default function MenuUser() {
         <div className="py-1">
           {userSession && !userSession.isLogged && (
             <MenuItem>
-              <a
-                href="#/login"
+              <Link
+                to={PATHS.LOGIN}
                 className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
               >
                 Login
-              </a>
+              </Link>
             </MenuItem>
           )}
 
           {userSession && userSession.isLogged && (
             <MenuItem>
-              <a
-                href="#/my-tickets"
+              <Link
+                to={PATHS.MY_TICKETS}
                 className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
               >
                 Mi cuenta
-              </a>
+              </Link>
             </MenuItem>
           )}
           {userSession && userSession.isLogged && userSession.isAdmin && (
             <MenuItem>
-              <a
-                href="#/admin"
+              <Link
+                to={PATHS.ADMIN}
                 className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
               >
                 Administración
-              </a>
+              </Link>
             </MenuItem>
           )}
           {userSession && userSession.isLogged && (

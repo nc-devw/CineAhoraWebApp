@@ -1,4 +1,4 @@
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { PATHS } from "@/routes";
 import { AdminLayout, Layout } from "@/components/Layout";
 import {
@@ -19,7 +19,7 @@ import { NewFunctionAdmin } from "@/pages/admin/panel/new-function";
 
 export const RoutesProvider = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path={PATHS.HOME} element={<Layout />}>
           <Route path={PATHS.HOME} element={<HomePage />} />
@@ -43,6 +43,6 @@ export const RoutesProvider = () => {
           <Route path={PATHS.ADMIN_DATALIST} element={<DataListAdmin />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };

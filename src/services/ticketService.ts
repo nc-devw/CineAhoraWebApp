@@ -4,6 +4,7 @@ import { ticketClient } from "./clients/ticket";
 export class TicketService {
   public static async getTicketsByUserId(userId: string): Promise<Ticket[]> {
     const result = await ticketClient.getTicketsByUserId(userId);
+
     const tickets = result.map((ticket) => ({
       id: ticket.ticket_id,
       poster_path: ticket.function.film?.poster_path ?? "",

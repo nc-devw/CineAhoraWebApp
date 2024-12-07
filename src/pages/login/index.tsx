@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { SessionService } from "@/services";
@@ -145,12 +145,12 @@ export const Login: React.FC = () => {
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="text-sm">
-                  <a
-                    href="jajvascript:void(0);"
+                  <Link
+                    to="#"
                     className="text-gray-600 hover:underline font-semibold"
                   >
                     ¿Olvidaste tu contraseña?
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -165,12 +165,12 @@ export const Login: React.FC = () => {
               </div>
               <p className="text-gray-800 text-sm !mt-8 text-center">
                 ¿No tienes una cuenta?{" "}
-                <a
-                  href="javascript:void(0);"
+                <Link
+                  to="#"
                   className="text-gray-600 hover:underline ml-1 whitespace-nowrap font-semibold"
                 >
                   Registrate aquí
-                </a>
+                </Link>
               </p>
             </form>
           </div>
