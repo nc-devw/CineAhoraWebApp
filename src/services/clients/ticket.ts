@@ -1,16 +1,20 @@
 import { RestClient } from "./rest";
 import { http } from "./http";
-import { Ticket } from "@/models/ticket";
-
+import { TicketRequest, TicketResponse } from "@/models/ticket";
 
 export class TicketClient extends RestClient {
-    public baseUrl =  `${import.meta.env.REACT_APP_API_URI}`;
+  public async getTicketsByUserId(userId: string): Promise<TicketResponse[]> {
+    const response = await http.get(this.getUrl(`tickets/user/${userId}`));
 
-    public async getTicketsByUserId(userId:number): Promise<Ticket[]> {
-        const response = await http.get(this.getUrl(`/Ticket/${userId}`));
-        return response.results;
-    }
-      
+    return response.responseObject;
+  }
+
+  public async createTicket(ticket: TicketRequest): Promise<any> {
+    const response = await http.post(this.getUrl("tickets"), {
+      ...ticket,
+    });
+    return response.results;
+  }
 }
 
 export const ticketClient = new TicketClient();

@@ -8,7 +8,7 @@ import { SessionService } from "@/services";
 import { Modal } from "@/components";
 
 export default function MenuUser() {
-  const { session, resetSession } = useBooking();
+  const { userSession, resetUserSession } = useBooking();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const openModal = (): void => setIsOpen(true);
@@ -16,7 +16,7 @@ export default function MenuUser() {
 
   const logout = () => {
     SessionService.deleteSession();
-    resetSession();
+    resetUserSession();
     openModal();
   };
 
@@ -32,8 +32,8 @@ export default function MenuUser() {
       />
       <div>
         <MenuButton className="text-white border border-white-700 hover:bg-gray-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-gray-500 dark:text-gray-500 dark:hover:text-white dark:focus:ring-gray-800 dark:hover:bg-gray-500">
-          {session && session.isLogged && session.name && (
-            <div className="mr-1">{`Hola ${session.name}!`}</div>
+          {userSession && userSession.isLogged && userSession.name && (
+            <div className="mr-1">{`Hola ${userSession.name}!`}</div>
           )}
           <UserIcon />
         </MenuButton>
@@ -44,7 +44,7 @@ export default function MenuUser() {
         className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
       >
         <div className="py-1">
-          {session && !session.isLogged && (
+          {userSession && !userSession.isLogged && (
             <MenuItem>
               <a
                 href="#/login"
@@ -55,7 +55,7 @@ export default function MenuUser() {
             </MenuItem>
           )}
 
-          {session && session.isLogged && (
+          {userSession && userSession.isLogged && (
             <MenuItem>
               <a
                 href="#/my-tickets"
@@ -65,7 +65,7 @@ export default function MenuUser() {
               </a>
             </MenuItem>
           )}
-          {session && session.isLogged && session.isAdmin && (
+          {userSession && userSession.isLogged && userSession.isAdmin && (
             <MenuItem>
               <a
                 href="#/admin"
@@ -75,7 +75,7 @@ export default function MenuUser() {
               </a>
             </MenuItem>
           )}
-          {session && session.isLogged && (
+          {userSession && userSession.isLogged && (
             <MenuItem>
               <Link to={PATHS.HOME}>
                 <button

@@ -20,7 +20,10 @@ const ListOfMovies: React.FC<{
         {movies.map((movie) => {
           const imagePath = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
           return (
-            <Link to={PATHS.DETAIL.replace(":id", String(movie.id))}>
+            <Link
+              to={PATHS.DETAIL.replace(":id", String(movie.film_id))}
+              key={movie.film_id}
+            >
               <Card image={imagePath} movie={movie} />
             </Link>
           );

@@ -6,7 +6,7 @@ import { useBooking } from "@/hooks";
 
 export const Login: React.FC = () => {
   const navigate = useNavigate();
-  const { setSession } = useBooking();
+  const { setUserSession } = useBooking();
 
   const formik = useFormik({
     initialValues: {
@@ -21,32 +21,36 @@ export const Login: React.FC = () => {
     }),
     onSubmit: (values) => {
       // MOCK ROLES LOGIN TODO
-      if(values.email.includes("admin")){
-        setSession({
+      if (values.email.includes("admin")) {
+        setUserSession({
           name: "Cristian",
           email: values.email,
+          userId: "1",
           isAdmin: true,
-          isLogged: true
-        })
+          isLogged: true,
+        });
         SessionService.saveSession({
           name: "Cristian",
           email: values.email,
+          userId: "1",
           isAdmin: true,
-        })
-      }else{
+        });
+      } else {
         SessionService.saveSession({
           name: "Tadeo",
           email: values.email,
+          userId: "2",
           isAdmin: false,
-        })
-        setSession({
+        });
+        setUserSession({
           name: "Tadeo",
           email: values.email,
+          userId: "2",
           isAdmin: false,
-          isLogged: true
-        })
+          isLogged: true,
+        });
       }
-      handleNavigation()
+      handleNavigation();
     },
   });
 

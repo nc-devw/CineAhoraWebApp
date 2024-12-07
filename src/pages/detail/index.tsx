@@ -19,8 +19,7 @@ export const Detail: React.FC = () => {
   const openModal = (): void => setIsOpen(true);
   const closeModal = (): void => setIsOpen(false);
 
-  const getGenres = (genres: Genre[]) =>
-    genres.map((genre) => genre.name).join(", ");
+  const getGenres = (genres: Genre[]) => genres.join(", ");
 
   useEffect(() => {
     FilmsService.getFilmById(id)

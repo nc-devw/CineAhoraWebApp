@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import { TicketCard } from '@/components/ticket-card/ticket-card';
+import { TicketCard } from "@/components/ticket-card/ticket-card";
 import { TicketService } from "@/services/ticketService";
 import { Ticket } from "@/models/ticket";
 import { Modal } from "@/components";
+import { useBooking } from "@/hooks";
 
 export const MyTicketsPage: React.FC = () => {
+  const { userSession } = useBooking();
   const [tickets, setTickets] = useState<Ticket[]>([]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [modalTitle, setModalTitle] = useState<string>("");
   const [modalMsg, setModalMsg] = useState<string>("");
-
-  const userId = 1; //TODO: agregar la obtencion del id de usuario cuando tengamos el backend.
 
   const openModal = (title: string, message: string): void => {
     setModalTitle(title);
@@ -21,19 +21,19 @@ export const MyTicketsPage: React.FC = () => {
   useEffect(() => {
     const fetchTickets = async () => {
       try {
-        //TODO: Replace this line with backend when el backend este hecho.
-        //const userTickets = await TicketService.getTicketsByUserId(userId);
-        const userTickets = await TicketService.getMockedTickets();
+        const userTickets = await TicketService.getTicketsByUserId(
+          userSession?.userId ?? "1"
+        );
         setTickets(userTickets);
-      } catch{
-      //} catch (error) {
-        //TODO: Agregar un logger para guardar estas excepciones
+      } catch {
         openModal("Error", "Error al cargar los tickets");
       }
     };
 
-    fetchTickets();
-  }, [userId]);
+    if (userSession?.userId) {
+      fetchTickets();
+    }
+  }, [userSession?.userId]);
 
   return (
     <div className="p-9">
@@ -60,7 +60,9 @@ export const MyTicketsPage: React.FC = () => {
         </div>
 
         <div className="max-w-xl">
-          <h1 className="text-white font-bold mb-9 text-right text-4xl">Mis entradas</h1>
+          <h1 className="text-white font-bold mb-9 text-right text-4xl">
+            Mis entradas
+          </h1>
           <div className="space-y-4">
             {tickets.map((ticket) => (
               <TicketCard key={ticket.id} {...ticket} />
