@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export const ConfirmationPage = () => {
   const navigate = useNavigate();
-  const { movie, selectedSeat, selectedFunction } = useBooking();
+  const { movie, selectedSeat, selectedFunction, userSession } = useBooking();
   const { enqueueSnackbar } = useSnackbar();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -22,7 +22,7 @@ export const ConfirmationPage = () => {
   const handlePayment = () => {
     setIsLoading(true);
     TicketService.createTicket({
-      customer_id: 1,
+      customer_id: parseInt(userSession?.userId || "1"),
       function_id: selectedFunction?.function_id || 1,
       seat_id: selectedSeat?.seat_id || 1,
     })

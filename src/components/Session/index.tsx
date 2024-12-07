@@ -10,14 +10,14 @@ import { SessionService } from "@/services";
  * luego de recargar
  */
 export function Session() {
-  const { setSession } = useBooking();
+  const { setUserSession } = useBooking();
 
   useEffect(() => {
     const session_saved = SessionService.getSession();
     if (session_saved && session_saved.isLogged) {
-      setSession(session_saved);
+      setUserSession(session_saved);
     }
-  }, [setSession]);
+  }, [setUserSession]);
 
   return false;
 }

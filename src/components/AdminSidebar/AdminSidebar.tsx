@@ -7,7 +7,7 @@ import { Modal } from "../modal";
 
 export const AdminSidebar: React.FC = () => {
   const navigate = useNavigate();
-  const { resetSession } = useBooking();
+  const { resetUserSession } = useBooking();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const openModal = (): void => setIsOpen(true);
@@ -15,9 +15,9 @@ export const AdminSidebar: React.FC = () => {
 
   const logout = useCallback(() => {
     SessionService.deleteSession();
-    resetSession();
+    resetUserSession();
     openModal();
-  }, [resetSession]);
+  }, [resetUserSession]);
 
   return (
     <>

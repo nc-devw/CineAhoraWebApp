@@ -4,6 +4,7 @@ import { createContext, useState, ReactNode } from "react";
 interface SessionData {
   name: string;
   email: string;
+  userId: string;
   isAdmin: boolean;
   isLogged: boolean;
 }
@@ -12,18 +13,19 @@ export interface BookingContextType {
   movie?: Film;
   selectedSeat: Seat | undefined;
   selectedFunction: Function | undefined;
-  session: SessionData | null;
+  userSession: SessionData | null;
   setMovieInfo: (movie?: Film) => void;
   setSessionInfo: (functionData: Function) => void;
   setSeatInfo: (seat: Seat) => void;
   clearBooking: () => void;
-  setSession: (session: SessionData) => void;
-  resetSession: () => void;
+  setUserSession: (session: SessionData) => void;
+  resetUserSession: () => void;
 }
 
 const sessionInit = {
   name: "",
   email: "",
+  userId: "",
   isAdmin: false,
   isLogged: false,
 };
@@ -36,7 +38,9 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
   const [movie, setMovie] = useState<Film>();
   const [selectedSeat, setSelectedSeat] = useState<Seat | undefined>();
   const [selectedFunction, setSelectedFunction] = useState<Function>();
-  const [session, setSession] = useState<SessionData | null>(sessionInit);
+  const [userSession, setUserSession] = useState<SessionData | null>(
+    sessionInit
+  );
 
   const setMovieInfo = (movie?: Film) => {
     setMovie(movie);
@@ -56,8 +60,8 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
     setSelectedSeat(undefined);
   };
 
-  const resetSession = () => {
-    setSession(sessionInit);
+  const resetUserSession = () => {
+    setUserSession(sessionInit);
   };
 
   return (
@@ -66,13 +70,13 @@ export const BookingProvider = ({ children }: { children: ReactNode }) => {
         movie,
         selectedSeat,
         selectedFunction,
-        session,
+        userSession,
         setMovieInfo,
         setSessionInfo,
         setSeatInfo,
         clearBooking,
-        setSession,
-        resetSession,
+        setUserSession,
+        resetUserSession,
       }}
     >
       {children}
