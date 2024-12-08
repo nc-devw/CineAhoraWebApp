@@ -36,7 +36,7 @@ export const SessionPage = () => {
               <div className="flex justify-center shadow h-[180px] sm:h-[600px]">
                 {movie?.poster_path && (
                   <img
-                    src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
+                    src={movie?.poster_path}
                     className="h-full border-2 border-primary"
                   />
                 )}

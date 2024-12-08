@@ -10,7 +10,9 @@ export const PATHS = {
   MY_TICKETS: "/my-tickets",
   ERROR: "*",
   ADMIN: "/admin",
-  ADMIN_DATALIST: "/admin/functions",
+  ADMIN_FUNCTION_LIST: "/admin/functions",
   ADMIN_NEW_FUNCTION: "/admin/functions/new",
+  ADMIN_FILM_LIST: "/admin/films",
+  ADMIN_NEW_FILM: "/admin/films/new",
   LOGIN: "/login",
 };

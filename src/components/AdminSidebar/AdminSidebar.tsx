@@ -39,7 +39,18 @@ export const AdminSidebar: React.FC = () => {
         </div>
         <nav className="flex flex-col gap-1 min-w-[240px] p-2 font-sans text-base font-normal text-gray-700 h-full justify-between">
           <div className="flex flex-col gap-1">
-            <Link to={PATHS.ADMIN_DATALIST}>
+            <Link to={PATHS.ADMIN_NEW_FILM}>
+              <div
+                role="button"
+                className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-gray-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none text-white"
+              >
+                <div className="grid place-items-center mr-4">
+                  <FilmIcon />
+                </div>
+                <span>Peliculas</span>
+              </div>
+            </Link>
+            <Link to={PATHS.ADMIN_FUNCTION_LIST}>
               <div
                 role="button"
                 tabIndex={0}
@@ -49,17 +60,6 @@ export const AdminSidebar: React.FC = () => {
                   <FilmFunctionIcon />
                 </div>
                 <span>Funciones</span>
-              </div>
-            </Link>
-            <Link to={PATHS.ADMIN_NEW_FUNCTION}>
-              <div
-                role="button"
-                className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-gray-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none text-white"
-              >
-                <div className="grid place-items-center mr-4">
-                  <FilmIcon />
-                </div>
-                <span>Peliculas</span>
               </div>
             </Link>
           </div>

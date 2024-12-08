@@ -18,13 +18,12 @@ const ListOfMovies: React.FC<{
       <h2 className="text-white text-2xl font-bold mb-2">{title}</h2>
       <div className="flex flex-wrap gap-x-4 gap-y-6 justify-around">
         {movies.map((movie) => {
-          const imagePath = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
           return (
             <Link
               to={PATHS.DETAIL.replace(":id", String(movie.film_id))}
               key={movie.film_id}
             >
-              <Card image={imagePath} movie={movie} />
+              <Card image={movie.poster_path} movie={movie} />
             </Link>
           );
         })}

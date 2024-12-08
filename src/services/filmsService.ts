@@ -1,4 +1,4 @@
-import { Film, FilmsData } from "@/models";
+import { Film, FilmRequest, FilmsData } from "@/models";
 import { movieClient } from "./clients";
 
 export class FilmsService {
@@ -14,6 +14,11 @@ export class FilmsService {
 
   public static async getFilmById(id?: string): Promise<Film> {
     const result = await movieClient.getFilmById(id);
+    return result;
+  }
+
+  public static async createFilm(film: FilmRequest): Promise<any> {
+    const result = await movieClient.createFilm(film);
     return result;
   }
 }

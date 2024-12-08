@@ -1,6 +1,6 @@
 import { RestClient } from "./rest";
 import { http } from "./http";
-import { Film } from "@/models";
+import { Film, FilmRequest } from "@/models";
 
 export class MovieClient extends RestClient {
   public async getNowPlayingFilms(): Promise<Film[]> {
@@ -29,6 +29,12 @@ export class MovieClient extends RestClient {
         language: "es-AR",
       },
     });
+
+    return response.responseObject;
+  }
+
+  public async createFilm(film: FilmRequest): Promise<any> {
+    const response = await http.post(this.getUrl(`films`), film);
 
     return response.responseObject;
   }
