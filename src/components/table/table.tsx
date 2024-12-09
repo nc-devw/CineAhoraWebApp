@@ -1,5 +1,10 @@
+export type Item = {
+  value: string;
+  id: number;
+};
+
 interface TableProps {
-  items: string[];
+  items: Item[];
   onDelete: (id: number) => void;
 }
 
@@ -24,13 +29,13 @@ export const Table: React.FC<TableProps> = ({ items, onDelete }) => {
                 </tr>
               </thead>
               <tbody>
-                {items.map((name, id) => {
+                {items.map((item) => {
                   return (
                     <Row
-                      key={id}
-                      id={id + 1}
-                      name={name}
-                      onDelete={() => onDelete(id + 1)}
+                      key={item.id}
+                      id={item.id}
+                      name={item.value}
+                      onDelete={() => onDelete(item.id)}
                     />
                   );
                 })}

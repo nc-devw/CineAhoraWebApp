@@ -2,6 +2,12 @@ import { Film, FilmRequest, FilmsData } from "@/models";
 import { movieClient } from "./clients";
 
 export class FilmsService {
+  public static async getAllFilms(): Promise<Film[]> {
+    const films = await movieClient.getAllFilms();
+
+    return films;
+  }
+
   public static async getFilms(): Promise<FilmsData> {
     const nowPlaying = await movieClient.getNowPlayingFilms();
     const upcoming = await movieClient.getUpcomingFilms();

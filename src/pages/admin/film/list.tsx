@@ -1,18 +1,29 @@
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { PATHS } from "@/routes";
-import { ModalConfirmation, Table } from "@/components";
-import { useState } from "react";
+import { ModalConfirmation, Table, Loading, Item } from "@/components";
+import { FilmsService } from "@/services";
 
 export const FilmListAdmin: React.FC = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [items, setItems] = useState([
-    "Superman",
-    "Batman",
-    "Los Vengadores",
-    "Barby",
-  ]);
+  const [items, setItems] = useState<Item[]>([]);
   const [itemToDeleteId, setItemToDeleteId] = useState<number | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    FilmsService.getAllFilms()
+      .then((results) => {
+        const items = results.map((item) => ({
+          value: item.title,
+          id: item.film_id,
+        }));
+        setItems(items);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
 
   const handleOpenModal = (id: number): void => {
     setItemToDeleteId(id);
@@ -21,11 +32,15 @@ export const FilmListAdmin: React.FC = () => {
 
   const handleDelete = () => {
     if (itemToDeleteId !== null) {
-      setItems(items.filter((_, index) => index !== itemToDeleteId - 1));
+      setItems(items.filter((item) => item.id !== itemToDeleteId));
       setItemToDeleteId(null);
       setIsOpen(false);
     }
   };
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className="w-full h-screen overflow-y-auto">

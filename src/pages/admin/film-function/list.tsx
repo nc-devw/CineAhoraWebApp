@@ -1,16 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { PATHS } from "@/routes";
-import { ModalConfirmation, Table } from "@/components";
+import { Item, ModalConfirmation, Table } from "@/components";
 import { useState } from "react";
 
 export const DataListAdmin: React.FC = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [items, setItems] = useState([
-    "Superman",
-    "Batman",
-    "Los Vengadores",
-    "Barby",
+  const [items, setItems] = useState<Item[]>([
+    { value: "Superman", id: 1 },
+    { value: "Batman", id: 2 },
+    { value: "Los Vengadores", id: 3 },
+    { value: "Barby", id: 4 },
   ]);
   const [itemToDeleteId, setItemToDeleteId] = useState<number | null>(null);
 
