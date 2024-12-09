@@ -19,8 +19,7 @@ export const Detail: React.FC = () => {
   const openModal = (): void => setIsOpen(true);
   const closeModal = (): void => setIsOpen(false);
 
-  const getGenres = (genres: Genre[]) =>
-    genres.map((genre) => genre.name).join(", ");
+  const getGenres = (genres: Genre[]) => genres.join(", ");
 
   useEffect(() => {
     FilmsService.getFilmById(id)
@@ -57,9 +56,7 @@ export const Detail: React.FC = () => {
               <div className="flex justify-center shadow h-[180px] sm:h-[600px]">
                 {film && film?.poster_path && (
                   <img
-                    src={`https://image.tmdb.org/t/p/w500/${
-                      film.poster_path || ""
-                    }`}
+                    src={film.poster_path}
                     className="h-full border-2 border-primary"
                   />
                 )}
@@ -78,10 +75,7 @@ export const Detail: React.FC = () => {
           <div className="flex flex-col gap-y-2">
             <div className="border-2 border-primary shadow w-full h-[180px] sm:h-[400px]">
               {film && film?.backdrop_path && (
-                <img
-                  src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path}`}
-                  className="h-full w-full"
-                />
+                <img src={film.backdrop_path} className="h-full w-full" />
               )}
             </div>
             <h1 className="text-center text-white font-bold text-2xl">
@@ -93,12 +87,13 @@ export const Detail: React.FC = () => {
       </div>
       <div className="flex justify-center">
         <Button
+          disabled={film?.is_upcoming}
           onClick={() => {
             setMovieInfo(film);
             navigate(PATHS.SESSION);
           }}
         >
-          Seleccionar horario
+          {film?.is_upcoming ? "Próximamente" : "Seleccionar horario"}
         </Button>
       </div>
     </div>

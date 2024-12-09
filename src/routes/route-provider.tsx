@@ -1,4 +1,4 @@
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { PATHS } from "@/routes";
 import { AdminLayout, Layout } from "@/components/Layout";
 import {
@@ -12,14 +12,14 @@ import {
   SeatsPage,
   ConfirmationPage,
   Admin,
-  DataListAdmin,
   Login,
 } from "@/pages";
-import { NewFunctionAdmin } from "@/pages/admin/panel/new-function";
+import { DataListAdmin, NewFunctionAdmin, NewFilmAdmin } from "@/pages/admin";
+import { FilmListAdmin } from "@/pages/admin/film/list";
 
 export const RoutesProvider = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path={PATHS.HOME} element={<Layout />}>
           <Route path={PATHS.HOME} element={<HomePage />} />
@@ -40,9 +40,11 @@ export const RoutesProvider = () => {
             path={PATHS.ADMIN_NEW_FUNCTION}
             element={<NewFunctionAdmin />}
           />
-          <Route path={PATHS.ADMIN_DATALIST} element={<DataListAdmin />} />
+          <Route path={PATHS.ADMIN_FUNCTION_LIST} element={<DataListAdmin />} />
+          <Route path={PATHS.ADMIN_NEW_FILM} element={<NewFilmAdmin />} />
+          <Route path={PATHS.ADMIN_FILM_LIST} element={<FilmListAdmin />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };

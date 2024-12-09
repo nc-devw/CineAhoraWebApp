@@ -1,16 +1,14 @@
-interface InputProps {
-  placeholder?: string;
-  value?: any;
-  onChange?: (value: any) => void;
-}
+import { InputHTMLAttributes } from "react";
 
-export const CineInput: React.FC<InputProps> = ({
+export const CineInput: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({
+  name,
   placeholder,
   value,
   onChange,
   ...props
 }) => (
   <input
+    name={name}
     placeholder={placeholder}
     value={value}
     onChange={onChange}

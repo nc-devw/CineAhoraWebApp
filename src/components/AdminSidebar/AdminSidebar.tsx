@@ -4,10 +4,13 @@ import { useCallback, useState } from "react";
 import { useBooking } from "@/hooks";
 import { SessionService } from "@/services";
 import { Modal } from "../modal";
+import { FilmFunctionIcon, FilmIcon } from "@/assets";
+import { LogoutIcon } from "@/assets/icons/logout-icon";
+import { HomeIcon } from "@/assets/icons/home-icon";
 
 export const AdminSidebar: React.FC = () => {
   const navigate = useNavigate();
-  const { resetSession } = useBooking();
+  const { resetUserSession } = useBooking();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const openModal = (): void => setIsOpen(true);
@@ -15,9 +18,9 @@ export const AdminSidebar: React.FC = () => {
 
   const logout = useCallback(() => {
     SessionService.deleteSession();
-    resetSession();
+    resetUserSession();
     openModal();
-  }, [resetSession]);
+  }, [resetUserSession]);
 
   return (
     <>
@@ -38,78 +41,53 @@ export const AdminSidebar: React.FC = () => {
         </div>
         <nav className="flex flex-col gap-1 min-w-[240px] p-2 font-sans text-base font-normal text-gray-700 h-full justify-between">
           <div className="flex flex-col gap-1">
-            <Link to={PATHS.ADMIN_DATALIST}>
+            <Link to={PATHS.ADMIN_FILM_LIST}>
+              <div
+                role="button"
+                className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-gray-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none text-white"
+              >
+                <div className="grid place-items-center mr-4">
+                  <FilmIcon />
+                </div>
+                <span>Peliculas</span>
+              </div>
+            </Link>
+            <Link to={PATHS.ADMIN_FUNCTION_LIST}>
               <div
                 role="button"
                 tabIndex={0}
                 className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none text-white"
               >
                 <div className="grid place-items-center mr-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="size-6 text-white"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                    />
-                  </svg>
+                  <FilmFunctionIcon />
                 </div>
-                <span>Listado funciones</span>
-              </div>
-            </Link>
-            <Link to={PATHS.ADMIN_NEW_FUNCTION}>
-              <div
-                role="button"
-                className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-gray-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none text-white"
-              >
-                <div className="grid place-items-center mr-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="size-6 text-white"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                    />
-                  </svg>
-                </div>
-                <span>Alta Función</span>
+                <span>Funciones</span>
               </div>
             </Link>
           </div>
-          <div
-            onClick={logout}
-            role="button"
-            tabIndex={0}
-            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none text-white"
-          >
-            <div className="grid place-items-center mr-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-                className="h-5 w-5 text-white"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+          <div>
+            <div
+              onClick={() => navigate(PATHS.HOME)}
+              role="button"
+              tabIndex={0}
+              className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none text-white"
+            >
+              <div className="grid place-items-center mr-4">
+                <HomeIcon />
+              </div>
+              <span>Volver al inicio</span>
             </div>
-            <span>Cerrar sesión</span>
+            <div
+              onClick={logout}
+              role="button"
+              tabIndex={0}
+              className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none text-white"
+            >
+              <div className="grid place-items-center mr-4">
+                <LogoutIcon />
+              </div>
+              <span>Cerrar sesión</span>
+            </div>
           </div>
         </nav>
       </div>

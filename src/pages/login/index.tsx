@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { SessionService } from "@/services";
@@ -6,7 +6,7 @@ import { useBooking } from "@/hooks";
 
 export const Login: React.FC = () => {
   const navigate = useNavigate();
-  const { setSession } = useBooking();
+  const { setUserSession } = useBooking();
 
   const formik = useFormik({
     initialValues: {
@@ -21,32 +21,36 @@ export const Login: React.FC = () => {
     }),
     onSubmit: (values) => {
       // MOCK ROLES LOGIN TODO
-      if(values.email.includes("admin")){
-        setSession({
+      if (values.email.includes("admin")) {
+        setUserSession({
           name: "Cristian",
           email: values.email,
+          userId: "1",
           isAdmin: true,
-          isLogged: true
-        })
+          isLogged: true,
+        });
         SessionService.saveSession({
           name: "Cristian",
           email: values.email,
+          userId: "1",
           isAdmin: true,
-        })
-      }else{
+        });
+      } else {
         SessionService.saveSession({
           name: "Tadeo",
           email: values.email,
+          userId: "2",
           isAdmin: false,
-        })
-        setSession({
+        });
+        setUserSession({
           name: "Tadeo",
           email: values.email,
+          userId: "2",
           isAdmin: false,
-          isLogged: true
-        })
+          isLogged: true,
+        });
       }
-      handleNavigation()
+      handleNavigation();
     },
   });
 
@@ -141,12 +145,12 @@ export const Login: React.FC = () => {
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="text-sm">
-                  <a
-                    href="jajvascript:void(0);"
+                  <Link
+                    to="#"
                     className="text-gray-600 hover:underline font-semibold"
                   >
                     ¿Olvidaste tu contraseña?
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -161,12 +165,12 @@ export const Login: React.FC = () => {
               </div>
               <p className="text-gray-800 text-sm !mt-8 text-center">
                 ¿No tienes una cuenta?{" "}
-                <a
-                  href="javascript:void(0);"
+                <Link
+                  to="#"
                   className="text-gray-600 hover:underline ml-1 whitespace-nowrap font-semibold"
                 >
                   Registrate aquí
-                </a>
+                </Link>
               </p>
             </form>
           </div>
