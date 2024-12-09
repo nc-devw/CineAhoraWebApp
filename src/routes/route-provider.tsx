@@ -15,6 +15,7 @@ import {
   Login,
 } from "@/pages";
 import { DataListAdmin, NewFunctionAdmin, NewFilmAdmin } from "@/pages/admin";
+import { FilmListAdmin } from "@/pages/admin/film/list";
 
 export const RoutesProvider = () => {
   return (
@@ -41,6 +42,7 @@ export const RoutesProvider = () => {
           />
           <Route path={PATHS.ADMIN_FUNCTION_LIST} element={<DataListAdmin />} />
           <Route path={PATHS.ADMIN_NEW_FILM} element={<NewFilmAdmin />} />
+          <Route path={PATHS.ADMIN_FILM_LIST} element={<FilmListAdmin />} />
         </Route>
       </Routes>
     </BrowserRouter>

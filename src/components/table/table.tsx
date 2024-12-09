@@ -1,41 +1,11 @@
-import { useState } from "react";
-import { ModalConfirmation } from "@/components";
+interface TableProps {
+  items: string[];
+  onDelete: (id: number) => void;
+}
 
-export const Table: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [items, setItems] = useState([
-    "Superman",
-    "Batman",
-    "Los Vengadores",
-    "Barby",
-  ]);
-  const [itemToDeleteId, setItemToDeleteId] = useState<number | null>(null);
-
-  const openModal = (id: number): void => {
-    setItemToDeleteId(id);
-    setIsOpen(true);
-  };
-
-  const closeModal = (): void => {
-    setItemToDeleteId(null);
-    setIsOpen(false);
-  };
-
-  const handleDelete = () => {
-    if (itemToDeleteId !== null) {
-      setItems(items.filter((_, index) => index !== itemToDeleteId - 1));
-      closeModal();
-    }
-  };
-
+export const Table: React.FC<TableProps> = ({ items, onDelete }) => {
   return (
     <div className="flex flex-col">
-      <ModalConfirmation
-        title={"ATENCIÓN"}
-        message={"¿Está seguro que desea eliminar la función?"}
-        isOpen={isOpen}
-        closeModal={handleDelete}
-      />
       <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
           <div className="overflow-hidden">
@@ -60,7 +30,7 @@ export const Table: React.FC = () => {
                       key={id}
                       id={id + 1}
                       name={name}
-                      openModal={() => openModal(id + 1)}
+                      onDelete={() => onDelete(id + 1)}
                     />
                   );
                 })}
@@ -73,13 +43,13 @@ export const Table: React.FC = () => {
   );
 };
 
-interface Props {
+interface RowProps {
   id: number;
   name: string;
-  openModal: () => void;
+  onDelete: () => void;
 }
 
-const Row: React.FC<Props> = ({ id, name, openModal }) => {
+const Row: React.FC<RowProps> = ({ id, name, onDelete }) => {
   return (
     <tr className="border-b dark:border-neutral-500">
       <td className="whitespace-nowrap  px-6 py-4  text-[#4F46E5] font-bold">
@@ -91,7 +61,7 @@ const Row: React.FC<Props> = ({ id, name, openModal }) => {
       <td className="whitespace-nowrap  px-6 py-4">
         <div style={{ display: "flex", justifyContent: "center" }}>
           <button
-            onClick={openModal}
+            onClick={onDelete}
             className="bg-[#4F46E5] hover:bg-[#6366F1] font-bold py-2 px-4 rounded inline-flex items-center"
           >
             <svg

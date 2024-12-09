@@ -3,7 +3,7 @@ import { PATHS } from "@/routes";
 import { ModalConfirmation, Table } from "@/components";
 import { useState } from "react";
 
-export const DataListAdmin: React.FC = () => {
+export const FilmListAdmin: React.FC = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [items, setItems] = useState([
@@ -39,17 +39,17 @@ export const DataListAdmin: React.FC = () => {
         <div className="flex flex-wrap justify-between items-center">
           <div className="w-auto">
             <h1 className="text-2xl font-bold text-[#4F46E5]">
-              Listado de funciones
+              Listado de películas
             </h1>
           </div>
           <div className="w-auto mr-5">
             <button
               className="bg-[#4F46E5] text-white px-4 py-2 rounded-md hover:bg-[#4338CA]"
               onClick={() => {
-                navigate(PATHS.ADMIN_NEW_FUNCTION);
+                navigate(PATHS.ADMIN_NEW_FILM);
               }}
             >
-              Agregar Función
+              Agregar Película
             </button>
           </div>
         </div>

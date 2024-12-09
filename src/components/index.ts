@@ -11,3 +11,4 @@ export * from "./OfferCard";
 export * from "./Select";
 export * from "./modalConfirmation";
 export * from "./Session";
+export * from "./table";
