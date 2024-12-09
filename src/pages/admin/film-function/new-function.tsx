@@ -1,5 +1,6 @@
-import { useCallback, useState } from "react";
-import { Select, Modal, CineInput, CineTextArea } from "@/components";
+import { useCallback, useState, useEffect } from "react";
+import { Select, Modal, Loading, Option } from "@/components";
+import { FilmsService } from "@/services/filmsService";
 
 const ROOMS = [
   { value: "sala1", label: "Sala 1" },
@@ -17,25 +18,49 @@ const SCHEDULES = [
 
 export const NewFunctionAdmin: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [movieTitle, setMovieTitle] = useState("");
-  const [movieDescription, setMovieDescription] = useState("");
+  const [selectedFilm, setSelectedFilm] = useState(null);
   const [selectedRoom, setSelectedRoom] = useState(null);
   const [selectedSchedules, setSelectedSchedules] = useState([]);
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const [films, setFilms] = useState<Option[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchFilms = async () => {
+      setIsLoading(true);
+      try {
+        const filmsData = await FilmsService.getAllFilms();
+        const filmOptions = filmsData.map((film) => ({
+          value: film.film_id.toString(),
+          label: film.title,
+        }));
+        setFilms(filmOptions);
+      } catch (error) {
+        console.error("Error fetching films:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchFilms();
+  }, []);
 
   const openModal = useCallback((): void => setIsOpen(true), []);
   const closeModal = useCallback((): void => setIsOpen(false), []);
 
   const handleSaveFunction = useCallback((): void => {
     openModal();
-    setMovieTitle("");
-    setMovieDescription("");
+    setSelectedFilm(null);
     setSelectedRoom(null);
     setSelectedSchedules([]);
     setStartDate("");
     setEndDate("");
   }, [openModal]);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -56,30 +81,15 @@ export const NewFunctionAdmin: React.FC = () => {
           <h2 className="text-xl font-semibold text-[#4F46E5] mb-4">
             1. Seleccionar Película
           </h2>
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Título de la Película
-              </label>
-              <CineInput
-                placeholder="Escribe el nombre de la película"
-                value={movieTitle}
-                onChange={(event: any) => setMovieTitle(event.target.value)}
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Descripción
-              </label>
-              <CineTextArea
-                placeholder="Escribe una breve descripción de la película"
-                value={movieDescription}
-                onChange={(event: any) =>
-                  setMovieDescription(event.target.value)
-                }
-              />
-            </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Película
+            </label>
+            <Select
+              options={films}
+              value={selectedFilm}
+              onChange={(value: any) => setSelectedFilm(value)}
+            />
           </div>
         </div>
 
