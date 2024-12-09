@@ -68,7 +68,7 @@ export const NewFilmAdmin: React.FC = () => {
             variant: "success",
           });
           formik.resetForm();
-          navigate(PATHS.ADMIN);
+          navigate(PATHS.ADMIN_FILM_LIST);
         })
         .catch(() => {
           setModalMsg("Ha ocurrido un error al agregar su película");

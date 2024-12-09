@@ -5,9 +5,18 @@ interface ModalProps {
   closeModal: () => void;
   title: string;
   message: string;
+  onConfirm: () => void;
+  onCancel: () => void;
 }
 
-export const ModalConfirmation: React.FC<ModalProps> = ({ isOpen, closeModal, title, message }) => {
+export const ModalConfirmation: React.FC<ModalProps> = ({
+  isOpen,
+  closeModal,
+  title,
+  message,
+  onConfirm,
+  onCancel,
+}) => {
   const stopPropagation = (e: MouseEvent<HTMLDivElement>): void => {
     e.stopPropagation();
   };
@@ -28,13 +37,13 @@ export const ModalConfirmation: React.FC<ModalProps> = ({ isOpen, closeModal, ti
             <div className="flex justify-end">
               <button
                 className="bg-blue-500 text-white px-4 py-2 rounded"
-                onClick={closeModal}
+                onClick={onConfirm}
               >
-                Aceptar
+                Confirmar
               </button>
               <button
                 className="ml-2 bg-red-500 text-white px-4 py-2 rounded"
-                onClick={closeModal}
+                onClick={onCancel}
               >
                 Cancelar
               </button>
@@ -45,4 +54,3 @@ export const ModalConfirmation: React.FC<ModalProps> = ({ isOpen, closeModal, ti
     </>
   );
 };
-

@@ -27,4 +27,9 @@ export class FilmsService {
     const result = await movieClient.createFilm(film);
     return result;
   }
+
+  public static async deleteFilm(id: number): Promise<any> {
+    const result = await movieClient.deleteFilm(id);
+    return result;
+  }
 }

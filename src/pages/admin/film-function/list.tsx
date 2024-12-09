@@ -33,6 +33,8 @@ export const DataListAdmin: React.FC = () => {
         title={"ATENCIÓN"}
         message={"¿Está seguro que desea eliminar la función?"}
         isOpen={isOpen}
+        onConfirm={handleDelete}
+        onCancel={handleDelete}
         closeModal={handleDelete}
       />
       <div className="mt-5 ml-5">

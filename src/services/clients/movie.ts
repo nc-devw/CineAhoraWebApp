@@ -32,6 +32,12 @@ export class MovieClient extends RestClient {
 
     return response.responseObject;
   }
+
+  public async deleteFilm(id: number): Promise<any> {
+    const response = await http.delete(this.getUrl(`films/${id}`));
+
+    return response.responseObject;
+  }
 }
 
 export const movieClient = new MovieClient();

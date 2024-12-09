@@ -1,15 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { PATHS } from "@/routes";
-import { ModalConfirmation, Table, Loading, Item } from "@/components";
+import { Table, Loading, Item, Modal } from "@/components";
 import { FilmsService } from "@/services";
+import { ModalConfirmation } from "@/components/modalConfirmation/modalConfirmation";
+import { enqueueSnackbar } from "notistack";
 
 export const FilmListAdmin: React.FC = () => {
   const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
   const [items, setItems] = useState<Item[]>([]);
   const [itemToDeleteId, setItemToDeleteId] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [modalTitle, setModalTitle] = useState<string>("");
+  const [modalMsg, setModalMsg] = useState<string>("");
+  const [isOpenConfirmModal, setIsOpenConfirmModal] = useState<boolean>(false);
+
+  const openModal = (): void => setIsOpenModal(true);
+  const closeModal = (): void => setIsOpenModal(false);
 
   useEffect(() => {
     FilmsService.getAllFilms()
@@ -25,17 +33,42 @@ export const FilmListAdmin: React.FC = () => {
       });
   }, []);
 
-  const handleOpenModal = (id: number): void => {
-    setItemToDeleteId(id);
-    setIsOpen(true);
+  const handleDelete = () => {
+    setIsLoading(true);
+    if (itemToDeleteId !== null) {
+      FilmsService.deleteFilm(itemToDeleteId)
+        .then(() => {
+          setItems(items.filter((item) => item.id !== itemToDeleteId));
+          setItemToDeleteId(null);
+          setIsOpenModal(false);
+          enqueueSnackbar("¡Su pelicula se eliminó con éxito!", {
+            variant: "success",
+          });
+        })
+        .catch(() => {
+          setModalMsg("Ha ocurrido un error al eliminar la película");
+          setModalTitle("Error");
+          openModal();
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    }
   };
 
-  const handleDelete = () => {
-    if (itemToDeleteId !== null) {
-      setItems(items.filter((item) => item.id !== itemToDeleteId));
-      setItemToDeleteId(null);
-      setIsOpen(false);
-    }
+  const handleDeleteConfirmation = (itemId: number) => {
+    setItemToDeleteId(itemId);
+    setIsOpenConfirmModal(true);
+  };
+
+  const handleConfirmDelete = () => {
+    handleDelete();
+    setIsOpenConfirmModal(false);
+  };
+
+  const handleCancelDelete = () => {
+    setItemToDeleteId(null);
+    setIsOpenConfirmModal(false);
   };
 
   if (isLoading) {
@@ -44,11 +77,19 @@ export const FilmListAdmin: React.FC = () => {
 
   return (
     <div className="w-full h-screen overflow-y-auto">
+      <Modal
+        title={modalTitle}
+        message={modalMsg}
+        isOpen={isOpenModal}
+        closeModal={closeModal}
+      />
       <ModalConfirmation
-        title={"ATENCIÓN"}
-        message={"¿Está seguro que desea eliminar la función?"}
-        isOpen={isOpen}
-        closeModal={handleDelete}
+        isOpen={isOpenConfirmModal}
+        title="Confirmar eliminación"
+        message="¿Estás seguro que deseas eliminar esta película? Se borraran todas las funciones asociadas a esta película."
+        closeModal={handleCancelDelete}
+        onConfirm={handleConfirmDelete}
+        onCancel={handleCancelDelete}
       />
       <div className="mt-5 ml-5">
         <div className="flex flex-wrap justify-between items-center">
@@ -70,7 +111,7 @@ export const FilmListAdmin: React.FC = () => {
         </div>
         <div className="flex flex-wrap">
           <div className="w-3/4 mt-5">
-            <Table items={items} onDelete={handleOpenModal} />
+            <Table items={items} onDelete={handleDeleteConfirmation} />
           </div>
         </div>
       </div>
