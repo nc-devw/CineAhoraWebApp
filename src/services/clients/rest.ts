@@ -1,5 +1,5 @@
 export class RestClient {
-  public baseUrl = import.meta.env.VITE_API_URI;
+  public baseUrl = import.meta.env.VITE_URL_BACKEND;
 
   public getUrl(url: string | number = "") {
     if (url) {

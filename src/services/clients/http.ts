@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { sleep } from "@/utils";
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -12,10 +11,7 @@ export class Http {
     this.initAuth();
   }
 
-  public async initAuth() {
-    const token = import.meta.env.VITE_MOVIE_TOKEN;
-    this.setAuth(token);
-  }
+  public async initAuth() {}
 
   public setAuth(token: string) {
     axios.defaults.headers.common.Authorization = token

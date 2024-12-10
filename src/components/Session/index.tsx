@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useBooking } from "@/hooks";
 import { SessionService } from "@/services";
 import axios from "axios";
+import { http } from "@/services/clients";
 
 /**
  * Cuando se recarga la página,
@@ -28,6 +29,8 @@ export function Session() {
           );
 
           if (response.data.success) {
+            http.setAuth(response.data.responseObject.accessToken);
+
             setUserSession({
               name: response.data.responseObject.first_name,
               email: "",
@@ -45,6 +48,7 @@ export function Session() {
 
   useEffect(() => {
     doRefreshToken();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return false;

@@ -29,11 +29,11 @@ export const Login: React.FC = () => {
         .required("Obligatorio"),
     }),
     onSubmit: (values) => {
-      let data = JSON.stringify({
+      const data = JSON.stringify({
         email: values.email,
         password: values.password,
       });
-      let config = {
+      const config = {
         method: "post",
         maxBodyLength: Infinity,
         url: `${import.meta.env.VITE_URL_BACKEND}/users/login`,
@@ -57,9 +57,9 @@ export const Login: React.FC = () => {
             name: response.data.responseObject.first_name,
             email: values.email,
             isAdmin: response.data.responseObject.is_admin,
-            refreshToken: response.data.responseObject.refreshToken
+            refreshToken: response.data.responseObject.refreshToken,
           });
-        handleNavigation();
+          handleNavigation();
         })
         .catch((error) => {
           if (error.response) {
@@ -178,7 +178,10 @@ export const Login: React.FC = () => {
                 </div>
               </div>
 
-              <div style={{display: "none"}} className="flex flex-wrap items-center justify-between gap-4">
+              <div
+                style={{ display: "none" }}
+                className="flex flex-wrap items-center justify-between gap-4"
+              >
                 <div className="text-sm">
                   <Link
                     to="#"
@@ -198,7 +201,10 @@ export const Login: React.FC = () => {
                   <b>Ingresar</b>
                 </button>
               </div>
-              <p style={{display: "none"}} className="text-gray-800 text-sm !mt-8 text-center">
+              <p
+                style={{ display: "none" }}
+                className="text-gray-800 text-sm !mt-8 text-center"
+              >
                 ¿No tienes una cuenta?{" "}
                 <Link
                   to="#"
