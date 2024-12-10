@@ -12,7 +12,9 @@ import { http } from "@/services/clients";
  * luego de recargar
  */
 export function Session() {
-  const { setUserSession } = useBooking();
+  const { setUserSession, userSession } = useBooking();
+
+  console.log({userSession})
 
   const doRefreshToken = async () => {
     const session_saved = SessionService.getSession();
@@ -29,12 +31,14 @@ export function Session() {
           );
 
           if (response.data.success) {
+            console.log("Pasa por aca?")
+            console.log(response.data)
             http.setAuth(response.data.responseObject.accessToken);
 
             setUserSession({
-              name: response.data.responseObject.first_name,
-              email: "",
-              isAdmin: response.data.responseObject.is_admin,
+              name: session_saved.name,
+              email: session_saved.email,
+              isAdmin: session_saved.isAdmin,
               isLogged: true,
               accessToken: response.data.responseObject.accessToken,
             });

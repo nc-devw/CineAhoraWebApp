@@ -20,6 +20,8 @@ export default function MenuUser() {
     openModal();
   };
 
+  console.log({userSession})  
+
   return (
     <Menu as="div" className="relative inline-block text-left">
       <Modal
