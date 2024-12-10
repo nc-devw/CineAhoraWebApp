@@ -1,41 +1,94 @@
 import { useNavigate } from "react-router-dom";
 import { PATHS } from "@/routes";
-import { Item, ModalConfirmation, Table } from "@/components";
-import { useState } from "react";
+import { Item, Loading, Modal, ModalConfirmation, Table } from "@/components";
+import { useEffect, useState } from "react";
+import { FilmFunctionService } from "@/services/filmFunctionService";
+import { enqueueSnackbar } from "notistack";
 
 export const DataListAdmin: React.FC = () => {
   const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [items, setItems] = useState<Item[]>([
-    { value: "Superman", id: 1 },
-    { value: "Batman", id: 2 },
-    { value: "Los Vengadores", id: 3 },
-    { value: "Barby", id: 4 },
-  ]);
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
+  const [items, setItems] = useState<Item[]>([]);
   const [itemToDeleteId, setItemToDeleteId] = useState<number | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [modalTitle, setModalTitle] = useState<string>("");
+  const [modalMsg, setModalMsg] = useState<string>("");
+  const [isOpenConfirmModal, setIsOpenConfirmModal] = useState<boolean>(false);
 
-  const handleOpenModal = (id: number): void => {
-    setItemToDeleteId(id);
-    setIsOpen(true);
-  };
+  const openModal = (): void => setIsOpenModal(true);
+  const closeModal = (): void => setIsOpenModal(false);
+
+  useEffect(() => {
+    FilmFunctionService.getAllFilmFunctions()
+      .then((results) => {
+        const items = results.map((item) => ({
+          value: `${item.film?.title} - ${item.function_date} - ${item.start_time}`,
+          id: item.function_id,
+        }));
+        setItems(items);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
 
   const handleDelete = () => {
+    setIsLoading(true);
     if (itemToDeleteId !== null) {
-      setItems(items.filter((_, index) => index !== itemToDeleteId - 1));
-      setItemToDeleteId(null);
-      setIsOpen(false);
+      FilmFunctionService.deleteFilmFunction(itemToDeleteId)
+        .then(() => {
+          setItems(items.filter((item) => item.id !== itemToDeleteId));
+          setItemToDeleteId(null);
+          setIsOpenModal(false);
+          enqueueSnackbar("¡Su función se eliminó con éxito!", {
+            variant: "success",
+          });
+        })
+        .catch(() => {
+          setModalMsg("Ha ocurrido un error al eliminar la función");
+          setModalTitle("Error");
+          openModal();
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
     }
   };
 
+  const handleDeleteConfirmation = (itemId: number) => {
+    setItemToDeleteId(itemId);
+    setIsOpenConfirmModal(true);
+  };
+
+  const handleConfirmDelete = () => {
+    handleDelete();
+    setIsOpenConfirmModal(false);
+  };
+
+  const handleCancelDelete = () => {
+    setItemToDeleteId(null);
+    setIsOpenConfirmModal(false);
+  };
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <div className="w-full h-screen overflow-y-auto">
+      <Modal
+        title={modalTitle}
+        message={modalMsg}
+        isOpen={isOpenModal}
+        closeModal={closeModal}
+      />
       <ModalConfirmation
-        title={"ATENCIÓN"}
-        message={"¿Está seguro que desea eliminar la función?"}
-        isOpen={isOpen}
-        onConfirm={handleDelete}
-        onCancel={handleDelete}
-        closeModal={handleDelete}
+        isOpen={isOpenConfirmModal}
+        title="Confirmar eliminación"
+        message="¿Estás seguro que deseas eliminar esta función?"
+        closeModal={handleCancelDelete}
+        onConfirm={handleConfirmDelete}
+        onCancel={handleCancelDelete}
       />
       <div className="mt-5 ml-5">
         <div className="flex flex-wrap justify-between items-center">
@@ -57,7 +110,7 @@ export const DataListAdmin: React.FC = () => {
         </div>
         <div className="flex flex-wrap">
           <div className="w-3/4 mt-5">
-            <Table items={items} onDelete={handleOpenModal} />
+            <Table items={items} onDelete={handleDeleteConfirmation} />
           </div>
         </div>
       </div>
