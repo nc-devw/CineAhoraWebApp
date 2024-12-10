@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useBooking } from "@/hooks";
 import { SessionService } from "@/services";
+import axios from "axios";
 
 /**
  * Cuando se recarga la página,
@@ -12,12 +13,39 @@ import { SessionService } from "@/services";
 export function Session() {
   const { setUserSession } = useBooking();
 
-  useEffect(() => {
+  const doRefreshToken = async () => {
     const session_saved = SessionService.getSession();
     if (session_saved && session_saved.isLogged) {
-      setUserSession(session_saved);
+      if (session_saved.refreshToken) {
+        try {
+          const response = await axios.get(
+            `${import.meta.env.VITE_URL_BACKEND}/users/refresh-token`,
+            {
+              headers: {
+                Authorization: `Bearer ${session_saved.refreshToken}`,
+              },
+            }
+          );
+
+          if (response.data.success) {
+            setUserSession({
+              name: response.data.responseObject.first_name,
+              email: "",
+              isAdmin: response.data.responseObject.is_admin,
+              isLogged: true,
+              accessToken: response.data.responseObject.accessToken,
+            });
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
     }
-  }, [setUserSession]);
+  };
+
+  useEffect(() => {
+    doRefreshToken();
+  }, []);
 
   return false;
 }

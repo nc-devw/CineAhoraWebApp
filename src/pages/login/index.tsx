@@ -1,12 +1,21 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { SessionService } from "@/services";
 import { useBooking } from "@/hooks";
+import { Modal } from "@/components";
+import axios from "axios";
 
 export const Login: React.FC = () => {
   const navigate = useNavigate();
   const { setUserSession } = useBooking();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [modalTitle, setModalTitle] = useState<string>("");
+  const [modalMsg, setModalMsg] = useState<string>("");
+
+  const openModal = (): void => setIsOpen(true);
+  const closeModal = (): void => setIsOpen(false);
 
   const formik = useFormik({
     initialValues: {
@@ -20,37 +29,57 @@ export const Login: React.FC = () => {
         .required("Obligatorio"),
     }),
     onSubmit: (values) => {
-      // MOCK ROLES LOGIN TODO
-      if (values.email.includes("admin")) {
-        setUserSession({
-          name: "Cristian",
-          email: values.email,
-          userId: "1",
-          isAdmin: true,
-          isLogged: true,
+      let data = JSON.stringify({
+        email: values.email,
+        password: values.password,
+      });
+      let config = {
+        method: "post",
+        maxBodyLength: Infinity,
+        url: `${import.meta.env.VITE_URL_BACKEND}/users/login`,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: data,
+      };
+      axios
+        .request(config)
+        .then((response) => {
+          console.log(JSON.stringify(response.data));
+          setUserSession({
+            name: response.data.responseObject.first_name,
+            email: values.email,
+            isAdmin: response.data.responseObject.is_admin,
+            isLogged: true,
+            accessToken: response.data.responseObject.accessToken,
+          });
+          SessionService.saveSession({
+            name: response.data.responseObject.first_name,
+            email: values.email,
+            isAdmin: response.data.responseObject.is_admin,
+            refreshToken: response.data.responseObject.refreshToken
+          });
+        handleNavigation();
+        })
+        .catch((error) => {
+          if (error.response) {
+            if (error.response.status === 404) {
+              setModalMsg("Usuario y/o contraseña incorrecta");
+              setModalTitle("Error");
+              openModal();
+            } else {
+              setModalMsg("Ha ocurrido un error en el login");
+              setModalTitle("Error");
+              openModal();
+            }
+            console.log(error.response);
+          } else {
+            setModalMsg("Error en la conexión. Por favor, intenta más tarde.");
+            setModalTitle("Error");
+            openModal();
+            console.log(error);
+          }
         });
-        SessionService.saveSession({
-          name: "Cristian",
-          email: values.email,
-          userId: "1",
-          isAdmin: true,
-        });
-      } else {
-        SessionService.saveSession({
-          name: "Tadeo",
-          email: values.email,
-          userId: "2",
-          isAdmin: false,
-        });
-        setUserSession({
-          name: "Tadeo",
-          email: values.email,
-          userId: "2",
-          isAdmin: false,
-          isLogged: true,
-        });
-      }
-      handleNavigation();
     },
   });
 
@@ -60,6 +89,12 @@ export const Login: React.FC = () => {
 
   return (
     <div className="font-[sans-serif]">
+      <Modal
+        title={modalTitle}
+        message={modalMsg}
+        isOpen={isOpen}
+        closeModal={closeModal}
+      />
       <div className="min-h-screen flex flex-col items-center justify-center pb-20 mb px-4">
         <div className="max-w-md w-full">
           <div className="p-8 rounded-2xl bg-white shadow">

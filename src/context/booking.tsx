@@ -4,9 +4,9 @@ import { createContext, useState, ReactNode } from "react";
 interface SessionData {
   name: string;
   email: string;
-  userId: string;
   isAdmin: boolean;
   isLogged: boolean;
+  accessToken: string;
 }
 
 export interface BookingContextType {
