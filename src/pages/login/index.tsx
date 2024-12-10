@@ -178,7 +178,7 @@ export const Login: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center justify-between gap-4">
+              <div style={{display: "none"}} className="flex flex-wrap items-center justify-between gap-4">
                 <div className="text-sm">
                   <Link
                     to="#"
@@ -198,7 +198,7 @@ export const Login: React.FC = () => {
                   <b>Ingresar</b>
                 </button>
               </div>
-              <p className="text-gray-800 text-sm !mt-8 text-center">
+              <p style={{display: "none"}} className="text-gray-800 text-sm !mt-8 text-center">
                 ¿No tienes una cuenta?{" "}
                 <Link
                   to="#"
