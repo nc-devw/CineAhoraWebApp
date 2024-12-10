@@ -2,6 +2,7 @@ import { Film, Function, Seat } from "@/models";
 import { createContext, useState, ReactNode } from "react";
 
 interface SessionData {
+  id: string;
   name: string;
   email: string;
   isAdmin: boolean;
@@ -22,12 +23,13 @@ export interface BookingContextType {
   resetUserSession: () => void;
 }
 
-const sessionInit = {
+const sessionInit: SessionData = {
+  id: "",
   name: "",
   email: "",
-  userId: "",
   isAdmin: false,
   isLogged: false,
+  accessToken: "",
 };
 
 export const BookingContext = createContext<BookingContextType | undefined>(

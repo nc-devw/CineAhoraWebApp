@@ -9,7 +9,7 @@ import { PATHS } from "@/routes";
 export const Detail: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { setMovieInfo } = useBooking();
+  const { setMovieInfo, userSession } = useBooking();
   const [film, setFilm] = useState<Film>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -87,7 +87,7 @@ export const Detail: React.FC = () => {
       </div>
       <div className="flex justify-center">
         <Button
-          disabled={film?.is_upcoming}
+          disabled={film?.is_upcoming || !userSession?.isLogged}
           onClick={() => {
             setMovieInfo(film);
             navigate(PATHS.SESSION);

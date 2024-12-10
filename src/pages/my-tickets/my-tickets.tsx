@@ -20,20 +20,30 @@ export const MyTicketsPage: React.FC = () => {
 
   useEffect(() => {
     const fetchTickets = async () => {
+      console.log("userSession", userSession);
       try {
         const userTickets = await TicketService.getTicketsByUserId(
-          userSession?.userId ?? "1"
+          userSession?.id ?? "1"
         );
         setTickets(userTickets);
-      } catch {
-        openModal("Error", "Error al cargar los tickets");
+      } catch (error: unknown) {
+        if (
+          error &&
+          typeof error === "object" &&
+          "status" in error &&
+          error.status === 404
+        ) {
+          openModal("Error", "No se encontraron tickets");
+        } else {
+          openModal("Error", "Error al cargar los tickets");
+        }
       }
     };
 
-    if (userSession?.userId) {
+    if (userSession?.id) {
       fetchTickets();
     }
-  }, [userSession?.userId]);
+  }, [userSession, userSession?.id]);
 
   return (
     <div className="p-9">

@@ -45,8 +45,8 @@ export const Login: React.FC = () => {
       axios
         .request(config)
         .then((response) => {
-          console.log(JSON.stringify(response.data));
           setUserSession({
+            id: response.data.responseObject.user_id,
             name: response.data.responseObject.first_name,
             email: values.email,
             isAdmin: response.data.responseObject.is_admin,
@@ -72,12 +72,10 @@ export const Login: React.FC = () => {
               setModalTitle("Error");
               openModal();
             }
-            console.log(error.response);
           } else {
             setModalMsg("Error en la conexión. Por favor, intenta más tarde.");
             setModalTitle("Error");
             openModal();
-            console.log(error);
           }
         });
     },

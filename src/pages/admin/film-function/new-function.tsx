@@ -81,7 +81,6 @@ export const NewFunctionAdmin: React.FC = () => {
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        console.log("values", values);
         const functionRequest: FunctionRequest = {
           film_id: parseInt(values.film_id),
           schedules: values.schedules,
