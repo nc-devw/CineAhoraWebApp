@@ -2,14 +2,16 @@ interface SessionData {
   name: string;
   email: string;
   isAdmin: boolean;
+  refreshToken: string;
 }
 
 export class SessionService {
-  public static saveSession({ name, email, isAdmin }: SessionData) {
+  public static saveSession({ name, email, isAdmin, refreshToken }: SessionData) {
     const session = {
       name,
       email,
       isAdmin,
+      refreshToken,
     };
     const session_raw = JSON.stringify(session, null, 2);
     localStorage.setItem("session", session_raw);

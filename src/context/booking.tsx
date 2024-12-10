@@ -6,6 +6,7 @@ interface SessionData {
   email: string;
   isAdmin: boolean;
   isLogged: boolean;
+  accessToken: string;
 }
 
 export interface BookingContextType {

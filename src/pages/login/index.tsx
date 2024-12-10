@@ -51,11 +51,13 @@ export const Login: React.FC = () => {
             email: values.email,
             isAdmin: response.data.responseObject.is_admin,
             isLogged: true,
+            accessToken: response.data.responseObject.accessToken,
           });
           SessionService.saveSession({
             name: response.data.responseObject.first_name,
             email: values.email,
             isAdmin: response.data.responseObject.is_admin,
+            refreshToken: response.data.responseObject.refreshToken
           });
         handleNavigation();
         })
